@@ -1,0 +1,223 @@
+.input--group {
+  padding: unitSize(.5) 0;
+  margin: 0 0 unitSize(.5) 0;
+
+  p{
+    margin: 0 0 unitSize(.5) 0;
+
+    small{
+      font-size: pxToEm(12);
+      color: getColor(text, light);
+    }
+  }
+}
+
+label {
+  font-size: pxToEm(14);
+  line-height: unitSize(2.5);
+  font-weight: normal;
+  margin-bottom: unitSize(.5);
+  display: block;
+}
+
+input:not([type="submit"]),
+select,
+textarea {
+  font-size: pxToEm(14);
+  width: 100%;
+  font-weight: normal;
+  display: block;
+  padding: unitSize(.5) unitSize(1);
+  border: 1px solid getColor(input, border);
+  @include border-radius(4px);
+  line-height: normal;
+  color: getColor(input, text);
+  min-height: unitSize(3);
+  outline: none;
+  margin-bottom: unitSize(.5);
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    background-color: getColor(input, disabledBg);
+    cursor: not-allowed;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    color: white;
+  }
+
+
+  //flat input style
+
+  &.input--flat {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid getColor(inputFlat, border);
+    @include border-radius(0);
+
+    &:focus{
+      border-bottom: 2px solid getColor(inputFlat, borderActive);
+    }
+  }
+}
+
+input:not([type="submit"]) {
+  // Remove focus styles
+  &[type="checkbox"],
+  &[type="radio"],
+  &[type="range"],
+  &[type="file"],
+  &[type="color"],
+  &[type="submit"] {
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+// Keep the original size for this small inputs
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"] {
+  height: auto;
+  width: auto;
+}
+
+// Checkbox & radio
+input[type="checkbox"],
+input[type="radio"] {
+  line-height: normal;
+  padding: 0;
+  vertical-align: middle;
+}
+
+// Checkbox & radio elements are inline with their label
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 0 0 .5em;
+  line-height: unitSize(4, -2);
+  vertical-align: middle;
+}
+
+// File upload
+input[type="file"] {
+  border: none;
+  line-height: 100%;
+  padding: 0;
+}
+
+// Textarea
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+// Style select like a standard input - Internet Explorer 11+
+select {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0;
+
+  &[disabled] {
+    color: getColor(text, secondary);
+  }
+
+  &[multiple] {
+    height: auto;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::-ms-value {
+    color: currentColor;
+  }
+
+  option {
+    padding: 0 .75em
+  }
+}
+
+// Range input
+input[type="range"] {
+  border: none;
+  padding: 0;
+  width: 100%;
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-webkit-slider-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+    -webkit-appearance: none;
+  }
+
+  &::-moz-range-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+  }
+
+  &::-moz-range-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+
+  &::-ms-track {
+    background-color: darken(getColor(background, light), 10%);
+    border: none;
+    border-radius: 3px;
+    color: transparent;
+    height: 5px;
+  }
+
+  &::-ms-thumb {
+    border: none;
+    border-radius: 50%;
+    background-color: getColor(base, primary);
+    height: 16px;
+    margin-top: -5px;
+    width: 16px;
+  }
+}
+
+.submitted .ng-invalid, .ng-invalid.ng-dirty {
+  border-color: getColor(state, error);
+}
+
+.ng-valid.ng-dirty {
+  border-color: getColor(state, success);
+}

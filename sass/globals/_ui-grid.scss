@@ -1,0 +1,111 @@
+.ui-grid {
+  border: 1px solid getColor(base, divider);
+
+  * {
+    outline: none;
+  }
+}
+
+.ui-grid-column-menu-button {
+  position: absolute;
+  right: 0;
+  //top: 50%;
+  //@include transform(translateY(-50%));
+}
+
+.ui-grid-render-container {
+}
+
+.ui-grid-header {
+  border-bottom: 1px solid getColor(base, divider);
+}
+
+.ui-grid-top-panel {
+  background: none;
+  background-color: getColor(table, headBg);
+  font-weight: normal;
+}
+
+.ui-grid-header-cell {
+  background-color: inherit;
+  border-right: 1px solid getColor(base, divider);
+  width: 0;
+}
+
+.ui-grid-icon-angle-down:before {
+  content: "\e064";
+}
+
+.ui-grid-icon-sort-alt-up:before {
+  content: "\6f";
+}
+
+.ui-grid-icon-sort-alt-down:before {
+  content: "\70";
+}
+
+.ui-grid-icon-cancel:before {
+  content: "\e082";
+}
+
+.ui-grid-icon-ok:before {
+  content: "\2f";
+}
+
+.ui-grid-icon-menu:before {
+  content: "\e062";
+}
+
+[class^="ui-grid-icon"]:before,
+[class*=" ui-grid-icon"]:before {
+  @extend .ec-icon;
+  width: auto;
+  margin-right: 0;
+  text-align: center;
+  font-size: pxToEm(16);
+  margin-left: 0;
+}
+
+.ui-grid-menu-button .ui-grid-menu .ui-grid-menu-mid {
+  border: none;
+}
+
+.ui-grid-menu .ui-grid-menu-inner ul li:not(:last-child) > button {
+  border-bottom: 1px solid getColor(base, divider);
+}
+
+.ui-grid-menu .ui-grid-menu-inner ul li {
+  padding: 0px;
+
+  button {
+    &.ui-grid-menu-item-active,
+    &:hover,
+    &:focus {
+      @include box-shadow(none);
+    }
+
+    &.ui-grid-menu-item-active,
+    &:hover {
+      background-color: getColor(dropdown, itemHoverBg);
+    }
+  }
+}
+
+.ui-grid-menu .ui-grid-menu-inner {
+  background: getColor(dropdown, menuBg);
+  border: 1px solid getColor(base, divider);
+  @include box-shadow(none);
+}
+
+.ui-grid-menu-button {
+  right: 0;
+  background: getColor(table, headBg);
+  border: none;
+  cursor: pointer;
+  height: auto;
+  //font-weight: normal;
+}
+
+.ui-grid-menu-button .ui-grid-icon-container {
+  margin-top: 0;
+}

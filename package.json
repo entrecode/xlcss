@@ -1,0 +1,28 @@
+{
+  "name": "xlcss",
+  "version": "1.0.0",
+  "description": "minimalistic css framework by entrecode.de",
+  "main": "sass/xlcss.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xlss",
+    "css",
+    "sass",
+    "framework",
+    "entrecode"
+  ],
+  "author": "Bernhard Ruoff <ruoff@entrecode.de>",
+  "contributors": [
+    "Bernhard Ruoff <ruoff@entrecode.de>",
+    "Konstantin Ehlers <ehlers@entrecode.de>"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1"
+  }
+}

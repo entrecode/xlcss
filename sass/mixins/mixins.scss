@@ -1,0 +1,65 @@
+@import 'flexbox';
+@import 'transition';
+@import 'retina';
+@import 'border-radius';
+@import 'background';
+@import 'gradient';
+@import 'transform';
+@import 'appearance';
+@import 'box-shadow';
+@import 'clearfix';
+@import 'ellipsis';
+@import 'word-wrap';
+@import 'material-icons';
+@import 'user-select';
+@import 'placeholder';
+
+@mixin keyframes($str) {
+  @-webkit-keyframes #{$str} {
+    @content;
+  }
+  @-moz-keyframes #{$str} {
+    @content;
+  }
+  @keyframes #{$str} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: $str;
+  -moz-animation: $str;
+  -ms-animation: $str;
+}
+
+@include keyframes(bounce-right) {
+  0% {
+    @include transform(translateY(-100%));
+  }
+  80% {
+    @include transform(translateY(0%));
+  }
+  90% {
+    @include transform(translateY(10%));
+  }
+  100% {
+    @include transform(translateY(0%));
+  }
+}
+
+
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+@mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px /* size must be an even number */) {
+  background-image: -webkit-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
+  background-image: -moz-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
+  background-image: -ms-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
+  background-image: -o-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
+  background-image: repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
+
+  @include background-size($size $size);
+}

@@ -1,0 +1,81 @@
+$switch-width: 28px;
+$toggle-shadow: 0 1px 8px rgba(black, 0.1), 0 1px 2px rgba(black, 0.2);
+
+.toggle-switch {
+  cursor: pointer;
+  display: inline-block;
+  width: $switch-width * 2;
+  height: $switch-width;
+  @include border-radius($switch-width / 2);
+  background-color: getColor(toggleSwitch, bg);
+  position: relative;
+
+  span {
+    cursor: pointer;
+    height: $switch-width;
+    line-height: $switch-width;
+    text-align: center;
+    font-size: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: $switch-width;
+    display: inline-block;
+    background-color: transparent;
+    color: getColor(text, light);
+  }
+
+  .switch-left {
+    left: 0;
+  }
+
+  .switch-right {
+    right: 0;
+  }
+
+  .knob {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include border-radius($switch-width / 2);
+    @include transition(transform .2s);
+    @include transform(translate3D(0, 0, 0));
+    @include box-shadow($toggle-shadow);
+  }
+
+  .switch-on {
+    .knob {
+      background-color: getColor(toggleSwitch, on);
+      @include transform(translate3D(100%, 0, 0));
+    }
+  }
+
+  .switch-off {
+    .knob {
+      background-color: getColor(toggleSwitch, off);
+    }
+  }
+}
+
+.toggle--group {
+  position: relative;
+  margin: 0 0 unitSize(1) 0;
+  padding: unitSize(.5) 0;
+  padding-right: 80px;
+  @include clearfix;
+
+
+  label {
+    line-height: unitSize(2.5);
+    padding: 4px 0;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .toggle-switch {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "xlcss",
+  "version": "1.0.0",
+  "authors": [
+    "Bernhard Ruoff <ruoff@entrecode.de>",
+    "Konstantin Ehlers <ehlers@entrecode.de>"
+  ],
+  "description": "minimalistic css framework by entrecode.de",
+  "main": "sass/xlcss.scss",
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "xlcss",
+    "framework"
+  ],
+  "license": "All rights reserved by entrecode",
+  "homepage": "www.entrecode.de",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

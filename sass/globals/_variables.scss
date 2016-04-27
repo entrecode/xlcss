@@ -1,0 +1,17 @@
+// Breakpoints
+$bp-xs: 30em !default; /* 480px Big smartphone */
+$bp-sm: 48em !default; /* 768px Small devices */
+$bp-md: 60em !default; /* 960px Medium devices */
+$bp-lg: 70em !default; /* 1120px Large devices */
+$bp-xl: 80em !default; /* 1280px Very Large devices*/
+
+
+// z-index positioning
+$z-main-header: 400;
+$z-toolbar: 400;
+$z-sidebar: 1000;
+$z-overlay: 1000;
+$z-loading: 9999;
+
+$shadow-deep: 0 4px 8px rgba(black, 0.2), 0 1px 2px rgba(black, 0.2);
+$shadow-low: 0 2px 4px rgba(black, 0.2), 0 1px 1px rgba(black, 0.2);
