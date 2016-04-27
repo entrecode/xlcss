@@ -44,7 +44,7 @@ $base-unit: 8 !default;
 // @return {Number} Value in Ems
 //
 
-@function pxToEm($px, $base: $font-base-size) {
+@function pxToEm($px, $base: $fontBaseSize) {
   @return ($px / $base) + em;
 }
 

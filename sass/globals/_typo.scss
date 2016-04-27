@@ -1,6 +1,6 @@
-.text--center {
-  text-align: center;
-}
+// Injected font
+
+$baseFont: 'roboto_condensed', sans-serif;
 
 //
 // Type Styles
@@ -9,6 +9,10 @@
 //
 // Defaults
 // --------
+
+body{
+  font-family: $baseFont;
+}
 
 i,
 em,
@@ -61,26 +65,32 @@ p:not(:last-child) {
 // -----
 
 a {
-  background-color: transparent;
-  color: getColor(base, link);
   cursor: pointer;
   text-decoration: none;
+  background-color: transparent;
+  color: getColor(base, link);
 
   &:hover,
   &:focus {
     color: getColor(base, linkHover);
   }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
-h1, h2, h3,
-.h1, .h2, .h3 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   a {
     color: getColor(base, link);
 
     &:hover,
     &:focus {
-      color: getColor(base, linkHover);
       text-decoration: none;
+      color: getColor(base, linkHover);
     }
   }
 }
@@ -102,7 +112,7 @@ code,
 pre,
 kbd,
 samp {
-  font-family: $font-family-mono;
+  font-family: $fontFamilyMono;
   font-size: pxToEm(14);
 }
 

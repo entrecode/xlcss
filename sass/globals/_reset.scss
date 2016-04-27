@@ -7,9 +7,9 @@
 // ---------
 
 // Font families
-$font-family: "Helvetica", "Arial", sans-serif !default;
-$font-family-mono: "Consolas", monospace !default;
-$font-base-size: 16 !default;
+$fontFamily: "Helvetica", "Arial", sans-serif !default;
+$fontFamilyMono: "Consolas", monospace !default;
+$fontBaseSize: 16 !default;
 
 //
 // Normalization
@@ -83,14 +83,14 @@ template,
   box-sizing: border-box;
   color: inherit;
   cursor: default;
-  font-family: $font-family;
-  font-size: ($font-base-size * .875) + px;
+  font-family: $fontFamily;
+  font-size: ($fontBaseSize * .875) + px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   vertical-align: top;
 
-  @media (min-width: $bp-xs) {
-    font-size: $font-base-size + px;
+  @media (min-width: $bpXs) {
+    font-size: $fontBaseSize + px;
   }
 }
 

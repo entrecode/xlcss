@@ -1,17 +1,22 @@
 // Breakpoints
-$bp-xs: 30em !default; /* 480px Big smartphone */
-$bp-sm: 48em !default; /* 768px Small devices */
-$bp-md: 60em !default; /* 960px Medium devices */
-$bp-lg: 70em !default; /* 1120px Large devices */
-$bp-xl: 80em !default; /* 1280px Very Large devices*/
+$bpXs: 30em !default; /* 480px Big smartphone */
+$bpSm: 48em !default; /* 768px Small devices */
+$bpMd: 60em !default; /* 960px Medium devices */
+$bpLg: 70em !default; /* 1120px Large devices */
+$bpXl: 80em !default; /* 1280px Very Large devices*/
 
+
+$bpXsMax: ($bpSm - 1) !default;
+$bpSmMax: ($bpMd - 1) !default;
+$bpMdMax: ($bpLg - 1) !default;
+$bpLgMax: ($bpXl - 1) !default;
 
 // z-index positioning
-$z-main-header: 400;
-$z-toolbar: 400;
-$z-sidebar: 1000;
-$z-overlay: 1000;
-$z-loading: 9999;
+$zMainHeader: 400;
+$zToolbar: 400;
+$zSidebar: 1000;
+$zOverlay: 1000;
+$zLoading: 9999;
 
-$shadow-deep: 0 4px 8px rgba(black, 0.2), 0 1px 2px rgba(black, 0.2);
-$shadow-low: 0 2px 4px rgba(black, 0.2), 0 1px 1px rgba(black, 0.2);
+$shadowDeep: 0 4px 8px rgba(black, 0.2), 0 1px 2px rgba(black, 0.2);
+$shadowLow: 0 2px 4px rgba(black, 0.2), 0 1px 1px rgba(black, 0.2);

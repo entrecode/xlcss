@@ -7,18 +7,18 @@
 // ---------
 
 // Font sizes
-$font-ratio: 1.333 !default; // perfect fourth
+$fontRatio: 1.333 !default; // perfect fourth
 
-$h6-size: 16 !default;
-$h5-size: ($h6-size * $font-ratio) !default;
-$h4-size: ($h5-size * $font-ratio) !default;
-$h3-size: ($h4-size * $font-ratio) !default;
-$h2-size: ($h3-size * $font-ratio) !default;
-$h1-size: ($h2-size * $font-ratio) !default;
+$h6Size: 16 !default;
+$h5Size: ($h6Size * $fontRatio) !default;
+$h4Size: ($h5Size * $fontRatio) !default;
+$h3Size: ($h4Size * $fontRatio) !default;
+$h2Size: ($h3Size * $fontRatio) !default;
+$h1Size: ($h2Size * $fontRatio) !default;
 
-$giga-size: $h1-size !default;
-$mega-size: $h2-size !default;
-$kilo-size: $h3-size !default;
+$gigaSize: $h1Size !default;
+$megaSize: $h2Size !default;
+$kiloSize: $h3Size !default;
 
 //
 // Styles
@@ -60,44 +60,44 @@ h4, h5, h6,
 
 h1,
 .h1 {
-  font-size: pxToEm($h1-size * .75);
+  font-size: pxToEm($h1Size * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($h1-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($h1Size);
   }
 }
 
 h2,
 .h2 {
-  font-size: pxToEm($h2-size * .75);
+  font-size: pxToEm($h2Size * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($h2-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($h2Size);
   }
 }
 
 h3,
 .h3 {
-  font-size: pxToEm($h3-size * .75);
+  font-size: pxToEm($h3Size * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($h3-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($h3Size);
   }
 }
 
 h4,
 .h4 {
-  font-size: pxToEm($h4-size);
+  font-size: pxToEm($h4Size);
 }
 
 h5,
 .h5 {
-  font-size: pxToEm($h5-size);
+  font-size: pxToEm($h5Size);
 }
 
 h6,
 .h6 {
-  font-size: pxToEm($h6-size);
+  font-size: pxToEm($h6Size);
 }
 
 //
@@ -106,27 +106,27 @@ h6,
 
 // Giga
 .giga {
-  font-size: pxToEm($giga-size * .75);
+  font-size: pxToEm($gigaSize * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($giga-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($gigaSize);
   }
 }
 
 // Mega
 .mega{
-  font-size: pxToEm($mega-size * .75);
+  font-size: pxToEm($megaSize * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($mega-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($megaSize);
   }
 }
 
 // Kilo
 .kilo {
-  font-size: pxToEm($kilo-size * .75);
+  font-size: pxToEm($kiloSize * .75);
 
-  @media (min-width: $bp-sm) {
-    font-size: pxToEm($kilo-size);
+  @media (min-width: $bpSm) {
+    font-size: pxToEm($kiloSize);
   }
 }

@@ -1,109 +1,61 @@
-$button-shadow: 0 1px 8px rgba(black, 0.2), 0 1px 1px rgba(black, 0.2);
+// Button Basic Styles
+// ------------------------------------------------
 
-.button {
+// Button Default Styles
+$buttonBg: getColor(button, bg) !default;
+$buttonBorder: none !default;
+$buttonText: getColor(button, text) !default;
+$buttonRadius: 2px !default;
+$buttonShadow: none !default;
+
+// Button Default Hover Styles
+$buttonHoverBg: getColor(button, bgHover) !default;
+$buttonHoverBorder: !default;
+$buttonHoverText: getColor(button, textHover) !default;
+$buttonHoverRadius: !default;
+$buttonHoverShadow: !default;
+
+// Button Default Active Styles
+$buttonActiveBg: !default;
+$buttonActiveBorder: !default;
+$buttonActiveText: !default;
+$buttonActiveRadius: !default;
+$buttonActiveShadow: !default;
+
+input[type=submit],
+button,
+.button{
   @include appearance(none);
   @include user-select(none);
+  @include button-styles($buttonBg, $buttonBorder, $buttonText, $buttonRadius, $buttonShadow)
   outline: none;
   border: none;
   display: inline-block;
-  background-color: getColor(button, bg);
+  text-align: center;
+  vertical-align: middle;
+  @include ellipsis;
+  margin: unitSize(.5);
+  cursor: pointer;
+  font-weight: bold;
+  touch-action: manipulation;
   font-size: unitSize(2);
-  color: getColor(button, text);
   height: unitSize(5);
   line-height: unitSize(3);
   min-width: unitSize(5);
   padding: unitSize(1);
-  font-weight: bold;
-  vertical-align: middle;
-  text-align: center;
   text-decoration: none;
-  margin: 0;
-  @include transition(all .4s);
-  touch-action: manipulation;
-  cursor: pointer;
-  white-space: nowrap;
 
   &:hover {
-    background-color: getColor(button, bgHover);
-    color: getColor(button, textHover);
-    outline: none;
+    @include button-styles($buttonHoverBg, $buttonHoverBorder, $buttonHoverText, $buttonHoverRadius, $buttonHoverShadow)
+  }
+
+  &:active,
+  &.active {
+    @include button-styles($buttonActiveBg, $buttonActiveBorder, $buttonActiveText, $buttonActiveRadius, $buttonActiveShadow)
   }
 
   &:active,
   &:focus {
     outline: none;
-  }
-
-  // Default Button
-  // ------------------------------------------------
-
-  &.button--default {
-    background-color: getColor(buttonDefault, bg);
-    color: getColor(buttonDefault, text);
-
-    &:hover {
-      background-color: getColor(buttonDefault, bgHover);
-      color: getColor(buttonDefault, textHover);
-    }
-  }
-
-  // Button Helper
-  // ------------------------------------------------
-
-  &.button--block {
-    display: block;
-    width: 100%;
-  }
-
-  &.button--wide {
-    min-width: unitSize(30);
-    padding-left: unitSize(2);
-    padding-right: unitSize(2);
-  }
-
-  &.button--sm {
-    font-size: 14px;
-    line-height: 24px;
-    padding: 4px;
-    height: 32px;
-    min-width: 32px;
-
-    [class*="icon"] {
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-  &.button--round {
-    @include border-radius(unitSize(2.5));
-  }
-
-  &.button--raised {
-    @include box-shadow($button-shadow);
-  }
-}
-
-.button--floating{
-  @extend .button;
-  @extend .button--default;
-  @extend .button--round;
-  @extend .button--raised;
-}
-
-.button--close {
-  @extend .button;
-  @extend .button--round;
-  position: absolute;
-  right: 4px;
-  top: 0;
-  color: getColor(button, close);
-  background-color: transparent;
-
-  &:hover {
-    color: getColor(button, closeHover);
-  }
-
-  .as-icon {
-    color: inherit;
   }
 }

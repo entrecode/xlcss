@@ -1,4 +1,4 @@
-$shadow-listItem: 0 2px 4px rgba(black,0.1);
+$shadowListItem: 0 2px 4px rgba(black,0.1);
 
 li.list-item,
 .list-item {
@@ -57,6 +57,6 @@ li.list-item,
 
 a.list-item{
   &:hover{
-    @include box-shadow($shadow-listItem);
+    @include box-shadow($shadowListItem);
   }
 }

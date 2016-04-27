@@ -16,16 +16,16 @@
 $prefix: "data-" !default;
 
 // Max width for container
-$container-width: 1200px !default;
+$containerWidth: 1200px !default;
 
 // Gutter size in pixels (without the unit we can do math easily)
 $gutter: 32 !default;
 
 // Number of columns in a row
-$num-columns: 12 !default;
+$numColumns: 12 !default;
 
 // If you only want to use the mixins for "semantic grids" set this to true
-$only-semantic: false !default;
+$onlySemantic: false !default;
 
 $responsive: true;
 
@@ -45,7 +45,7 @@ $responsive: true;
 @mixin container() {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: $container-width;
+  max-width: $containerWidth;
   padding-left: ($gutter / 2) + px;
   padding-right: ($gutter / 2) + px;
   width: 100%;
@@ -60,8 +60,8 @@ $responsive: true;
 // @clear-gutter: Set true to contain columns with gutter
 //
 
-@mixin row($clear-gutter: true) {
-  @if $clear-gutter {
+@mixin row($clearGutter: true) {
+  @if $clearGutter {
     margin-left: ($gutter / -2) + px;
     margin-right: ($gutter / -2) + px;
   }
@@ -87,19 +87,19 @@ $responsive: true;
 // @add-gutter: Set this to true if you want to create padding for the column
 //
 
-@mixin column($size, $add-gutter: true) {
+@mixin column($size, $addGutter: true) {
   box-sizing: border-box;
   float: left;
   margin-bottom: 0;
   width: 100%;
 
   @if $size < 1 {
-    @media (min-width: $bp-small) {
+    @media (min-width: $bpSmall) {
       width: ($size * 100%);
     }
   }
 
-  @if $add-gutter {
+  @if $addGutter {
     padding-left: ($gutter / 2) + px;
     padding-right: ($gutter / 2) + px;
   }
@@ -123,7 +123,7 @@ $responsive: true;
 // Semantic Styles
 // =============================================================================
 
-@if not $only-semantic {
+@if not $onlySemantic {
   //
   // General Styles
   // --------------
@@ -168,16 +168,16 @@ $responsive: true;
   }
 
   // Create columns
-  @for $i from 1 through $num-columns {
+  @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}"] {
-      width: (($i / $num-columns) * 100%);
+      width: (($i / $numColumns) * 100%);
     }
   }
 
   // Offset for columns
-  @for $i from 1 through ($num-columns - 1) {
+  @for $i from 1 through ($numColumns - 1) {
     [#{$prefix}col~="+#{$i}"] {
-      margin-left: (($i / $num-columns) * 100%);
+      margin-left: (($i / $numColumns) * 100%);
     }
   }
 
@@ -185,16 +185,16 @@ $responsive: true;
   @if $responsive == false {
     .nonresponsive {
       // Create columns
-      @for $i from 1 through $num-columns {
+      @for $i from 1 through $numColumns {
         [#{$prefix}col~="#{$i}"] {
-          width: (($i / $num-columns) * 100%);
+          width: (($i / $numColumns) * 100%);
         }
       }
 
       // Offset for columns
-      @for $i from 1 through ($num-columns - 1) {
+      @for $i from 1 through ($numColumns - 1) {
         [#{$prefix}col~="+#{$i}"] {
-          margin-left: (($i / $num-columns) * 100%);
+          margin-left: (($i / $numColumns) * 100%);
         }
       }
     }

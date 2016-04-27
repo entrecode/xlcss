@@ -1,16 +1,19 @@
-.input--group {
-  padding: unitSize(.5) 0;
-  margin: 0 0 unitSize(.5) 0;
+// Input Style
+// --------------------------
 
-  p{
-    margin: 0 0 unitSize(.5) 0;
+$inputBG: getColor(input, bg);
+$inputText: getColor(input, text);
+$inputBorder: 1px solid getColor(input, border);
+$inputRadius: 4px;
 
-    small{
-      font-size: pxToEm(12);
-      color: getColor(text, light);
-    }
-  }
-}
+// InputDisabled Style
+// --------------------------
+
+$inputDisabledBG: getColor(inputDisabled, bg);
+$inputDisabledText: getColor(inputDisabled, text);
+$inputDisabledBorder: ;
+$inputDisabledRadius: ;
+
 
 label {
   font-size: pxToEm(14);
@@ -28,21 +31,25 @@ textarea {
   font-weight: normal;
   display: block;
   padding: unitSize(.5) unitSize(1);
-  border: 1px solid getColor(input, border);
-  @include border-radius(4px);
   line-height: normal;
-  color: getColor(input, text);
   min-height: unitSize(3);
   outline: none;
   margin-bottom: unitSize(.5);
+  background-color: $inputBG;
+  color: $inputText;
+  border: $inputBorder;
+  @include border-radius($inputRadius);
 
   &:focus {
     outline: none;
   }
 
   &[disabled] {
-    background-color: getColor(input, disabledBg);
     cursor: not-allowed;
+    background-color: $inputDisabledBG;
+    color: $inputDisabledText;
+    border: $inputDisabledBorder;
+    @include border-radius($inputDisabledRadius);
   }
 
   &:-webkit-autofill,
@@ -51,22 +58,6 @@ textarea {
   &:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     color: white;
-  }
-
-
-  //flat input style
-
-  &.input--flat {
-    background-color: transparent;
-    border: none;
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid getColor(inputFlat, border);
-    @include border-radius(0);
-
-    &:focus{
-      border-bottom: 2px solid getColor(inputFlat, borderActive);
-    }
   }
 }
 
@@ -84,6 +75,10 @@ input:not([type="submit"]) {
       outline: none;
     }
   }
+}
+
+input[type="submit"] {
+  @extend .as-btn;
 }
 
 // Keep the original size for this small inputs
@@ -212,12 +207,4 @@ input[type="range"] {
     margin-top: -5px;
     width: 16px;
   }
-}
-
-.submitted .ng-invalid, .ng-invalid.ng-dirty {
-  border-color: getColor(state, error);
-}
-
-.ng-valid.ng-dirty {
-  border-color: getColor(state, success);
 }

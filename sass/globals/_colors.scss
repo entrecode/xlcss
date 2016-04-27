@@ -1,13 +1,7 @@
 //
 // Color Palette
 // -------------
-
-
-// Base Color Palette
-$font: #263238;
-$link: #FF8A80;
-$linkHover: #FF5252;
-$yellow-200: #fff59d;
+@import '../custom/colors';
 
 // Colors
 $colors: (
@@ -15,7 +9,7 @@ $colors: (
                 "primary":   $link,
                 "divider": rgba(black,0.1),
                 "link": $link,
-                "linkHover": $link
+                "linkHover": $linkHover,
         ),
 
         text: (
@@ -23,8 +17,6 @@ $colors: (
                 "light": rgba($font,0.6),
                 "lightest": rgba($font,0.4),
                 "disabled": rgba($font,0.2),
-                "link": $link,
-                "linkHover": $linkHover
         ),
 
         headings: (
@@ -42,51 +34,36 @@ $colors: (
                 "bgHover": white,
                 "text": $link,
                 "textHover": $linkHover,
-                "close": rgba($font,0.4),
-                "closeHover": rgba($font,0.8)
-        ),
-
-        buttonDefault: (
-                "bg": $link,
-                "bgHover": $linkHover,
-                "text": white,
-                "textHover": white
-        ),
-
-        dropdown: (
-                "caret": rgba($font, 0.2),
-                "itemBg": transparent,
-                "itemHoverBg": rgba($yellow-200,0.6),
-                "text": $link,
-                "textHover": $linkHover,
-                "menuBg": white,
-                "menuText": $link,
-                "menuTextHover": $linkHover,
-                "menuTextHoverBg": $linkHover
-        ),
-
-        toggleSwitch: (
-                "bg": rgba(black, 0.1),
-                "on": $link,
-                "off": white
-        ),
-
-        panel: (
-                "bg": transparent,
-                "headingBg": transparent,
-                "headingText": rgba(black, 0.4)
         ),
 
         input: (
+                "bg": white,
                 "text": $font,
                 "border": rgba(black,0.1),
-                "disabledBg": rgba(black,0.1),
+        ),
+
+        inputDisabled: (
+                "bg": rgba(black,0.1),
+                "text": $font,
+                "border": rgba(black,0.1),
         ),
 
         inputFlat: (
                 "text": $font,
                 "border": rgba(black,0.1),
                 "borderActive": $link,
+        ),
+
+        dropdown: (
+                "caret": rgba($font, 0.2),
+                "itemBg": transparent,
+                "itemHoverBg": rgba($highlight,0.6),
+                "text": $link,
+                "textHover": $linkHover,
+                "menuBg": white,
+                "menuText": $link,
+                "menuTextHover": $linkHover,
+                "menuTextHoverBg": $linkHover
         ),
 
         overlay: (
@@ -110,10 +87,12 @@ $colors: (
 
         table: (
                 "headBg": #EEEEEE,
-        )
+        ),
 
 ) !default;
 
+// Merge maps
+$colors: map-merge($colors, $customColors);
 
 //
 // Colors
