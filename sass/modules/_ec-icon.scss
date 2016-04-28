@@ -975,4 +975,7 @@
   &.text-input:before {
     content: "\e0d9";
   }
+  &.tablet:before {
+    content: "\e0da";
+  }
 }

@@ -77,10 +77,6 @@ input:not([type="submit"]) {
   }
 }
 
-input[type="submit"] {
-  @extend .as-btn;
-}
-
 // Keep the original size for this small inputs
 input[type="checkbox"],
 input[type="file"],

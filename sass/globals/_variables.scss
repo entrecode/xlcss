@@ -1,3 +1,12 @@
+// Fixed color Variables
+
+$font: #263238;
+$link: #FF8A80;
+$highlight: #fff59d;
+
+// generated color Variables
+$linkHover: darken($link,10%);
+
 // Breakpoints
 $bpXs: 30em !default; /* 480px Big smartphone */
 $bpSm: 48em !default; /* 768px Small devices */
@@ -12,7 +21,8 @@ $bpMdMax: ($bpLg - 1) !default;
 $bpLgMax: ($bpXl - 1) !default;
 
 // z-index positioning
-$zMainHeader: 400;
+
+
 $zToolbar: 400;
 $zSidebar: 1000;
 $zOverlay: 1000;

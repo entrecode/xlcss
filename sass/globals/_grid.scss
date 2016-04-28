@@ -51,7 +51,6 @@ $responsive: true;
   width: 100%;
 }
 
-
 //
 // Rows
 // ----
@@ -74,9 +73,10 @@ $responsive: true;
     display: table;
   }
 
-  &:after { clear: both; }
+  &:after {
+    clear: both;
+  }
 }
-
 
 //
 // Columns
@@ -105,7 +105,6 @@ $responsive: true;
   }
 }
 
-
 //
 // Column offset
 // -------
@@ -117,7 +116,6 @@ $responsive: true;
 @mixin columnOffset($offset) {
   margin-left: $offset * 100%;
 }
-
 
 //
 // Semantic Styles
@@ -136,10 +134,21 @@ $responsive: true;
     @include container();
   }
 
+  [#{$prefix}container="full"] {
+    @include container();
+    max-width: 100% !important;
+
+    > [#{$prefix}row] {
+      > [#{$prefix}col~="12"] {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
   [#{$prefix}row] {
     @include row();
   }
-
 
   //
   // Column Styles
@@ -161,7 +170,6 @@ $responsive: true;
   //   </div>
   // </main>
   //
-
 
   [#{$prefix}col] {
     @include column(1);

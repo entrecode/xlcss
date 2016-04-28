@@ -1,7 +1,6 @@
 //
 // Color Palette
 // -------------
-@import '../custom/colors';
 
 // Colors
 $colors: (
@@ -10,6 +9,7 @@ $colors: (
                 "divider": rgba(black,0.1),
                 "link": $link,
                 "linkHover": $linkHover,
+                "disabled": rgba($font,0.2),
         ),
 
         text: (
@@ -90,9 +90,6 @@ $colors: (
         ),
 
 ) !default;
-
-// Merge maps
-$colors: map-merge($colors, $customColors);
 
 //
 // Colors
