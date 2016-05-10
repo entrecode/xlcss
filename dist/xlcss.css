@@ -694,6 +694,9 @@ address {
 .text--left {
   text-align: left; }
 
+.lead {
+  font-size: 1.5em; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #263238;
@@ -1129,8 +1132,8 @@ button.button--lg,
 
 @font-face {
   font-family: "ec-icon";
-  src: url("/assets/fonts/ec-icon/ec-icon.eot");
-  src: url("/assets/fonts/ec-icon/ec-icon.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/ec-icon/ec-icon.woff") format("woff"), url("/assets/fonts/ec-icon/ec-icon.ttf") format("truetype"), url("/assets/fonts/ec-icon/ec-icon.svg#appsite") format("svg");
+  src: url("../fonts/ec-icon/ec-icon.eot");
+  src: url("../fonts/ec-icon/ec-icon.eot?#iefix") format("embedded-opentype"), url("../fonts/ec-icon/ec-icon.woff") format("woff"), url("../fonts/ec-icon/ec-icon.ttf") format("truetype"), url("../fonts/ec-icon/ec-icon.svg#appsite") format("svg");
   font-weight: normal;
   font-style: normal; }
 

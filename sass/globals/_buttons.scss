@@ -27,7 +27,7 @@ button,
 .button{
   @include appearance(none);
   @include user-select(none);
-  @include button-styles($buttonBg, $buttonBorder, $buttonText, $buttonRadius, $buttonShadow)
+  @include button-styles($buttonBg, $buttonBorder, $buttonText, $buttonRadius, $buttonShadow);
   outline: none;
   border: none;
   display: inline-block;
