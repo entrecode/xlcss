@@ -12,6 +12,16 @@
   }
 }
 
+.ng-submitted{
+  input:not([type="submit"]),
+  select,
+  textarea{
+    &.ng-invalid{
+      border-color: getColor(state, error);
+    }
+  }
+}
+
 
 //flat input style
 

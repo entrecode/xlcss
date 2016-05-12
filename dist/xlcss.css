@@ -1077,15 +1077,6 @@ a {
   a:hover, a:focus, a:active {
     outline: none; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
-.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
-  color: #FF8A80; }
-  h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus,
-  .h1 a:hover,
-  .h1 a:focus, .h2 a:hover, .h2 a:focus, .h3 a:hover, .h3 a:focus, .h4 a:hover, .h4 a:focus, .h5 a:hover, .h5 a:focus, .h6 a:hover, .h6 a:focus {
-    text-decoration: none;
-    color: #ff5b4d; }
-
 abbr[title] {
   border-bottom: 1px dotted;
   cursor: help; }
@@ -1245,6 +1236,15 @@ h5,
 h6,
 .h6 {
   font-size: 1em; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+  color: #FF8A80; }
+  h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus,
+  .h1 a:hover,
+  .h1 a:focus, .h2 a:hover, .h2 a:focus, .h3 a:hover, .h3 a:focus, .h4 a:hover, .h4 a:focus, .h5 a:hover, .h5 a:focus, .h6 a:hover, .h6 a:focus {
+    text-decoration: none;
+    color: #ff5b4d; }
 
 .giga {
   font-size: 3.15655em; }
@@ -1434,6 +1434,11 @@ input[type="range"] {
     .input--group p small {
       font-size: 0.75em;
       color: rgba(38, 50, 56, 0.6); }
+
+.ng-submitted input:not([type="submit"]).ng-invalid,
+.ng-submitted select.ng-invalid,
+.ng-submitted textarea.ng-invalid {
+  border-color: #ca4829; }
 
 input:not([type="submit"]).input--flat,
 select.input--flat,
