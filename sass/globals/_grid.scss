@@ -180,12 +180,72 @@ $responsive: true;
     [#{$prefix}col~="#{$i}"] {
       width: (($i / $numColumns) * 100%);
     }
+
+    @media (min-width: $bpXs){
+      [#{$prefix}col~="#{$i}xs"] {
+        width: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpSm){
+      [#{$prefix}col~="#{$i}sm"] {
+        width: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpMd){
+      [#{$prefix}col~="#{$i}md"] {
+        width: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpLg){
+      [#{$prefix}col~="#{$i}lg"] {
+        width: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpXl){
+      [#{$prefix}col~="#{$i}xl"] {
+        width: (($i / $numColumns) * 100%);
+      }
+    }
   }
 
   // Offset for columns
   @for $i from 1 through ($numColumns - 1) {
     [#{$prefix}col~="+#{$i}"] {
       margin-left: (($i / $numColumns) * 100%);
+    }
+
+    @media (min-width: $bpXs){
+      [#{$prefix}col~="+#{$i}xs"] {
+        margin-left: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpSm){
+      [#{$prefix}col~="+#{$i}sm"] {
+        margin-left: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpMd){
+      [#{$prefix}col~="+#{$i}md"] {
+        margin-left: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpLg){
+      [#{$prefix}col~="+#{$i}lg"] {
+        margin-left: (($i / $numColumns) * 100%);
+      }
+    }
+
+    @media (min-width: $bpXl){
+      [#{$prefix}col~="+#{$i}xl"] {
+        margin-left: (($i / $numColumns) * 100%);
+      }
     }
   }
 
