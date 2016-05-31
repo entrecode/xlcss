@@ -6,7 +6,7 @@
     "Konstantin Ehlers <ehlers@entrecode.de>"
   ],
   "description": "minimalistic css framework by entrecode.de",
-  "main": "sass/xlcss.scss",
+  "main": "dist/xlcss.min.css",
   "keywords": [
     "css",
     "sass",
