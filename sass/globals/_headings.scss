@@ -10,11 +10,11 @@
 $fontRatio: 1.333 !default; // perfect fourth
 
 $h6Size: 16 !default;
-$h5Size: ($h6Size * $fontRatio) !default;
-$h4Size: ($h5Size * $fontRatio) !default;
-$h3Size: ($h4Size * $fontRatio) !default;
-$h2Size: ($h3Size * $fontRatio) !default;
-$h1Size: ($h2Size * $fontRatio) !default;
+$h5Size: round($h6Size * $fontRatio) !default;
+$h4Size: round($h5Size * $fontRatio) !default;
+$h3Size: round($h4Size * $fontRatio) !default;
+$h2Size: round($h3Size * $fontRatio) !default;
+$h1Size: round($h2Size * $fontRatio) !default;
 
 $gigaSize: $h1Size !default;
 $megaSize: $h2Size !default;
@@ -60,7 +60,7 @@ h4, h5, h6,
 
 h1,
 .h1 {
-  font-size: pxToEm($h1Size * .75);
+  font-size: pxToEm($h1Size * .66);
 
   @media (min-width: $bpSm) {
     font-size: pxToEm($h1Size);
@@ -69,7 +69,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: pxToEm($h2Size * .75);
+  font-size: pxToEm($h2Size * .66);
 
   @media (min-width: $bpSm) {
     font-size: pxToEm($h2Size);
@@ -78,7 +78,7 @@ h2,
 
 h3,
 .h3 {
-  font-size: pxToEm($h3Size * .75);
+  font-size: pxToEm($h3Size * .66);
 
   @media (min-width: $bpSm) {
     font-size: pxToEm($h3Size);

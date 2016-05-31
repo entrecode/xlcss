@@ -1,0 +1,20 @@
+dl {
+  @include clearfix;
+
+  dt {
+    margin-bottom: unitSize(.5);
+
+    @media (min-width: $bpSm) {
+      width: 80px;
+      float: left;
+    }
+  }
+
+  dd {
+    margin-bottom: unitSize(.5);
+
+    @media (min-width: $bpSm) {
+      margin-right: 96px;
+    }
+  }
+}

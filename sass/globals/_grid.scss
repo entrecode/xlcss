@@ -178,36 +178,46 @@ $responsive: true;
   // Create columns
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}"] {
-      width: (($i / $numColumns) * 100%);
+      width: floor(($i / $numColumns) * 100%);
     }
+  }
 
-    @media (min-width: $bpXs){
-      [#{$prefix}col~="#{$i}xs"] {
-        width: (($i / $numColumns) * 100%);
+  @for $i from 1 through $numColumns {
+    [#{$prefix}col~="#{$i}xs"] {
+      @media (min-width: $bpXs) {
+        width: floor(($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpSm){
-      [#{$prefix}col~="#{$i}sm"] {
-        width: (($i / $numColumns) * 100%);
+  @for $i from 1 through $numColumns {
+    [#{$prefix}col~="#{$i}sm"] {
+      @media (min-width: $bpSm) {
+        width: floor(($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpMd){
-      [#{$prefix}col~="#{$i}md"] {
-        width: (($i / $numColumns) * 100%);
+  @for $i from 1 through $numColumns {
+    [#{$prefix}col~="#{$i}md"] {
+      @media (min-width: $bpMd) {
+        width: floor(($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpLg){
-      [#{$prefix}col~="#{$i}lg"] {
-        width: (($i / $numColumns) * 100%);
+  @for $i from 1 through $numColumns {
+    [#{$prefix}col~="#{$i}lg"] {
+      @media (min-width: $bpLg) {
+        width: floor(($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpXl){
-      [#{$prefix}col~="#{$i}xl"] {
-        width: (($i / $numColumns) * 100%);
+  @for $i from 1 through $numColumns {
+    [#{$prefix}col~="#{$i}xl"] {
+      @media (min-width: $bpXl) {
+        width: floor(($i / $numColumns) * 100%);
       }
     }
   }
@@ -217,33 +227,43 @@ $responsive: true;
     [#{$prefix}col~="+#{$i}"] {
       margin-left: (($i / $numColumns) * 100%);
     }
+  }
 
-    @media (min-width: $bpXs){
-      [#{$prefix}col~="+#{$i}xs"] {
+  @for $i from 1 through ($numColumns - 1) {
+    [#{$prefix}col~="+#{$i}xs"] {
+      @media (min-width: $bpXs) {
         margin-left: (($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpSm){
-      [#{$prefix}col~="+#{$i}sm"] {
+  @for $i from 1 through ($numColumns - 1) {
+    [#{$prefix}col~="+#{$i}sm"] {
+      @media (min-width: $bpSm) {
         margin-left: (($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpMd){
-      [#{$prefix}col~="+#{$i}md"] {
+  @for $i from 1 through ($numColumns - 1) {
+    [#{$prefix}col~="+#{$i}md"] {
+      @media (min-width: $bpMd) {
         margin-left: (($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpLg){
-      [#{$prefix}col~="+#{$i}lg"] {
+  @for $i from 1 through ($numColumns - 1) {
+    [#{$prefix}col~="+#{$i}lg"] {
+      @media (min-width: $bpLg) {
         margin-left: (($i / $numColumns) * 100%);
       }
     }
+  }
 
-    @media (min-width: $bpXl){
-      [#{$prefix}col~="+#{$i}xl"] {
+  @for $i from 1 through ($numColumns - 1) {
+    [#{$prefix}col~="+#{$i}xl"] {
+      @media (min-width: $bpXl) {
         margin-left: (($i / $numColumns) * 100%);
       }
     }

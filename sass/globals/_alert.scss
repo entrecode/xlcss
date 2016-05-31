@@ -1,0 +1,12 @@
+.alert {
+  padding: unitSize(1);
+  @include border-radius(4px);
+  width: 100%;
+  font-size: pxToEm(14);
+  margin: unitSize(2) 0;
+
+  &.alert--error {
+    background-color: rgba(getColor(state, error), .2);
+    color: darken(getColor(state, error), 40%);
+  }
+}

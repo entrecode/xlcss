@@ -56,7 +56,7 @@ s {
 // Paragraphs
 // --------
 
-p:not(:last-child) {
+p{
   margin-bottom: unitSize(2);
 }
 
@@ -70,8 +70,7 @@ a {
   background-color: transparent;
   color: getColor(base, link);
 
-  &:hover,
-  &:focus {
+  &:hover{
     color: getColor(base, linkHover);
   }
 

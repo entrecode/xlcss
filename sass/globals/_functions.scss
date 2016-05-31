@@ -65,3 +65,23 @@ $base-unit: 8 !default;
   @return map-get(map-get($colors, $color), $value);
 }
 
+//
+// set color
+// --------
+// set color based on luminosity of another color
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $dark - Name of dark color (default: #000000)
+// @param {Color} $light - Name of light color (default: #ffffff)
+//
+// @return {Color} value of $light or $dark
+//
+
+@function setColor($color, $dark: #000000, $light: #ffffff) {
+  @if (lightness($color) > 50) {
+    @return $dark; // Lighter background, return dark color
+  } @else {
+    @return $light; // Darker background, return light color
+  }
+}
