@@ -1330,9 +1330,9 @@ textarea {
   width: 100%;
   font-weight: normal;
   display: block;
-  padding: 4px 8px;
-  line-height: normal;
-  min-height: 24px;
+  padding: 8px 8px;
+  line-height: 16px;
+  min-height: 32px;
   outline: none;
   margin-bottom: 4px;
   background-color: white;
@@ -1365,6 +1365,9 @@ textarea {
   textarea:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
     color: white; }
+
+select {
+  height: 32px; }
 
 input:not([type="submit"])[type="checkbox"]:focus, input:not([type="submit"])[type="radio"]:focus, input:not([type="submit"])[type="range"]:focus, input:not([type="submit"])[type="file"]:focus, input:not([type="submit"])[type="color"]:focus, input:not([type="submit"])[type="submit"]:focus {
   border-color: transparent;

@@ -30,9 +30,9 @@ textarea {
   width: 100%;
   font-weight: normal;
   display: block;
-  padding: unitSize(.5) unitSize(1);
-  line-height: normal;
-  min-height: unitSize(3);
+  padding: unitSize(1) unitSize(1);
+  line-height: unitSize(2);
+  min-height: unitSize(4);
   outline: none;
   margin-bottom: unitSize(.5);
   background-color: $inputBG;
@@ -59,6 +59,10 @@ textarea {
     transition: background-color 5000s ease-in-out 0s;
     color: white;
   }
+}
+
+select{
+  height: unitSize(4);
 }
 
 input:not([type="submit"]) {
