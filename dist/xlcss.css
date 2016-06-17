@@ -1401,7 +1401,7 @@ textarea {
   resize: vertical; }
 
 select {
-  background-color: transparent;
+  background-color: white;
   border-radius: 5px;
   padding: 0; }
   select[multiple] {
