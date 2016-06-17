@@ -118,7 +118,7 @@ textarea {
 
 // Style select like a standard input - Internet Explorer 11+
 select {
-  background-color: transparent;
+  background-color: $inputBG;
   border-radius: 5px;
   padding: 0;
 
