@@ -7,8 +7,8 @@
 // ---------
 
 // Font families
-$fontFamily: "Helvetica", "Arial", sans-serif !default;
-$fontFamilyMono: "Consolas", monospace !default;
+$fontFamily: sans-serif !default;
+$fontFamilyMono: monospace !default;
 $fontBaseSize: 16 !default;
 
 //
@@ -108,8 +108,6 @@ template,
 
 * {
   cursor: inherit;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -154,7 +152,6 @@ bdo[dir="rtl"] {
   direction: rtl;
 }
 
-
 figcaption {
   color: inherit;
   font-style: italic;
@@ -163,13 +160,13 @@ figcaption {
 
 // Selection
 ::selection {
-  background-color: #FFECB3;
+  background-color: getColor(state, selected);
 }
 
 ::-moz-selection {
-  background-color: #FFECB3;
+  background-color: getColor(state, selected);
 }
 
-span{
+span {
   vertical-align: top;
 }

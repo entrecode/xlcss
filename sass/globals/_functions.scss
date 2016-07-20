@@ -9,7 +9,6 @@
 // Base Size
 $base-unit: 8 !default;
 
-
 //
 // unitSize
 // --------
@@ -29,7 +28,6 @@ $base-unit: 8 !default;
 @function unitSize($multiplier, $offset: 0) {
   @return ($base-unit * $multiplier + $offset) + px;
 }
-
 
 //
 // pxToEm
@@ -79,8 +77,12 @@ $base-unit: 8 !default;
 //
 
 @function setColor($color, $dark: #000000, $light: #ffffff) {
-  @if (lightness($color) > 50) {
-    @return $dark; // Lighter background, return dark color
+  @if (lightness($color) > 52) {
+    @if (hue($color) < 55 and hue($color) > 65 or hue($color) < 175 and hue($color) > 185) {
+      @return $light; // Lighter background, return dark color
+    } @else {
+      @return $dark; // Lighter background, return dark color
+    }
   } @else {
     @return $light; // Darker background, return light color
   }

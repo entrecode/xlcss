@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px;
-  @include transform(translate3D(2px,0,0));
+  @include transform(translate3D(2px, 0, 0));
 }
 
 ::-webkit-scrollbar-button {
@@ -10,21 +10,21 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(black,0.4);
+  background: rgba(black, 0.4);
   border: none;
   border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(black,0.4);
+  background: rgba(black, 0.4);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background: rgba(black,0.4);
+  background: rgba(black, 0.4);
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(black,0.1);
+  background: rgba(black, 0.1);
   border: none;
   border-radius: 0;
 }

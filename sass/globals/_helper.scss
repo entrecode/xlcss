@@ -4,7 +4,7 @@ $base-padding: unitSize(2);
   padding: $base-padding;
 }
 
-.padding--top{
+.padding--top {
   padding-top: $base-padding;
 }
 
@@ -25,15 +25,15 @@ $base-padding: unitSize(2);
   padding-bottom: $base-padding;
 }
 
-.padding--vertical{
+.padding--vertical {
   padding-left: $base-padding;
   padding-right: $base-padding;
 }
 
-.pull--right{
+.pull--right {
   float: right !important;
 }
 
-.pull--left{
+.pull--left {
   float: left !important;
 }
