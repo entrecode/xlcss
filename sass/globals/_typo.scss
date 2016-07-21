@@ -59,12 +59,6 @@ p {
 a {
   cursor: pointer;
   text-decoration: none;
-  background-color: transparent;
-  color: getColor(base, link);
-
-  &:hover {
-    color: getColor(base, linkHover);
-  }
 
   &:hover,
   &:focus,

@@ -5,7 +5,7 @@ label {
   display: block;
 }
 
-input:not([type="submit"]):not([type="reset"]),
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
   width: 100%;
@@ -58,6 +58,7 @@ input[type="image"],
 input[type="radio"] {
   height: auto;
   width: auto;
+  display: inline-block;
 }
 
 // Checkbox & radio

@@ -8,6 +8,7 @@
 
 // Base Size
 $base-unit: 8 !default;
+$fontBaseSize: 16 !default;
 
 //
 // unitSize
@@ -78,15 +79,15 @@ $base-unit: 8 !default;
 
 @function setColor($color, $dark: #000000, $light: #ffffff) {
   @if (opacity($color) > .5) {
-    @if (hue($color) > 50 and hue($color) < 70 or hue($color) > 170 and hue($color) < 190 or hue($color) > 290 and hue($color) < 310) {
-      @if (lightness($color) > 52) {
+    @if (hue($color) >= 50 and hue($color) <= 70 or hue($color) >= 170 and hue($color) <= 190 or hue($color) >= 290 and hue($color) <= 310) {
+      @if (lightness($color) < 52) {
         @return $dark; // Lighter background, return dark color
       } @else {
         @return $light; // Lighter background, return dark color
       }
     }
     @else{
-      @if (hue($color) > 230 and hue($color) < 250 or hue($color) > 0 and hue($color) < 10 or hue($color) > 350 and hue($color) < 360) {
+      @if (hue($color) >= 230 and hue($color) <= 250 or hue($color) >= 0 and hue($color) <= 10 or hue($color) >= 350 and hue($color) <= 360) {
         @if (lightness($color) > 70) {
           @return $dark; // Lighter background, return dark color
         } @else {
@@ -94,7 +95,11 @@ $base-unit: 8 !default;
         }
       }
       @else{
-        @return $light; // Lighter background, return dark color
+        @if (lightness($color) > 62) {
+          @return $dark; // Lighter background, return dark color
+        } @else {
+          @return $light; // Lighter background, return dark color
+        }
       }
     }
   }
@@ -102,4 +107,3 @@ $base-unit: 8 !default;
     @return $dark; // Lighter background, return dark color
   }
 }
-
