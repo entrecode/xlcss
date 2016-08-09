@@ -16,15 +16,13 @@
 @import 'button-styles';
 @import 'animation';
 
-
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
   background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
 
-@mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px /* size must be an even number */
-) {
+@mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px /* size must be an even number */) {
   background-image: -webkit-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: -moz-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: -ms-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
