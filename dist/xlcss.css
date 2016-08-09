@@ -88,6 +88,21 @@
     transform: translateY(0%);
     -webkit-backface-visibility: hidden; } }
 
+ul#unstyled,
+ol#unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+ul#inline,
+ol#inline {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul#inline > li,
+  ol#inline > li {
+    display: inline-block; }
+
 /* 480px Big smartphone */
 /* 768px Small devices */
 /* 960px Medium devices */
