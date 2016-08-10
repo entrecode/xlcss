@@ -104,7 +104,12 @@ fieldset{
     margin: 0 unitSize(-1);
 
     [data-col]{
-      padding: 0 unitSize(-1);
+      padding-left: unitSize(1);
+      padding-right: unitSize(1);
     }
   }
+}
+
+fieldset{
+  padding: 0;
 }

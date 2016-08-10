@@ -170,3 +170,24 @@ figcaption {
 span {
   vertical-align: top;
 }
+
+// fieldset reset
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
