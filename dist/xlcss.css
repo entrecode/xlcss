@@ -88,19 +88,19 @@
     transform: translateY(0%);
     -webkit-backface-visibility: hidden; } }
 
-ul#unstyled,
-ol#unstyled {
+ul.unstyled,
+ol.unstyled {
   margin: 0;
   padding: 0;
   list-style: none; }
 
-ul#inline,
-ol#inline {
+ul.inline,
+ol.inline {
   margin: 0;
   padding: 0;
   list-style: none; }
-  ul#inline > li,
-  ol#inline > li {
+  ul.inline > li,
+  ol.inline > li {
     display: inline-block; }
 
 /* 480px Big smartphone */
@@ -1245,7 +1245,7 @@ dl dd {
   margin-bottom: 4px; }
   @media (min-width: 48em) {
     dl dd {
-      margin-right: 96px; } }
+      margin-left: 96px; } }
 
 fieldset {
   border: none;
