@@ -1,44 +1,19 @@
 // Input Style
-// --------------------------
-
-$inputBG: getColor(input, bg);
-$inputText: getColor(input, text);
-$inputBorder: 1px solid getColor(input, border);
-$inputRadius: 4px;
-
-// InputDisabled Style
-// --------------------------
-
-$inputDisabledBG: getColor(inputDisabled, bg);
-$inputDisabledText: getColor(inputDisabled, text);
-$inputDisabledBorder: ;
-$inputDisabledRadius: ;
-
 
 label {
-  font-size: pxToEm(14);
-  line-height: unitSize(2.5);
-  font-weight: normal;
   margin-bottom: unitSize(.5);
   display: block;
 }
 
-input:not([type="submit"]),
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
 select,
 textarea {
-  font-size: pxToEm(14);
   width: 100%;
-  font-weight: normal;
   display: block;
   padding: unitSize(1) unitSize(1);
-  line-height: unitSize(2);
   min-height: unitSize(4);
   outline: none;
   margin-bottom: unitSize(.5);
-  background-color: $inputBG;
-  color: $inputText;
-  border: $inputBorder;
-  @include border-radius($inputRadius);
 
   &:focus {
     outline: none;
@@ -46,10 +21,6 @@ textarea {
 
   &[disabled] {
     cursor: not-allowed;
-    background-color: $inputDisabledBG;
-    color: $inputDisabledText;
-    border: $inputDisabledBorder;
-    @include border-radius($inputDisabledRadius);
   }
 
   &:-webkit-autofill,
@@ -61,18 +32,17 @@ textarea {
   }
 }
 
-select{
+select {
   height: unitSize(4);
 }
 
-input:not([type="submit"]) {
+input:not([type="submit"]):not([type="reset"]) {
   // Remove focus styles
   &[type="checkbox"],
   &[type="radio"],
   &[type="range"],
   &[type="file"],
-  &[type="color"],
-  &[type="submit"] {
+  &[type="color"] {
     &:focus {
       border-color: transparent;
       box-shadow: none;
@@ -88,6 +58,7 @@ input[type="image"],
 input[type="radio"] {
   height: auto;
   width: auto;
+  display: inline-block;
 }
 
 // Checkbox & radio
@@ -98,22 +69,6 @@ input[type="radio"] {
   vertical-align: middle;
 }
 
-// Checkbox & radio elements are inline with their label
-input[type="checkbox"] + label,
-input[type="radio"] + label {
-  display: inline-block;
-  margin: 0 0 0 .5em;
-  line-height: unitSize(4, -2);
-  vertical-align: middle;
-}
-
-// File upload
-input[type="file"] {
-  border: none;
-  line-height: 100%;
-  padding: 0;
-}
-
 // Textarea
 textarea {
   height: auto;
@@ -122,12 +77,9 @@ textarea {
 
 // Style select like a standard input - Internet Explorer 11+
 select {
-  background-color: $inputBG;
-  border-radius: 5px;
   padding: 0;
 
   &[disabled] {
-    color: getColor(text, secondary);
   }
 
   &[multiple] {
@@ -147,64 +99,17 @@ select {
   }
 }
 
-// Range input
-input[type="range"] {
-  border: none;
+fieldset{
+  [data-row]{
+    margin: 0 unitSize(-1);
+
+    [data-col]{
+      padding-left: unitSize(1);
+      padding-right: unitSize(1);
+    }
+  }
+}
+
+fieldset{
   padding: 0;
-  width: 100%;
-  -webkit-appearance: none;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::-webkit-slider-runnable-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    height: 5px;
-  }
-
-  &::-webkit-slider-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-    -webkit-appearance: none;
-  }
-
-  &::-moz-range-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    height: 5px;
-  }
-
-  &::-moz-range-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-  }
-
-  &::-ms-track {
-    background-color: darken(getColor(background, light), 10%);
-    border: none;
-    border-radius: 3px;
-    color: transparent;
-    height: 5px;
-  }
-
-  &::-ms-thumb {
-    border: none;
-    border-radius: 50%;
-    background-color: getColor(base, primary);
-    height: 16px;
-    margin-top: -5px;
-    width: 16px;
-  }
 }

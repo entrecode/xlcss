@@ -4,36 +4,28 @@ $base-padding: unitSize(2);
   padding: $base-padding;
 }
 
-.padding--top{
+.padding-top {
   padding-top: $base-padding;
 }
 
-.padding--right {
+.padding-right {
   padding-right: $base-padding;
 }
 
-.padding--bottom {
+.padding-bottom {
   padding-bottom: $base-padding;
 }
 
-.padding--left {
+.padding-left {
   padding-left: $base-padding;
 }
 
-.padding--horizontal {
+.padding-horizontal {
   padding-top: $base-padding;
   padding-bottom: $base-padding;
 }
 
-.padding--vertical{
+.padding-vertical {
   padding-left: $base-padding;
   padding-right: $base-padding;
-}
-
-.pull--right{
-  float: right !important;
-}
-
-.pull--left{
-  float: left !important;
 }

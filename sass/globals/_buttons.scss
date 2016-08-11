@@ -1,33 +1,12 @@
 // Button Basic Styles
 // ------------------------------------------------
 
-// Button Default Styles
-$buttonBg: getColor(button, bg) !default;
-$buttonBorder: none !default;
-$buttonText: getColor(button, text) !default;
-$buttonRadius: 2px !default;
-$buttonShadow: none !default;
-
-// Button Default Hover Styles
-$buttonHoverBg: getColor(button, bgHover) !default;
-$buttonHoverBorder: !default;
-$buttonHoverText: getColor(button, textHover) !default;
-$buttonHoverRadius: !default;
-$buttonHoverShadow: !default;
-
-// Button Default Active Styles
-$buttonActiveBg: !default;
-$buttonActiveBorder: !default;
-$buttonActiveText: !default;
-$buttonActiveRadius: !default;
-$buttonActiveShadow: !default;
-
 input[type=submit],
+input[type=reset],
 button,
-.button{
+.btn {
   @include appearance(none);
   @include user-select(none);
-  @include button-styles($buttonBg, $buttonBorder, $buttonText, $buttonRadius, $buttonShadow);
   outline: none;
   border: none;
   display: inline-block;
@@ -44,15 +23,6 @@ button,
   min-width: unitSize(5);
   padding: unitSize(1);
   text-decoration: none;
-
-  &:hover {
-    @include button-styles($buttonHoverBg, $buttonHoverBorder, $buttonHoverText, $buttonHoverRadius, $buttonHoverShadow)
-  }
-
-  &:active,
-  &.active {
-    @include button-styles($buttonActiveBg, $buttonActiveBorder, $buttonActiveText, $buttonActiveRadius, $buttonActiveShadow)
-  }
 
   &:active,
   &:focus {

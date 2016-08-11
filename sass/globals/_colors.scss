@@ -2,105 +2,23 @@
 // Color Palette
 // -------------
 
+$text: #222222;
+$link: #FF5252;
+
 // Colors
 $colors: (
         base: (
-                "primary":   $link,
-                "divider": rgba(black,0.1),
+                "text": $text,
                 "link": $link,
-                "linkHover": $linkHover,
-                "disabled": rgba($font,0.2),
+                "linkHover": darken($link, 10%),
         ),
-
         text: (
-                "default": $font,
-                "light": rgba($font,0.6),
-                "lightest": rgba($font,0.4),
-                "disabled": rgba($font,0.2),
+                "default": $text,
+                "light": rgba($text, 0.6),
+                "lighter": rgba($text, 0.4)
         ),
-
-        headings: (
-                "default":  $font,
-                "light": rgba($font,0.6),
-        ),
-
-        background: (
-                "body":  white,
-                "light": #f5f5f5,
-        ),
-
-        button: (
-                "bg": white,
-                "bgHover": white,
-                "text": $link,
-                "textHover": $linkHover,
-        ),
-
-        input: (
-                "bg": white,
-                "text": $font,
-                "border": rgba(black,0.1),
-        ),
-
-        inputDisabled: (
-                "bg": rgba(black,0.1),
-                "text": $font,
-                "border": rgba(black,0.1),
-        ),
-
-        inputFlat: (
-                "text": $font,
-                "border": rgba(black,0.1),
-                "borderActive": $link,
-        ),
-
-        dropdown: (
-                "caret": rgba($font, 0.2),
-                "itemBg": transparent,
-                "itemHoverBg": rgba($highlight,0.6),
-                "text": $link,
-                "textHover": $linkHover,
-                "menuBg": white,
-                "menuText": $link,
-                "menuTextHover": $linkHover,
-                "menuTextHoverBg": $linkHover
-        ),
-
-        listItem: (
-                "bg": transparent,
-                "bgHover": white,
-        ),
-
         state: (
-                "muted":   #aaa,
-                "primary": #4591aa,
-                "success": #45ca69,
-                "warning": #ffb800,
-                "error":   #ca4829
-        ),
-
-        table: (
-                "headBg": #EEEEEE,
-        ),
-
+                "selected": #FF8A80,
+                "disabled": rgba($text, 0.2)
+        )
 ) !default;
-
-//
-// Colors
-// =============================================================================
-// Generates classes to change type and background colors from the colors
-// set in above.
-
-@each $color-name, $color in $colors {
-  @each $color-type, $color-value in $color {
-    @if $color-name == "base" {
-      .text-#{$color-type} {
-        color: $color-value !important;
-      }
-
-      .bg-#{$color-type} {
-        background-color: $color-value !important;
-      }
-    }
-  }
-}

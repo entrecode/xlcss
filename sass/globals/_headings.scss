@@ -26,13 +26,10 @@ $kiloSize: $h3Size !default;
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: getColor(headings, default);
   line-height: 1.25em;
 
   small,
   .small {
-    color: getColor(headings, light);
-    font-weight: lighter;
     vertical-align: 0;
   }
 }
@@ -100,19 +97,6 @@ h6,
   font-size: pxToEm($h6Size);
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  a {
-    color: getColor(base, link);
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: getColor(base, linkHover);
-    }
-  }
-}
-
 //
 // Sizes
 // -----
@@ -127,7 +111,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 // Mega
-.mega{
+.mega {
   font-size: pxToEm($megaSize * .75);
 
   @media (min-width: $bpSm) {

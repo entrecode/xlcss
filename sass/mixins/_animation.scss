@@ -1,0 +1,35 @@
+@mixin keyframes($str) {
+  @-webkit-keyframes #{$str} {
+    @content;
+  }
+  @-moz-keyframes #{$str} {
+    @content;
+  }
+  @keyframes #{$str} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: $str;
+  -moz-animation: $str;
+  -ms-animation: $str;
+}
+
+
+// Keyframe Example
+
+@include keyframes(bounce-right) {
+  0% {
+    @include transform(translateY(-100%));
+  }
+  80% {
+    @include transform(translateY(0%));
+  }
+  90% {
+    @include transform(translateY(10%));
+  }
+  100% {
+    @include transform(translateY(0%));
+  }
+}

@@ -1,9 +1,10 @@
 {
   "name": "xlcss",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     "Bernhard Ruoff <ruoff@entrecode.de>",
-    "Konstantin Ehlers <ehlers@entrecode.de>"
+    "Konstantin Ehlers <ehlers@entrecode.de>",
+    "Michael Locher <locher@entrecode.de>"
   ],
   "description": "minimalistic css framework by entrecode.de",
   "main": "dist/xlcss.min.css",
