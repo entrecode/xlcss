@@ -80,7 +80,7 @@ $fontBaseSize: 16 !default;
 @function setColor($color, $dark: #000000, $light: #ffffff) {
   @if (opacity($color) > .5) {
     @if (hue($color) >= 50 and hue($color) <= 70 or hue($color) >= 170 and hue($color) <= 190 or hue($color) >= 290 and hue($color) <= 310) {
-      @if (lightness($color) < 52) {
+      @if (lightness($color) <= 54) {
         @return $dark; // Lighter background, return dark color
       } @else {
         @return $light; // Lighter background, return dark color
