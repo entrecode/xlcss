@@ -1,32 +1,28 @@
 @mixin radial-gradient($from, $to) {
-  background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
-  background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
-  background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
-  background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
-  background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: -moz-radial-gradient($from, $to);
+  background: -webkit-radial-gradient($from, $to);
+  background: -o-radial-gradient($from, $to);
+  background: -ms-radial-gradient($from, $to);
+  background: radial-gradient($from, $to);
   background-color: $to;
 }
 
 @mixin linear-gradient($top, $bottom) {
-  background: $top; /* Old browsers */
-  background: -moz-linear-gradient(top, $top 0%, $bottom 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, $top 0%, $bottom 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, $top 0%, $bottom 100%); /* IE10+ */
-  background: linear-gradient(to bottom, $top 0%, $bottom 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
+  background: -moz-linear-gradient($top, $bottom); /* FF3.6+ */
+  background: -webkit-linear-gradient($top, $bottom); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($top, $bottom); /* Opera 11.10+ */
+  background: -ms-linear-gradient($top, $bottom); /* IE10+ */
+  background: linear-gradient($top, $bottom); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start-colour}', endColorstr='#{$start-colour}', GradientType=0); /* IE6-9 */
 }
 
 @mixin linear-gradient-rtl($start-colour, $end-colour) {
   background-color: $start-colour;
-  background-image: -webkit-gradient(linear, left top, right top, from($start-colour), to($end-colour));
   background-image: -webkit-linear-gradient(left, $start-colour, $end-colour);
-  background-image: -moz-linear-gradient(left, $start-colour, $end-colour);
-  background-image: -ms-linear-gradient(left, $start-colour, $end-colour);
-  background-image: -o-linear-gradient(left, $start-colour, $end-colour);
-  background-image: linear-gradient(left, $start-colour, $end-colour);
+  background-image: -moz-linear-gradient(right, $start-colour, $end-colour);
+  background-image: -ms-linear-gradient(right, $start-colour, $end-colour);
+  background-image: -o-linear-gradient(right, $start-colour, $end-colour);
+  background-image: linear-gradient(to right, $start-colour, $end-colour);
   filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr='#{$start-colour}', end-colourStr='#{$end-colour}', gradientType='1');
 }
 
