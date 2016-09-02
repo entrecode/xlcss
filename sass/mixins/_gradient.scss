@@ -13,7 +13,7 @@
   background: -o-linear-gradient($top, $bottom); /* Opera 11.10+ */
   background: -ms-linear-gradient($top, $bottom); /* IE10+ */
   background: linear-gradient($top, $bottom); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$start-colour}', endColorstr='#{$start-colour}', GradientType=0); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}', GradientType=0); /* IE6-9 */
 }
 
 @mixin linear-gradient-rtl($start-colour, $end-colour) {
