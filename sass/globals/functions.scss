@@ -79,22 +79,28 @@ $fontBaseSize: 16 !default;
 
 @function setColor($color, $dark: #000000, $light: #ffffff) {
   @if (opacity($color) > .5) {
-    @if (hue($color) >= 50 and hue($color) <= 70 or hue($color) >= 170 and hue($color) <= 190 or hue($color) >= 290 and hue($color) <= 310) {
-      @if (lightness($color) <= 54) {
+
+    // if color hue is between 50 and 70 - yellow
+    @if (hue($color) >= 50 and hue($color) <= 70) {
+      @return $dark; // Lighter background, return dark color
+    }
+
+    @if (hue($color) >= 170 and hue($color) <= 190 or hue($color) >= 290 and hue($color) <= 310) {
+      @if (lightness($color) <= 52) {
         @return $dark; // Lighter background, return dark color
       } @else {
         @return $light; // Lighter background, return dark color
       }
     }
-    @else{
+
+    @else {
       @if (hue($color) >= 230 and hue($color) <= 250 or hue($color) >= 0 and hue($color) <= 10 or hue($color) >= 350 and hue($color) <= 360) {
         @if (lightness($color) > 70) {
           @return $dark; // Lighter background, return dark color
         } @else {
           @return $light; // Lighter background, return dark color
         }
-      }
-      @else{
+      } @else {
         @if (lightness($color) > 62) {
           @return $dark; // Lighter background, return dark color
         } @else {
@@ -103,7 +109,8 @@ $fontBaseSize: 16 !default;
       }
     }
   }
-  @else{
+
+  @else {
     @return $dark; // Lighter background, return dark color
   }
 }
