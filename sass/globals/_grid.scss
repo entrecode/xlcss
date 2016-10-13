@@ -101,6 +101,8 @@ $responsive: true;
 
 @mixin column($size, $addGutter: true) {
   box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
   float: left;
   margin-bottom: 0;
   width: 100%;

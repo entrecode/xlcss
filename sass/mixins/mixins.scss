@@ -3,6 +3,7 @@
 @import 'transition';
 @import 'retina';
 @import 'border-radius';
+@import "perspective";
 @import 'background';
 @import 'gradient';
 @import 'transform';
@@ -11,11 +12,11 @@
 @import 'clearfix';
 @import 'ellipsis';
 @import 'word-wrap';
-@import 'material-icons';
 @import 'user-select';
 @import 'placeholder';
 @import 'button-styles';
 @import 'animation';
+@import 'filter';
 
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
   background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
