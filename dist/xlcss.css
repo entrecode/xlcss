@@ -1340,6 +1340,10 @@ button,
   .btn:focus {
     outline: none; }
 
+img.responsive {
+  width: 100%;
+  height: auto; }
+
 .pull-right {
   float: right !important; }
 
