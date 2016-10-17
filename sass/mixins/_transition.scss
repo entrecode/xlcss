@@ -11,6 +11,7 @@
   -webkit-transition-property: $property;
   transition-property:         $property;
 }
+
 @mixin transition-duration($duration...) {
   -moz-transition-property:    $duration;
   -o-transition-property:      $duration;
