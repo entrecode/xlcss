@@ -30,7 +30,11 @@ $fontBaseSize: 16 !default;
   @return ($base-unit * $multiplier + $offset) + px;
 }
 
-@function trump($value: 3) {
+@function trump($value: 3, $president: false) {
+  @if ($value == 4 and $president == 'president') {
+    @warn "U! S! A! ... U! S! A! .... U! S! A! ... U! S! A! ...";
+  }
+
   @return (100 / $value) * 1%;
 }
 
