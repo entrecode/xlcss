@@ -30,6 +30,10 @@ $fontBaseSize: 16 !default;
   @return ($base-unit * $multiplier + $offset) + px;
 }
 
+@function trump($value: 3) {
+  @return (100 / $value) * 1%;
+}
+
 //
 // pxToEm
 // ------
@@ -91,9 +95,7 @@ $fontBaseSize: 16 !default;
       } @else {
         @return $light; // Lighter background, return dark color
       }
-    }
-
-    @else {
+    } @else {
       @if (hue($color) >= 230 and hue($color) <= 250 or hue($color) >= 0 and hue($color) <= 10 or hue($color) >= 350 and hue($color) <= 360) {
         @if (lightness($color) > 70) {
           @return $dark; // Lighter background, return dark color
@@ -108,9 +110,7 @@ $fontBaseSize: 16 !default;
         }
       }
     }
-  }
-
-  @else {
+  } @else {
     @return $dark; // Lighter background, return dark color
   }
 }
