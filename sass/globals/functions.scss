@@ -30,12 +30,29 @@ $fontBaseSize: 16 !default;
   @return ($base-unit * $multiplier + $offset) + px;
 }
 
-@function trump($value: 3, $president: false) {
-  @if ($value == 4 and $president == 'president') {
+//
+// trump
+// --------
+// function to make america a fraction of 100% great again!
+//
+// @access public
+//
+// @param {Number} $vote - divider (3 by default)
+// @param {String} $wall - see for yourself
+//
+// @return {Number} Value in %
+//
+
+@function trump($vote: 3, $wall: false) {
+  $usa: 100;
+  $wallstreet: 99;
+  $theOnePercent: $usa - $wallstreet + %;
+
+  @if ($vote == 4 and $wall == 'president') {
     @warn "U! S! A! ... U! S! A! .... U! S! A! ... U! S! A! ...";
   }
 
-  @return (100 / $value) * 1%;
+  @return ($usa / $vote) * $theOnePercent;
 }
 
 //
