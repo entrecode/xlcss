@@ -883,45 +883,6 @@ td.visible {
   .hidden-print {
     display: none !important; } }
 
-::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-  -moz-transform: translate3D(2px, 0, 0);
-  -o-transform: translate3D(2px, 0, 0);
-  -ms-transform: translate3D(2px, 0, 0);
-  -webkit-transform: translate3D(2px, 0, 0);
-  transform: translate3D(2px, 0, 0);
-  -webkit-backface-visibility: hidden; }
-
-::-webkit-scrollbar-button {
-  width: 0;
-  height: 0; }
-
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.4);
-  border: none;
-  border-radius: 0; }
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4); }
-
-::-webkit-scrollbar-thumb:active {
-  background: rgba(0, 0, 0, 0.4); }
-
-::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 0; }
-
-::-webkit-scrollbar-track:hover {
-  background: #666666; }
-
-::-webkit-scrollbar-track:active {
-  background: #333333; }
-
-::-webkit-scrollbar-corner {
-  background: transparent; }
-
 i,
 em,
 .italic {
