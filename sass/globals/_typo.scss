@@ -113,3 +113,13 @@ samp {
 address {
   font-style: normal;
 }
+
+p {
+  font-size: pxToEm(16);
+  line-height: pxToEm(24, 16);
+
+  &.lead {
+    font-size: pxToEm(20);
+    line-height: pxToEm(28, 20);
+  }
+}

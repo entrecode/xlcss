@@ -107,7 +107,7 @@ template,
 }
 
 * {
-  cursor: inherit;
+  cursor: initial;
   box-sizing: border-box;
 }
 
@@ -157,11 +157,11 @@ figcaption {
 
 // Selection
 ::selection {
-  background-color: getColor(state, selected);
+  background-color: inherit;
 }
 
 ::-moz-selection {
-  background-color: getColor(state, selected);
+  background-color: inherit;
 }
 
 span {

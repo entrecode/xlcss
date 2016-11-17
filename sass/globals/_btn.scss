@@ -1,0 +1,86 @@
+// Button Basic Styles
+// ------------------------------------------------
+
+input[type=submit],
+input[type=reset],
+button,
+.btn {
+  // core
+  @include appearance(none);
+  @include user-select(none);
+  outline: none;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  touch-action: manipulation;
+  text-decoration: none;
+  position: relative;
+
+  // global
+  font-size: pxToEm(16);
+  line-height: pxToEm(24, 16);
+  min-width: unitSize(5);
+  height: auto;
+  margin: unitSize(.5);
+  padding: unitSize(1) unitSize(2);
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled*='disabled'] {
+    opacity: .6;
+    cursor: not-allowed;
+    @include box-shadow(none);
+  }
+
+  // ec-icon styles for default btn
+
+  .ec-icon {
+    &:empty{
+      margin-left: unitSize(-1);
+      margin-right: unitSize(-1);
+
+      &:before{
+        padding-right: 0;
+      }
+    }
+
+    &:before {
+      padding-right: unitSize(1);
+    }
+  }
+
+  &.small {
+    font-size: pxToEm(14);
+    line-height: pxToEm(20, 14);
+    min-width: unitSize(3);
+    height: auto;
+    padding: 0 unitSize(1);
+  }
+
+  &.big {
+    font-size: pxToEm(16);
+    line-height: pxToEm(24, 16);
+    min-width: unitSize(6);
+    height: auto;
+    padding: unitSize(1.5) unitSize(2);
+
+    .ec-icon {
+      &:empty{
+        margin-left: unitSize(-1.5);
+        margin-right: unitSize(-1.5);
+      }
+    }
+  }
+
+  &.block {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

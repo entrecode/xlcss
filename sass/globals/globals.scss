@@ -1,10 +1,9 @@
+@import 'functions';
 @import 'grid';
 @import 'reset';
-@import 'functions';
 @import 'colors';
 @import 'responsive-utilities';
 @import 'nav';
-//@import 'scrollbar';
 @import 'typo';
 @import 'typo-utilities';
 @import 'table';
@@ -12,6 +11,8 @@
 @import 'dl';
 @import 'fieldset';
 @import 'form';
-@import 'buttons';
+@import 'btn';
 @import 'img';
+
+//@import 'scrollbar';
 
