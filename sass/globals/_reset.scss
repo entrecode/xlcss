@@ -155,15 +155,6 @@ figcaption {
   text-align: center;
 }
 
-// Selection
-::selection {
-  background-color: inherit;
-}
-
-::-moz-selection {
-  background-color: inherit;
-}
-
 span {
   vertical-align: top;
 }

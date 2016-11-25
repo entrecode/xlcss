@@ -46,7 +46,7 @@ $fontBaseSize: 16 !default;
 @function trump($vote: 3, $wall: false) {
   $usa: 100;
   $wallstreet: 99;
-  $theOnePercent: $usa - $wallstreet + %;
+  $theOnePercent: $usa - $wallstreet +%;
 
   @if ($vote == 4 and $wall == 'president') {
     @warn "U! S! A! ... U! S! A! .... U! S! A! ... U! S! A! ...";
@@ -102,7 +102,9 @@ $fontBaseSize: 16 !default;
 // @return {Color} value of $light or $dark
 //
 
-@function setColor($color, $dark: #000000, $light: #ffffff) {
+
+@function setColor($color, $dark: #000, $light: #fff) {
+
   @if (opacity($color) > .5) {
 
     // if color hue is between 50 and 70 - yellow
@@ -132,6 +134,44 @@ $fontBaseSize: 16 !default;
       }
     }
   } @else {
-    @return $dark; // Lighter background, return dark color
+    @return $dark;
   }
+}
+
+//
+// set lightness
+// --------
+// reset a colors lightness
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $value - lightness value
+//
+// @return {Color} value with new lightness value
+//
+
+@function set-lightness($color, $value) {
+  $color-hue: hue($color);
+  $color-sat: saturation($color);
+
+  @return hsl($color-hue, $color-sat, $value);
+}
+
+//
+// set saturation
+// --------
+// reset a colors saturation
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $value - saturation value
+//
+// @return {Color} value with new saturation value
+//
+
+@function set-saturation($color, $value) {
+  $color-hue: hue($color);
+  $color-lightness: lightness($color);
+
+  @return hsl($color-hue, $value, $color-lightness);
 }

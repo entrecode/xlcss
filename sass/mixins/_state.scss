@@ -9,11 +9,12 @@
   @each $color-name, $color in $colors {
     @each $color-type, $color-value in $color {
       @if $color-name == $name {
-        &.base-#{$color-type} {
+        &.#{$name}-#{$color-type} {
           @if $text == true {
             color: $color-value;
           } @else {
             background-color: $color-value;
+            color: setColor($color-value);
           }
         }
       }
