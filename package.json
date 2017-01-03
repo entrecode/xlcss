@@ -1,6 +1,6 @@
 {
   "name": "xlcss",
-  "version": "1.1.6",
+  "version": "1.1.8",
   "description": "traiblez xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "scripts": {
