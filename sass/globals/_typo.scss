@@ -49,7 +49,7 @@ s {
 // --------
 
 p {
-  margin-bottom: unitSize(2);
+  margin-bottom: rem(16);
 }
 
 //
@@ -83,8 +83,8 @@ code,
 pre,
 kbd,
 samp {
-  font-family: $fontFamilyMono;
-  font-size: pxToEm(14);
+  font-family: $monoFont;
+  font-size: em(14);
 }
 
 code {
@@ -115,11 +115,11 @@ address {
 }
 
 p {
-  font-size: pxToEm(16);
-  line-height: pxToEm(24, 16);
+  font-size: em(16);
+  line-height: em(24, 16);
 
   &.lead {
-    font-size: pxToEm(20);
-    line-height: pxToEm(28, 20);
+    font-size: em(20);
+    line-height: em(28, 20);
   }
 }

@@ -3,15 +3,6 @@
 // =============================================================================
 
 //
-// Variables
-// ---------
-
-// Font families
-$fontFamily: sans-serif !default;
-$fontFamilyMono: monospace !default;
-$fontBaseSize: 16 !default;
-
-//
 // Normalization
 // -------------
 // Courtesy of sanitize.css
@@ -83,15 +74,7 @@ template,
   box-sizing: border-box;
   color: inherit;
   cursor: default;
-  font-family: $fontFamily;
-  font-size: ($fontBaseSize * .875) + px;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility;
   vertical-align: top;
-
-  @media (min-width: $bpXs) {
-    font-size: $fontBaseSize + px;
-  }
 }
 
 *,

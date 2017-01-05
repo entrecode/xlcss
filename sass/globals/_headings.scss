@@ -2,42 +2,22 @@
 // Headings
 // =============================================================================
 
-//
-// Variables
-// ---------
-
-// Font sizes
-$fontRatio: 1.333 !default; // perfect fourth
-
-$h6Size: 16 !default;
-$h5Size: round($h6Size * $fontRatio) !default;
-$h4Size: round($h5Size * $fontRatio) !default;
-$h3Size: round($h4Size * $fontRatio) !default;
-$h2Size: round($h3Size * $fontRatio) !default;
-$h1Size: round($h2Size * $fontRatio) !default;
-
-$gigaSize: $h1Size !default;
-$megaSize: $h2Size !default;
-$kiloSize: $h3Size !default;
-
-//
-// Styles
-// ------
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  line-height: 1.25em;
+.h1, .h2, .h3, .h4, .h5, .h6,
+.giga, .mega, .kilo {
+  font-weight: $headings-weight;
 
   small,
   .small {
-    vertical-align: 0;
+    vertical-align: baseline;
   }
 }
 
 h1, h2, h3,
 .h1, .h2, .h3,
 .giga, .mega, .kilo {
-  margin: unitSize(2) 0 unitSize(1);
+  margin: rem(16) 0 rem(8);
 
   small,
   .small {
@@ -47,7 +27,7 @@ h1, h2, h3,
 
 h4, h5, h6,
 .h4, .h5, .h6 {
-  margin: unitSize(1, 2) 0;
+  margin: rem(16) 0 rem(8);
 
   small,
   .small {
@@ -55,75 +35,79 @@ h4, h5, h6,
   }
 }
 
+// Ratio for downscaling on mobile devices
+$ratioXS: .875;
+
 h1,
-.h1 {
-  font-size: pxToEm($h1Size * .66);
+.h1,
+.giga {
+  font-size: em($h1-size * $ratioXS);
+  line-height: em(($h1-height * $ratioXS), ($h1-size * $ratioXS));
 
   @media (min-width: $bpSm) {
-    font-size: pxToEm($h1Size);
+    font-size: em($h1-size);
+    line-height: em($h1-height, $h1-size);
   }
 }
 
 h2,
 .h2 {
-  font-size: pxToEm($h2Size * .66);
+  font-size: em($h2-size * $ratioXS);
+  line-height: em(($h2-height * $ratioXS), ($h2-size * $ratioXS));
 
   @media (min-width: $bpSm) {
-    font-size: pxToEm($h2Size);
+    font-size: em($h2-size);
+    line-height: em($h2-height, $h2-size);
   }
 }
 
 h3,
-.h3 {
-  font-size: pxToEm($h3Size * .66);
+.h3,
+.mega {
+  font-size: em($h3-size * $ratioXS);
+  line-height: em(($h3-height * $ratioXS), ($h3-size * $ratioXS));
 
   @media (min-width: $bpSm) {
-    font-size: pxToEm($h3Size);
+    font-size: em($h3-size);
+    line-height: em($h3-height, $h3-size);
   }
 }
 
 h4,
 .h4 {
-  font-size: pxToEm($h4Size);
+  font-size: em($h4-size * $ratioXS);
+  line-height: em(($h4-height * $ratioXS), ($h4-size * $ratioXS));
+
+  @media (min-width: $bpSm) {
+    font-size: em($h4-size);
+    line-height: em($h4-height, $h4-size);
+  }
 }
 
 h5,
-.h5 {
-  font-size: pxToEm($h5Size);
+.h5,
+.kilo {
+  font-size: em($h5-size * $ratioXS);
+  line-height: em(($h5-height * $ratioXS), ($h5-size * $ratioXS));
+
+  @media (min-width: $bpSm) {
+    font-size: em($h5-size);
+    line-height: em($h5-height, $h5-size);
+  }
 }
 
 h6,
 .h6 {
-  font-size: pxToEm($h6Size);
-}
-
-//
-// Sizes
-// -----
-
-// Giga
-.giga {
-  font-size: pxToEm($gigaSize * .75);
+  font-size: em($h6-size * $ratioXS);
+  line-height: em(($h6-height * $ratioXS), ($h6-size * $ratioXS));
 
   @media (min-width: $bpSm) {
-    font-size: pxToEm($gigaSize);
+    font-size: em($h6-size);
+    line-height: em($h6-height, $h6-size);
   }
 }
 
-// Mega
-.mega {
-  font-size: pxToEm($megaSize * .75);
-
-  @media (min-width: $bpSm) {
-    font-size: pxToEm($megaSize);
-  }
-}
-
-// Kilo
-.kilo {
-  font-size: pxToEm($kiloSize * .75);
-
-  @media (min-width: $bpSm) {
-    font-size: pxToEm($kiloSize);
-  }
+.base-font{
+  font-size: $base-size + px;
+  line-height: 1.5em;
 }
