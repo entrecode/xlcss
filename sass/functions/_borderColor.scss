@@ -8,10 +8,10 @@
     $lightnessborder: ($lightness2 - $lightness1);
 
     @if ($lightnessborder > 75) {
-      @return lighten($color1, $lightnessborder * .5);
-    }
-
-    @else {
+      @return lighten($color1, $lightnessborder / 3);
+    } @else if ($lightnessborder > 75) {
+      @return lighten($color1, $lightnessborder / 2);
+    } @else {
       @return lighten($color1, $lightnessborder * .25);
     }
   }
@@ -20,11 +20,11 @@
     $lightnessborder: ($lightness1 - $lightness2);
 
     @if ($lightnessborder > 75) {
+      @return darken($color1, $lightnessborder / 3);
+    } @else if ($lightnessborder > 75) {
+      @return darken($color1, $lightnessborder / 2);
+    } @else {
       @return darken($color1, $lightnessborder * .25);
-    }
-
-    @else {
-      @return darken($color1, $lightnessborder * .5);
     }
   }
 
