@@ -18,7 +18,3 @@
 
   @return hsl($targetHue, $totalSat, $totalLight);
 }
-
-@function rem($value, $base: $base-size) {
-  @return ($value / $base) + rem;
-}

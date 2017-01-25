@@ -1,7 +1,8 @@
 // Colors
-$xlcss: (
+$colors: (
         base: (
                 "text": $text,
+                "background": $background,
                 "link": $link,
                 "linkHover": darken($link, 10),
                 "super": $super,
@@ -17,8 +18,8 @@ $xlcss: (
                 "superHover": darken($super, 10),
                 "minor": rgba($minor, .1),
                 "minorHover": rgba($minor, .2),
-                "pill": rgba($text, .1),
-                "pillHover": rgba($text, .2)
+                "pill": rgba($minor, .1),
+                "pillHover": rgba($minor, .2)
         ),
         text: (
                 "default": $text,
@@ -52,6 +53,3 @@ $xlcss: (
                 "marked": $highlight
         )
 ) !default;
-
-// set $colors to name of your colormap
-$colors: $xlcss;
