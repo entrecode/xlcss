@@ -1,0 +1,22 @@
+//
+// set saturation
+// --------
+// reset a colors saturation
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $value - saturation value
+//
+// @return {Color} value with new saturation value
+//
+
+@function setSaturation($color, $value) {
+  $color-hue: hue($color);
+  $color-lightness: lightness($color);
+
+  @return hsl($color-hue, $value, $color-lightness);
+}
+
+@function rem($value, $base: $base-size) {
+  @return ($value / $base) + rem;
+}

@@ -1,7 +1,7 @@
 // Input Style
 
 label {
-  margin-bottom: unitSize(.5);
+  margin-bottom: rem(4);
   display: block;
 }
 
@@ -10,10 +10,10 @@ select,
 textarea {
   width: 100%;
   display: block;
-  padding: unitSize(1) unitSize(1);
-  min-height: unitSize(4);
+  padding: rem(8);
+  min-height: rem(32);
   outline: none;
-  margin-bottom: unitSize(.5);
+  margin-bottom: rem(4);
 
   &:focus {
     outline: none;
@@ -33,7 +33,7 @@ textarea {
 }
 
 select {
-  height: unitSize(4);
+  height: rem(32);
 }
 
 input:not([type="submit"]):not([type="reset"]) {
@@ -101,11 +101,11 @@ select {
 
 fieldset{
   [data-row]{
-    margin: 0 unitSize(-1);
+    margin: 0 rem(-8);
 
     [data-col]{
-      padding-left: unitSize(1);
-      padding-right: unitSize(1);
+      padding-left: rem(8);
+      padding-right: rem(8);
     }
   }
 }

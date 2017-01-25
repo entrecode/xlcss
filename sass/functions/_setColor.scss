@@ -1,0 +1,48 @@
+//
+// set color
+// --------
+// set color based on luminosity of another color
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $dark - Name of dark color (default: #000000)
+// @param {Color} $light - Name of light color (default: #ffffff)
+//
+// @return {Color} value of $light or $dark
+//
+
+
+@function setColor($color, $dark: #000, $light: #fff) {
+
+  @if (opacity($color) > .5) {
+
+    // if color hue is between 50 and 70 - yellow
+    @if (hue($color) >= 50 and hue($color) <= 70) {
+      @return $dark; // Lighter background, return dark color
+    }
+
+    @if (hue($color) >= 170 and hue($color) <= 190 or hue($color) >= 290 and hue($color) <= 310) {
+      @if (lightness($color) <= 52) {
+        @return $dark; // Lighter background, return dark color
+      } @else {
+        @return $light; // Lighter background, return dark color
+      }
+    } @else {
+      @if (hue($color) >= 230 and hue($color) <= 250 or hue($color) >= 0 and hue($color) <= 10 or hue($color) >= 350 and hue($color) <= 360) {
+        @if (lightness($color) > 70) {
+          @return $dark; // Lighter background, return dark color
+        } @else {
+          @return $light; // Lighter background, return dark color
+        }
+      } @else {
+        @if (lightness($color) > 62) {
+          @return $dark; // Lighter background, return dark color
+        } @else {
+          @return $light; // Lighter background, return dark color
+        }
+      }
+    }
+  } @else {
+    @return $dark;
+  }
+}

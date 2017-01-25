@@ -2,19 +2,19 @@ dl {
   @include clearfix;
 
   dt {
-    margin-bottom: unitSize(.5);
+    margin-bottom: rem(4);
 
     @media (min-width: $bpSm) {
-      width: 80px;
+      width: rem(80);
       float: left;
     }
   }
 
   dd {
-    margin-bottom: unitSize(.5);
+    margin-bottom: rem(4);
 
     @media (min-width: $bpSm) {
-      margin-left: 96px;
+      margin-left: rem(96);
     }
   }
 }

@@ -8,21 +8,10 @@
 // (https://github.com/jameskolce/atGrid/blob/master/LICENSE)
 //
 
+
 //
 // Variables
 // ---------
-
-// Breakpoints
-$bpXs: 30em !default; /* 480px Big smartphone */
-$bpSm: 48em !default; /* 768px Small devices */
-$bpMd: 60em !default; /* 960px Medium devices */
-$bpLg: 70em !default; /* 1120px Large devices */
-$bpXl: 80em !default; /* 1280px Very Large devices*/
-
-$bpXsMax: ($bpSm - 1) !default;
-$bpSmMax: ($bpMd - 1) !default;
-$bpMdMax: ($bpLg - 1) !default;
-$bpLgMax: ($bpXl - 1) !default;
 
 // Attribute prefix
 $prefix: "data-" !default;

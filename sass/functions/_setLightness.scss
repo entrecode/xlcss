@@ -1,0 +1,18 @@
+//
+// set lightness
+// --------
+// reset a colors lightness
+//
+// @access public
+// @param {Color} $color - Name of base color
+// @param {Color} $value - lightness value
+//
+// @return {Color} value with new lightness value
+//
+
+@function setLightness($color, $value) {
+  $color-hue: hue($color);
+  $color-sat: saturation($color);
+
+  @return hsl($color-hue, $color-sat, $value);
+}

@@ -1,0 +1,61 @@
+//
+// @font-face
+// -------------
+
+//
+// Variables
+// ---------
+
+// Font families
+$bodyFont: sans-serif !default;
+$headerFont: sans-serif !default;
+$monoFont: monospace !default;
+
+//
+// Color Palette
+// -------------
+
+$background: white !default;
+$text: #232A3F !default;
+$link: #2962FF !default;
+$super: #2962FF !default;
+$minor: #2962FF !default;
+$highlight: #A9C0FF !default;
+
+// if is btn is round
+$btn-round: false !default;
+
+// headings variables
+$base-size: 16;
+
+$headings-weight: bold !default;
+
+$h1-size: 48;
+$h1-height: 56;
+
+$h2-size: 40;
+$h2-height: 48;
+
+$h3-size: 32;
+$h3-height: 40;
+
+$h4-size: 24;
+$h4-height: 32;
+
+$h5-size: 20;
+$h5-height: 28;
+
+$h6-size: 16;
+$h6-height: 24;
+
+// Breakpoints
+$bpXs: 30em !default; /* 480px Big smartphone */
+$bpSm: 48em !default; /* 768px Small devices */
+$bpMd: 60em !default; /* 960px Medium devices */
+$bpLg: 70em !default; /* 1120px Large devices */
+$bpXl: 80em !default; /* 1280px Very Large devices*/
+
+$bpXsMax: ($bpSm - 1) !default;
+$bpSmMax: ($bpMd - 1) !default;
+$bpMdMax: ($bpLg - 1) !default;
+$bpLgMax: ($bpXl - 1) !default;

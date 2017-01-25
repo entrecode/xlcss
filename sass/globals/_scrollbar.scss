@@ -1,7 +1,7 @@
 ::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-  @include transform(translate3D(2px, 0, 0));
+  width: rem(2);
+  height: rem(2);
+  @include transform(translate3D(rem(2), 0, 0));
 }
 
 ::-webkit-scrollbar-button {
