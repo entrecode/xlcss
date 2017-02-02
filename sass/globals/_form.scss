@@ -100,6 +100,8 @@ select {
 }
 
 fieldset{
+  padding: 0;
+
   [data-row]{
     margin: 0 rem(-8);
 
@@ -108,8 +110,4 @@ fieldset{
       padding-right: rem(8);
     }
   }
-}
-
-fieldset{
-  padding: 0;
 }

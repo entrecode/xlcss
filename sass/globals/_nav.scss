@@ -2,4 +2,10 @@ nav{
   ul{
     @extend ul.unstyled;
   }
+
+  &.inline {
+    ul {
+      @extend ul.inline;
+    }
+  }
 }
