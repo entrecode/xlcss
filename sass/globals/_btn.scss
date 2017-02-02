@@ -22,7 +22,7 @@ button,
   font-size: rem(16);
   line-height: rem(24);
   min-width: rem(40);
-  height: auto;
+  min-height: rem(40);
   margin: rem(4);
   padding: rem(8) rem(16);
 
@@ -31,6 +31,7 @@ button,
     outline: none;
   }
 
+  &.disabled,
   &[disabled*='disabled'] {
     opacity: .6;
     cursor: not-allowed;
@@ -40,6 +41,8 @@ button,
   // ec-icon styles for default btn
 
   .ec-icon {
+    cursor: inherit;
+
     &:empty{
       margin-left: rem(-16);
       margin-right: rem(-16);
@@ -58,8 +61,21 @@ button,
     font-size: rem(14);
     line-height: rem(24);
     min-width: rem(24);
+    min-height: rem(24);
     height: auto;
     padding: 0 rem(8);
+
+    .ec-icon {
+      &:before {
+        font-size: rem(16);
+        line-height: rem(24);
+      }
+
+      &:empty{
+        margin-left: rem(-8);
+        margin-right: rem(-8);
+      }
+    }
   }
 
   &.big {
