@@ -1,14 +1,17 @@
-//
-// set lightness
-// --------
-// reset a colors lightness
-//
-// @access public
-// @param {Color} $color - Name of base color
-// @param {Color} $value - lightness value
-//
-// @return {Color} value with new lightness value
-//
+////
+/// @group color-functions
+/// @since 2.0.1
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// set lightness of a color to a specific value
+/// @example setLightness(#ff2200, 100)
+///
+/// @param {Color} $color - Name of base color
+/// @param {Color} $value - lightness value
+///
+/// @return {Color} value with new value for lightness
 
 @function setLightness($color, $value) {
   $color-hue: hue($color);

@@ -5,7 +5,7 @@ input[type=submit],
 input[type=reset],
 button,
 .btn {
-  // core
+  // core styles
   @include appearance(none);
   @include user-select(none);
   outline: none;
@@ -18,11 +18,10 @@ button,
   text-decoration: none;
   position: relative;
 
-  // global
+  // global styles
   font-size: rem(16);
   line-height: rem(24);
   min-width: rem(40);
-  min-height: rem(40);
   margin: rem(4);
   padding: rem(8) rem(16);
 
@@ -42,6 +41,7 @@ button,
 
   .ec-icon {
     cursor: inherit;
+    display: inline;
 
     &:empty{
       margin-left: rem(-16);
@@ -61,19 +61,22 @@ button,
     font-size: rem(14);
     line-height: rem(24);
     min-width: rem(24);
-    min-height: rem(24);
-    height: auto;
     padding: 0 rem(8);
 
     .ec-icon {
       &:before {
         font-size: rem(16);
         line-height: rem(24);
+        padding-right: rem(8);
       }
 
       &:empty{
         margin-left: rem(-8);
         margin-right: rem(-8);
+
+        &:before{
+          padding-right: 0;
+        }
       }
     }
   }
@@ -81,8 +84,6 @@ button,
   &.big {
     font-size: rem(20);
     line-height: rem(28);
-    min-width: rem(48);
-    height: auto;
     padding: rem(10) rem(16);
 
     .ec-icon {

@@ -4,7 +4,7 @@
   "description": "banana xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "scripts": {
-    "build:docs": "sassdoc /sass -d dist",
+    "build:docs": "sassdoc sass/ -d dist",
     "build:css:min": "node-sass sass/xlcss.scss dist/xlcss.min.css --include-path sass --output-style compressed",
     "build:css": "node-sass sass/xlcss.scss dist/xlcss.css --include-path sass",
     "build": "rimraf dist && npm run build:docs && npm run build:css && npm run build:css:min",
