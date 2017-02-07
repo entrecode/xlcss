@@ -6,7 +6,8 @@
 ////
 
 /// set lightness of a color to a specific value
-/// @example setLightness(#ff2200, 100)
+/// @example
+/// color: setLightness(#E51F00, 100); // returns #ff2200
 ///
 /// @param {Color} $color - Name of base color
 /// @param {Color} $value - lightness value

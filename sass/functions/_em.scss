@@ -6,7 +6,9 @@
 ////
 
 /// Converts a px value into a em value
-/// @example em(16)
+/// @example
+/// font-size: em(16); // returns 1em
+/// line-height: em(24, 12); // returns 2em
 ///
 /// @param {Number} $value - value in pixels
 /// @param {Number} $base [$base-size]- 16 !default

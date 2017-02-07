@@ -6,7 +6,8 @@
 ////
 
 /// Converts a px value into a rem value
-/// @example rem(32)
+/// @example
+/// width: rem(32); // returns 2rem
 ///
 /// @param {Number} $value - value in pixels
 /// @param {Number} $base [$base-size]- 16 !default

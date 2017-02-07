@@ -1,25 +1,16 @@
+////
+/// @group border-radius
+/// @since 2.0.1
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// cross-browser mixin for border-radius
+/// @param {value} $radius - can be multiple arguments
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   border-radius: $radius;
-  background-clip: padding-box; /* stops bg color from leaking outside the border: */
-}
-
-@mixin border-top-radius($radius) {
-  border-top-right-radius: $radius;
-  border-top-left-radius: $radius;
-}
-
-@mixin border-right-radius($radius) {
-  border-bottom-right-radius: $radius;
-  border-top-right-radius: $radius;
-}
-
-@mixin border-bottom-radius($radius) {
-  border-bottom-right-radius: $radius;
-  border-bottom-left-radius: $radius;
-}
-
-@mixin border-left-radius($radius) {
-  border-bottom-left-radius: $radius;
-  border-top-left-radius: $radius;
+  // stops bg color from leaking outside the border:
+  background-clip: padding-box;
 }

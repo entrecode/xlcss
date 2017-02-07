@@ -6,7 +6,8 @@
 ////
 
 /// color function to automatically generate a harmonic border-color based on two colors
-/// @example borderColor($background, $text)
+/// @example
+/// border-color: borderColor($background, $text) // returns #555555
 ///
 /// @param {variable} $color1 - first color
 /// @param {variable} $color2 - second color

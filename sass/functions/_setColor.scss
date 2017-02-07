@@ -6,14 +6,14 @@
 ////
 
 /// sets color based on luminosity of another color
+/// @example
+/// color: setColor(#222222); // returns #fff
 ///
 /// @param {Color} $color - Name of base color
 /// @param {Color} $setDark [#000] - Name of dark color
 /// @param {Color} $setLight [#fff] - Name of light color
 ///
 /// @return {Color} value of $setLight or $setDark
-///
-/// @example borderColor($link)
 
 
 @function setColor($color, $setDark: #000, $setLight: #fff) {
