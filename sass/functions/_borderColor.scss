@@ -1,4 +1,16 @@
-// function fo determine a border-color
+////
+/// @group color-functions
+/// @since 2.0.1
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// color function to automatically generate a harmonic border-color based on two colors
+/// @example
+/// border-color: borderColor($background, $text) // returns #555555
+///
+/// @param {variable} $color1 - first color
+/// @param {variable} $color2 - second color
 
 @function borderColor($color1, $color2) {
   $lightness1: lightness($color1);
