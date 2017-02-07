@@ -4,6 +4,10 @@
   "description": "banana xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "scripts": {
+    "build:docs": "sassdoc /sass -d dist",
+    "build:css:min": "node-sass sass/xlcss.scss dist/xlcss.min.css --include-path sass --output-style compressed",
+    "build:css": "node-sass sass/xlcss.scss dist/xlcss.css --include-path sass",
+    "build": "rimraf dist && npm run build:docs && npm run build:css && npm run build:css:min",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,9 +25,8 @@
   ],
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.1"
+    "node-sass": "^4.5.0",
+    "rimraf": "^2.5.4",
+    "sassdoc": "^2.1.20"
   }
 }
