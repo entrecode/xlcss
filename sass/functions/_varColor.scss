@@ -18,6 +18,10 @@
 @function varColor($source, $amount) {
   /// @prop {value} $hue: hue value of source color
   $hue: hue($source);
+  /// @prop {value} $lightness: lightness value of source color
+  $lightness: lightness($source);
+  /// @prop {value} $sat: saturation value of source color
+  $sat: saturation($source);
   /// @prop {number} $hueRatio: ratio for increasing or decreasing hue based on $amount
   $hueRatio: .15;
   /// @prop {number} $satRatio: ratio for increasing or decreasing saturation based on $amount
@@ -35,34 +39,38 @@
     /// @prop {value} $hueTransform: value for hue adjustment
     $hueTransform: $amount * $hueRatio;
 
-    /// if next to red hue is transformed towards red (0°)
-    @if ($hue < 60 and $hue >= 0) {
-      $source: adjust-hue($source, $hueTransform);
-    }
+    @if ($lightness == 100 and $sat == 0 or $lightness == 100 and $sat == 0) {
 
-    /// if next to green hue is transformed towards green (120°)
-    @if ($hue < 120 and $hue >= 60) {
-      $source: adjust-hue($source, $hueTransform *-1);
-    }
+    } @else {
+      /// if next to red hue is transformed towards red (0°)
+      @if ($hue < 60 and $hue >= 0) {
+        $source: adjust-hue($source, $hueTransform);
+      }
 
-    /// if next to green hue is transformed towards green (120°)
-    @if ($hue < 180 and $hue >= 120) {
-      $source: adjust-hue($source, $hueTransform);
-    }
+      /// if next to green hue is transformed towards green (120°)
+      @if ($hue < 120 and $hue >= 60) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
 
-    /// if next to blue hue is transformed towards blue (240°)
-    @if ($hue < 240 and $hue >= 180) {
-      $source: adjust-hue($source, $hueTransform *-1);
-    }
+      /// if next to green hue is transformed towards green (120°)
+      @if ($hue < 180 and $hue >= 120) {
+        $source: adjust-hue($source, $hueTransform);
+      }
 
-    /// if next to blue hue is transformed towards blue (240°)
-    @if ($hue < 300 and $hue >= 240) {
-      $source: adjust-hue($source, $hueTransform);
-    }
+      /// if next to blue hue is transformed towards blue (240°)
+      @if ($hue < 240 and $hue >= 180) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
 
-    /// if next to red hue is transformed towards red (360°)
-    @if ($hue <= 360 and $hue >= 300) {
-      $source: adjust-hue($source, $hueTransform *-1);
+      /// if next to blue hue is transformed towards blue (240°)
+      @if ($hue < 300 and $hue >= 240) {
+        $source: adjust-hue($source, $hueTransform);
+      }
+
+      /// if next to red hue is transformed towards red (360°)
+      @if ($hue <= 360 and $hue >= 300) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
     }
 
     $target: lighten(desaturate($source, $satTransform), $amount);
@@ -79,34 +87,38 @@
     /// @prop {value} $hueTransform: value for hue adjustment
     $hueTransform: $amount * $hueRatio;
 
-    /// if next to red hue is transformed towards red (0°)
-    @if ($hue < 60 and $hue >= 0) {
-      $source: adjust-hue($source, $hueTransform *-1);
-    }
+    @if ($lightness == 100 and $sat == 0 or $lightness == 100 and $sat == 0) {
 
-    /// if next to green hue is transformed towards green (120°)
-    @if ($hue < 120 and $hue >= 60) {
-      $source: adjust-hue($source, $hueTransform);
-    }
+    } @else {
+      /// if next to red hue is transformed towards red (0°)
+      @if ($hue < 60 and $hue >= 0) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
 
-    /// if next to green hue is transformed towards green (120°)
-    @if ($hue < 180 and $hue >= 120) {
-      $source: adjust-hue($source, $hueTransform *-1);
-    }
+      /// if next to green hue is transformed towards green (120°)
+      @if ($hue < 120 and $hue >= 60) {
+        $source: adjust-hue($source, $hueTransform);
+      }
 
-    /// if next to blue hue is transformed towards blue (120°)
-    @if ($hue < 240 and $hue >= 180) {
-      $source: adjust-hue($source, $hueTransform);
-    }
+      /// if next to green hue is transformed towards green (120°)
+      @if ($hue < 180 and $hue >= 120) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
 
-    /// if next to blue hue is transformed towards blue (120°)
-    @if ($hue < 300 and $hue >= 240) {
-      $source: adjust-hue($source, $hueTransform *-1);
-    }
+      /// if next to blue hue is transformed towards blue (120°)
+      @if ($hue < 240 and $hue >= 180) {
+        $source: adjust-hue($source, $hueTransform);
+      }
 
-    /// if next to red hue is transformed towards red (360°)
-    @if ($hue <= 360 and $hue >= 300) {
-      $source: adjust-hue($source, $hueTransform);
+      /// if next to blue hue is transformed towards blue (120°)
+      @if ($hue < 300 and $hue >= 240) {
+        $source: adjust-hue($source, $hueTransform *-1);
+      }
+
+      /// if next to red hue is transformed towards red (360°)
+      @if ($hue <= 360 and $hue >= 300) {
+        $source: adjust-hue($source, $hueTransform);
+      }
     }
 
     $target: darken(saturate($source, $satTransform), $amount);
