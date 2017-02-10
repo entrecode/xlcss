@@ -15,7 +15,6 @@
 ///
 /// @return {Color} value of $setLight or $setDark
 
-
 @function setColor($color, $setDark: #000, $setLight: #fff) {
   $hue: hue($color);
 
@@ -34,5 +33,7 @@
         @return $setLight; // Lighter background, return dark color
       }
     }
+  } @else {
+    @return $setDark;
   }
 }
