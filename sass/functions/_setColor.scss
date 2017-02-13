@@ -1,6 +1,6 @@
 ////
 /// @group color-functions
-/// @since 2.1.3
+/// @since 2.1.5
 /// @author Bernhard Ruoff
 /// @access public
 ////
@@ -20,14 +20,15 @@
 
   @if (opacity($color) > .5) {
 
-    @if ($hue > 200 or $hue < 15) {
-      @if (lightness($color) >= 52) {
+    /// if color is not a light color (yellow, cyan)
+    @if ($hue >= 190 or $hue <= 40) {
+      @if (lightness($color) >= 80) {
         @return $setDark; // Lighter background, return dark color
       } @else {
         @return $setLight; // Lighter background, return dark color
       }
     } @else {
-      @if (lightness($color) >= 52) {
+      @if (lightness($color) >= 40) {
         @return $setDark; // Lighter background, return dark color
       } @else {
         @return $setLight; // Lighter background, return dark color
