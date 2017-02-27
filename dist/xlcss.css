@@ -881,6 +881,9 @@ small {
   font-size: 75%;
   vertical-align: baseline; }
 
+u {
+  text-decoration: underline; }
+
 sup,
 sub {
   font-size: 75%;
