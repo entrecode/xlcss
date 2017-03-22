@@ -1,0 +1,21 @@
+////
+/// @group size-functions
+/// @since 2.0.1
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// Converts a px value into a em value
+/// @example
+/// font-size: em(16); // returns 1em
+/// line-height: em(24, 12); // returns 2em
+///
+/// @param {Number} $value - value in pixels
+/// @param {Number} $base [$base-size]- 16 !default
+/// @require {variable} $base-size
+///
+/// @return {Number} Value in em
+
+@function em($value, $base: $base-size) {
+  @return ($value / $base) + em;
+}

@@ -1,0 +1,23 @@
+//
+// set states
+// =============================================================================
+// Generates classes to change colors from the colors
+// set in `core/_colors.scss`.
+
+
+@mixin state($name: base, $text: true) {
+  @each $color-name, $color in $colors {
+    @each $color-type, $color-value in $color {
+      @if $color-name == $name {
+        &.#{$name}-#{$color-type} {
+          @if $text == true {
+            color: $color-value;
+          } @else {
+            background-color: $color-value;
+            color: setColor($color-value);
+          }
+        }
+      }
+    }
+  }
+}

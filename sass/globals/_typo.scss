@@ -1,0 +1,126 @@
+//
+// Type Styles
+// =============================================================================
+
+//
+// Defaults
+// --------
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+small {
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+u {
+  text-decoration: underline;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+//
+// Paragraphs
+// --------
+
+p {
+  margin-bottom: rem(16);
+}
+
+//
+// Links
+// -----
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+//
+// Abbreviations
+// -------------
+
+abbr[title] {
+  cursor: help;
+}
+
+//
+// Pre, Code, and User Input
+// -------------------------
+
+code,
+pre,
+kbd,
+samp {
+  font-family: $monoFont;
+  font-size: em(14);
+}
+
+code {
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+pre code {
+  white-space: pre;
+}
+
+kbd {
+  display: inline-block;
+  line-height: 1.75;
+  white-space: nowrap;
+}
+
+samp {
+  vertical-align: bottom;
+}
+
+//
+// Addresses
+// ---------
+
+address {
+  font-style: normal;
+}
+
+p {
+  font-size: em(16);
+  line-height: em(24, 16);
+
+  &.lead {
+    font-size: em(20);
+    line-height: em(28, 20);
+  }
+}

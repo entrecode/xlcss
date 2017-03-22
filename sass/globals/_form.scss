@@ -1,0 +1,113 @@
+// Input Style
+
+label {
+  margin-bottom: rem(4);
+  display: block;
+}
+
+input:not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  display: block;
+  padding: rem(8);
+  min-height: rem(32);
+  outline: none;
+  margin-bottom: rem(4);
+
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    color: white;
+  }
+}
+
+select {
+  height: rem(32);
+}
+
+input:not([type="submit"]):not([type="reset"]) {
+  // Remove focus styles
+  &[type="checkbox"],
+  &[type="radio"],
+  &[type="range"],
+  &[type="file"],
+  &[type="color"] {
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
+
+// Keep the original size for this small inputs
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"] {
+  height: auto;
+  width: auto;
+  display: inline-block;
+}
+
+// Checkbox & radio
+input[type="checkbox"],
+input[type="radio"] {
+  line-height: normal;
+  padding: 0;
+  vertical-align: middle;
+}
+
+// Textarea
+textarea {
+  height: auto;
+  resize: vertical;
+}
+
+// Style select like a standard input - Internet Explorer 11+
+select {
+  padding: 0;
+
+  &[disabled] {
+  }
+
+  &[multiple] {
+    height: auto;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::-ms-value {
+    color: currentColor;
+  }
+
+  option {
+    padding: 0 .75em
+  }
+}
+
+fieldset{
+  padding: 0;
+
+  [data-row]{
+    margin: 0 rem(-8);
+
+    [data-col]{
+      padding-left: rem(8);
+      padding-right: rem(8);
+    }
+  }
+}

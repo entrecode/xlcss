@@ -1,0 +1,32 @@
+{
+  "name": "xlcss",
+  "version": "2.1.7",
+  "description": "banana xlcss - minimalistic css framework by entrecode.de",
+  "main": "sass/xlcss.scss",
+  "scripts": {
+    "build:docs": "sassdoc sass/ -d dist",
+    "build:css:min": "node-sass sass/xlcss.scss dist/xlcss.min.css --include-path sass --output-style compressed",
+    "build:css": "node-sass sass/xlcss.scss dist/xlcss.css --include-path sass",
+    "build": "rimraf dist && npm run build:docs && npm run build:css && npm run build:css:min",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "xlss",
+    "css",
+    "sass",
+    "framework",
+    "entrecode"
+  ],
+  "author": "Bernhard Ruoff <ruoff@entrecode.de>",
+  "contributors": [
+    "Bernhard Ruoff <ruoff@entrecode.de>",
+    "Konstantin Ehlers <ehlers@entrecode.de>",
+    "Michael Locher <locher@entrecode.de>"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "node-sass": "^4.5.0",
+    "rimraf": "^2.5.4",
+    "sassdoc": "^2.1.20"
+  }
+}

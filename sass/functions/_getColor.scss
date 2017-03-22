@@ -1,0 +1,22 @@
+////
+/// @group color-functions
+/// @since 2.0.1
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// Easily retrieve colors for use.
+/// @example
+/// color: getColor(base, link);
+///
+/// @author James Kolce, Keenan Payne & Concise CSS Contributors.
+/// @link http://concisecss.com
+///
+/// @param {String} $color - Name of the color
+/// @param {Color}  $value [base] - The color value to grab
+///
+/// @return {Color} Value of the color
+
+@function getColor($color, $value: "base") {
+  @return map-get(map-get($colors, $color), $value);
+}

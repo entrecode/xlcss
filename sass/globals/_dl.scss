@@ -1,0 +1,25 @@
+////
+/// dl.scss
+/// @deprecated
+
+
+dl {
+  @include clearfix;
+
+  dt {
+    margin-bottom: rem(4);
+
+    @media (min-width: $bpSm) {
+      width: rem(80);
+      float: left;
+    }
+  }
+
+  dd {
+    margin-bottom: rem(4);
+
+    @media (min-width: $bpSm) {
+      margin-left: rem(96);
+    }
+  }
+}
