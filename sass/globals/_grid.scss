@@ -181,14 +181,14 @@ $responsive: true;
   // Create columns
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}"] {
-      width: floor(($i / $numColumns) * 100%);
+      width: ($i / $numColumns) * 100%;
     }
   }
 
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}xs"] {
       @media (min-width: $bpXs) {
-        width: floor(($i / $numColumns) * 100%);
+        width: ($i / $numColumns) * 100%;
       }
     }
   }
@@ -196,7 +196,7 @@ $responsive: true;
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}sm"] {
       @media (min-width: $bpSm) {
-        width: floor(($i / $numColumns) * 100%);
+        width: ($i / $numColumns) * 100%;
       }
     }
   }
@@ -204,7 +204,7 @@ $responsive: true;
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}md"] {
       @media (min-width: $bpMd) {
-        width: floor(($i / $numColumns) * 100%);
+        width: ($i / $numColumns) * 100%;
       }
     }
   }
@@ -212,7 +212,7 @@ $responsive: true;
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}lg"] {
       @media (min-width: $bpLg) {
-        width: floor(($i / $numColumns) * 100%);
+        width: ($i / $numColumns) * 100%;
       }
     }
   }
@@ -220,7 +220,7 @@ $responsive: true;
   @for $i from 1 through $numColumns {
     [#{$prefix}col~="#{$i}xl"] {
       @media (min-width: $bpXl) {
-        width: floor(($i / $numColumns) * 100%);
+        width: ($i / $numColumns) * 100%;
       }
     }
   }
