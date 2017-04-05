@@ -1,8 +1,9 @@
 {
   "name": "xlcss",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "description": "banana xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
+  "repository": "entrecode/xlcss",
   "scripts": {
     "build:docs": "sassdoc sass/ -d dist",
     "build:css:min": "node-sass sass/xlcss.scss dist/xlcss.min.css --include-path sass --output-style compressed",
