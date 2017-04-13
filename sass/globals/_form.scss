@@ -99,13 +99,13 @@ select {
   }
 }
 
-fieldset{
+fieldset {
   padding: 0;
 
-  [data-row]{
+  [data-row] {
     margin: 0 rem(-8);
 
-    [data-col]{
+    [data-col] {
       padding-left: rem(8);
       padding-right: rem(8);
     }

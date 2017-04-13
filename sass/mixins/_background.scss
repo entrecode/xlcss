@@ -8,7 +8,6 @@
 /// cross-browser mixin for background-size
 /// @param {auto|length|cover|contain|initial|inherit} $var
 
-
 @mixin background-size($var) {
   -webkit-background-size: $var;
   -moz-background-size: $var;
