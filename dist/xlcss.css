@@ -1,3 +1,4 @@
+/* size must be an even number */
 :root {
   font-size: 16px;
   text-rendering: optimizeLegibility; }
@@ -1479,10 +1480,6 @@ h6,
       font-size: 1em;
       line-height: 1.5em; } }
 
-.base-font {
-  font-size: 16px;
-  line-height: 1.5em; }
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -1642,6 +1639,12 @@ button,
   button .ec-icon,
   .btn .ec-icon {
     display: inline; }
+    input[type=submit] .ec-icon:before,
+    input[type=reset] .ec-icon:before,
+    button .ec-icon:before,
+    .btn .ec-icon:before {
+      padding-right: 0.5rem;
+      vertical-align: top; }
     input[type=submit] .ec-icon:empty,
     input[type=reset] .ec-icon:empty,
     button .ec-icon:empty,
@@ -1653,11 +1656,6 @@ button,
       button .ec-icon:empty:before,
       .btn .ec-icon:empty:before {
         padding-right: 0; }
-    input[type=submit] .ec-icon:before,
-    input[type=reset] .ec-icon:before,
-    button .ec-icon:before,
-    .btn .ec-icon:before {
-      padding-right: 0.5rem; }
   input[type=submit].small,
   input[type=reset].small,
   button.small,
@@ -1670,7 +1668,7 @@ button,
     input[type=reset].small .ec-icon:before,
     button.small .ec-icon:before,
     .btn.small .ec-icon:before {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.5rem;
       padding-right: 0.5rem; }
     input[type=submit].small .ec-icon:empty,
@@ -1679,11 +1677,6 @@ button,
     .btn.small .ec-icon:empty {
       margin-left: -0.5rem;
       margin-right: -0.5rem; }
-      input[type=submit].small .ec-icon:empty:before,
-      input[type=reset].small .ec-icon:empty:before,
-      button.small .ec-icon:empty:before,
-      .btn.small .ec-icon:empty:before {
-        padding-right: 0; }
   input[type=submit].big,
   input[type=reset].big,
   button.big,
@@ -1697,12 +1690,6 @@ button,
     .btn.big .ec-icon:before {
       font-size: 1.75rem;
       line-height: 1.75rem; }
-    input[type=submit].big .ec-icon:empty,
-    input[type=reset].big .ec-icon:empty,
-    button.big .ec-icon:empty,
-    .btn.big .ec-icon:empty {
-      margin-left: -1rem;
-      margin-right: -1rem; }
   input[type=submit].block,
   input[type=reset].block,
   button.block,

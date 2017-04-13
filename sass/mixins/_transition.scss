@@ -3,7 +3,6 @@
   -o-transition: $transition;
   -webkit-transition: $transition;
   transition: $transition;
-  //-webkit-backface-visibility: hidden;
 }
 
 @mixin transition-property($property...) {

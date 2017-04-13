@@ -25,13 +25,12 @@
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
 
-@mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px /* size must be an even number */
-) {
+/* size must be an even number */
+@mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px) {
   background-image: -webkit-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: -moz-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: -ms-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: -o-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
   background-image: repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);
-
   @include background-size($size $size);
 }

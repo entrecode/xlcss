@@ -38,10 +38,13 @@ button,
   }
 
   // ec-icon styles for default btn
-
   .ec-icon {
-    //cursor: inherit;
     display: inline;
+
+    &:before {
+      padding-right: rem(8);
+      vertical-align: top;
+    }
 
     &:empty {
       margin-left: rem(-16);
@@ -50,11 +53,6 @@ button,
       &:before {
         padding-right: 0;
       }
-    }
-
-    &:before {
-      padding-right: rem(8);
-      vertical-align: top;
     }
   }
 
@@ -74,10 +72,6 @@ button,
       &:empty {
         margin-left: rem(-8);
         margin-right: rem(-8);
-
-        &:before {
-          padding-right: 0;
-        }
       }
     }
   }
@@ -91,11 +85,6 @@ button,
       &:before {
         font-size: rem(28);
         line-height: rem(28);
-      }
-
-      &:empty {
-        margin-left: rem(-16);
-        margin-right: rem(-16);
       }
     }
   }
