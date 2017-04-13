@@ -16,7 +16,7 @@
 @function trump($vote: 3, $wall: null) {
   $usa: 100;
   $wallstreet: 99;
-  $theOnePercent: $usa - $wallstreet + %;
+  $theOnePercent: $usa - $wallstreet * 1%;
 
   @if ($vote == 4 and $wall == 'president') {
     @warn "U! S! A! ... U! S! A! .... U! S! A! ... U! S! A! ...";

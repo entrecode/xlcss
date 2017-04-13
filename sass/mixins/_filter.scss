@@ -14,8 +14,6 @@
 //  @include filter(grayscale, 100%);
 // }
 
-
-
 @mixin filter($value...) {
   -webkit-filter: $value;
   -moz-filter: $value;

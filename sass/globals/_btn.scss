@@ -43,17 +43,18 @@ button,
     //cursor: inherit;
     display: inline;
 
-    &:empty{
+    &:empty {
       margin-left: rem(-16);
       margin-right: rem(-16);
 
-      &:before{
+      &:before {
         padding-right: 0;
       }
     }
 
     &:before {
       padding-right: rem(8);
+      vertical-align: top;
     }
   }
 
@@ -65,16 +66,16 @@ button,
 
     .ec-icon {
       &:before {
-        font-size: rem(16);
+        font-size: rem(14);
         line-height: rem(24);
         padding-right: rem(8);
       }
 
-      &:empty{
+      &:empty {
         margin-left: rem(-8);
         margin-right: rem(-8);
 
-        &:before{
+        &:before {
           padding-right: 0;
         }
       }
@@ -92,7 +93,7 @@ button,
         line-height: rem(28);
       }
 
-      &:empty{
+      &:empty {
         margin-left: rem(-16);
         margin-right: rem(-16);
       }

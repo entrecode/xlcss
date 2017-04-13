@@ -2,7 +2,6 @@
 // Headings
 // =============================================================================
 
-
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .giga, .mega, .kilo {
@@ -107,7 +106,7 @@ h6,
   }
 }
 
-.base-font{
+.base-font {
   font-size: $base-size + px;
   line-height: 1.5em;
 }

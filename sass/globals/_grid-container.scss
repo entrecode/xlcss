@@ -1,0 +1,19 @@
+//
+// Container
+// ---------
+// Use this mixin to create a row. Rows should be contained in a
+// "container" element
+//
+
+@mixin container() {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $containerWidth;
+  padding-left: ($gutter / 2) + px;
+  padding-right: ($gutter / 2) + px;
+  width: 100%;
+}
+
+[#{$prefix}container] {
+  @include container();
+}
