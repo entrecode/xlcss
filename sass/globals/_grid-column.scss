@@ -14,31 +14,41 @@
   [#{$prefix}col~="#{$i}"] {
     width: ($i / $numColumns) * 100%;
   }
+}
 
+@for $i from 1 through $numColumns {
   [#{$prefix}col~="#{$i}xs"] {
     @media (min-width: $bpXs) {
       width: ($i / $numColumns) * 100%;
     }
   }
+}
 
+@for $i from 1 through $numColumns {
   [#{$prefix}col~="#{$i}sm"] {
     @media (min-width: $bpSm) {
       width: ($i / $numColumns) * 100%;
     }
   }
+}
 
+@for $i from 1 through $numColumns {
   [#{$prefix}col~="#{$i}md"] {
     @media (min-width: $bpMd) {
       width: ($i / $numColumns) * 100%;
     }
   }
+}
 
+@for $i from 1 through $numColumns {
   [#{$prefix}col~="#{$i}lg"] {
     @media (min-width: $bpLg) {
       width: ($i / $numColumns) * 100%;
     }
   }
+}
 
+@for $i from 1 through $numColumns {
   [#{$prefix}col~="#{$i}xl"] {
     @media (min-width: $bpXl) {
       width: ($i / $numColumns) * 100%;
