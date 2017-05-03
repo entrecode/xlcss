@@ -50,7 +50,7 @@ s {
 // --------
 
 p {
-  margin-bottom: rem(16);
+  margin: rem(8) 0;
 }
 
 //
@@ -84,7 +84,6 @@ code,
 pre,
 kbd,
 samp {
-  font-family: $monoFont;
   font-size: em(14);
 }
 
@@ -113,14 +112,4 @@ samp {
 
 address {
   font-style: normal;
-}
-
-p {
-  font-size: em(16);
-  line-height: em(24, 16);
-
-  &.lead {
-    font-size: em(20);
-    line-height: em(28, 20);
-  }
 }

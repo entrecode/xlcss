@@ -1,7 +1,7 @@
 {
   "name": "xlcss",
-  "version": "2.2.2",
-  "description": "banana xlcss - minimalistic css framework by entrecode.de",
+  "version": "3.0.0",
+  "description": "cranberry xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "repository": "entrecode/xlcss",
   "scripts": {

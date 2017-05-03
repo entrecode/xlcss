@@ -1,9 +1,7 @@
-//
-// Container
-// ---------
-// Use this mixin to create a row. Rows should be contained in a
-// "container" element
-//
+/// grid container
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
 
 @mixin container() {
   box-sizing: border-box;
