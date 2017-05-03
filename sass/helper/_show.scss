@@ -1,0 +1,41 @@
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+
+@mixin show($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  table#{$parent} {
+    display: table !important;
+  }
+  tr#{$parent} {
+    display: table-row !important;
+  }
+  th#{$parent},
+  td#{$parent} {
+    display: table-cell !important;
+  }
+}
+
+@include show('.show');
+
+@media (max-width: $bpXsMax) {
+  @include show('.show-xs');
+}
+
+@media (min-width: $bpSm) and (max-width: $bpSmMax) {
+  @include show('.show-sm');
+}
+
+@media (min-width: $bpMd) and (max-width: $bpMdMax) {
+  @include show('.show-md');
+}
+
+@media (min-width: $bpLg) {
+  @include show('.show-lg');
+}
+
+@media print {
+  @include show('.show-print');
+}

@@ -1,10 +1,7 @@
-//
-// Rows
-// ----
-// Use this mixin to create a row. Columns should be contained in rows
-//
-// @$outerGutter: Set true to have no outer gutter
-//
+/// grid row
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
 
 @mixin row($outerGutter: true) {
 

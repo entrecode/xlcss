@@ -1,5 +1,18 @@
-img{
-  &.responsive{
+/// image
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+
+img {
+
+  // image grows up to its initial width
+  &.responsive {
+    max-width: 100%;
+    height: auto;
+  }
+
+  // image grows up to its parents width
+  &.full {
     width: 100%;
     height: auto;
   }

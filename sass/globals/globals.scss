@@ -1,14 +1,12 @@
-@import 'grid';
-@import 'reset';
-@import 'responsive-utilities';
-@import 'nav';
-@import 'typo';
-@import 'typo-utilities';
-@import 'headings';
-@import 'table';
-@import 'dl';
-@import 'fieldset';
-@import 'form';
-@import 'btn';
+/// global elements
+/// @author Bernhard Ruoff
+/// @since 3.0.0
+
+@import "grid-config";
+@import "grid-container";
+@import "grid-row";
+@import "grid-column";
+@import "grid-column-offset";
+@import "grid-column-order";
 @import 'img';
-@import "figure";
+@import 'typo';

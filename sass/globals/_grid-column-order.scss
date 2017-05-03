@@ -1,3 +1,8 @@
+/// column ordering
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+
 @for $i from 1 through ($numColumns - 1) {
   [#{$prefix}col~="pull#{$i}"] {
     right: 100 / $numColumns * $i * 1%;
