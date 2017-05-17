@@ -1,3 +1,8 @@
+## 3.0.1
+
+### removed
+- `sandbox.scss`
+
 ## 3.0.0
 
 ### changed
