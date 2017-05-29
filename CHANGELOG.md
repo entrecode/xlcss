@@ -1,10 +1,16 @@
-## 3.0.1
+## 3.0.2
 
+### added 
+- new mixin `headings.scss`
+
+### changed
+- `_varColor.scss` function for colors with alpha transparency
+
+## 3.0.1
 ### removed
 - `sandbox.scss`
 
 ## 3.0.0
-
 ### changed
 - simplified helper classes for show and hide  
 - Fix typos in zh-CN translation.
@@ -26,7 +32,6 @@
 - removed bower
 
 ## 2.2.1
-
 ### changed
 - optimized grid styles
 
