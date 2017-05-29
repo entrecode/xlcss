@@ -1,0 +1,31 @@
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+
+@mixin hide($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+
+@include hide('.hide');
+
+@media (max-width: $bpXsMax) {
+  @include hide('.hidden-xs');
+}
+
+@media (min-width: $bpSm) and (max-width: $bpSmMax) {
+  @include hide('.hidden-sm');
+}
+
+@media (min-width: $bpMd) and (max-width: $bpMdMax) {
+  @include hide('.hidden-md');
+}
+
+@media (min-width: $bpLg) {
+  @include hide('.hidden-lg');
+}
+
+@media print {
+  @include hide('.hidden-print');
+}

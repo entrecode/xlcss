@@ -1,5 +1,8 @@
+/// mixins elements
+/// @author Bernhard Ruoff
+/// @since 3.0.0
+
 @import 'flexbox';
-@import 'responsive-visibility';
 @import 'transition';
 @import 'retina';
 @import 'border-radius';
@@ -18,13 +21,17 @@
 @import 'animation';
 @import 'filter';
 @import 'state';
+@import 'headings';
 
+
+// TODO better mixin
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
   background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
   background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
 }
 
+// TODO better mixin
 /* size must be an even number */
 @mixin stripes($angle: -45deg, $color: rgba(black, 1), $size: 4px) {
   background-image: -webkit-repeating-linear-gradient($angle, $color, $color 25%, transparent 25%, transparent 50%, $color 50%);

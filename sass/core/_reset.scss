@@ -1,12 +1,8 @@
-//
-// Base styles
-// =============================================================================
-
-//
-// Normalization
-// -------------
-// Courtesy of sanitize.css
-// (http://jonathantneal.github.io/sanitize.css/)
+/// reset
+/// @since 3.0.0
+/// @access public
+/// Courtesy of sanitize.css
+/// (http://jonathantneal.github.io/sanitize.css/)
 
 :root {
   -ms-overflow-style: -ms-autohiding-scrollbar;
