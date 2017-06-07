@@ -3,10 +3,6 @@
 /// @author Bernhard Ruoff
 /// @access public
 
-@mixin columnOffset($offset) {
-  margin-left: $offset * 100%;
-}
-
 // Offset for columns
 @for $i from 1 through ($numColumns - 1) {
   [#{$prefix}col~="+#{$i}"] {
@@ -51,5 +47,39 @@
     @media (min-width: $bpXl) {
       margin-left: (($i / $numColumns) * 100%);
     }
+  }
+}
+
+[#{$prefix}col~="+0"] {
+  margin-left: 0;
+}
+
+[#{$prefix}col~="+0xs"] {
+  @media (min-width: $bpXs) {
+    margin-left: 0;
+  }
+}
+
+[#{$prefix}col~="+0sm"] {
+  @media (min-width: $bpSm) {
+    margin-left: 0;
+  }
+}
+
+[#{$prefix}col~="+0md"] {
+  @media (min-width: $bpMd) {
+    margin-left: 0;
+  }
+}
+
+[#{$prefix}col~="+0lg"] {
+  @media (min-width: $bpLg) {
+    margin-left: 0;
+  }
+}
+
+[#{$prefix}col~="+0xl"] {
+  @media (min-width: $bpXl) {
+    margin-left: 0;
   }
 }
