@@ -663,6 +663,29 @@ legend {
   [data-col~="+11xl"] {
     margin-left: 91.66667%; } }
 
+[data-col~="+0"] {
+  margin-left: 0; }
+
+@media (min-width: 30em) {
+  [data-col~="+0xs"] {
+    margin-left: 0; } }
+
+@media (min-width: 48em) {
+  [data-col~="+0sm"] {
+    margin-left: 0; } }
+
+@media (min-width: 60em) {
+  [data-col~="+0md"] {
+    margin-left: 0; } }
+
+@media (min-width: 70em) {
+  [data-col~="+0lg"] {
+    margin-left: 0; } }
+
+@media (min-width: 80em) {
+  [data-col~="+0xl"] {
+    margin-left: 0; } }
+
 [data-col~="pull1"] {
   right: 8.33333%; }
 
