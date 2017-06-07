@@ -1,10 +1,15 @@
-## 3.0.3
+## 3.0.4
 
 ### added 
 - responsive reset for offset-columns e.g. `data-col="+0sm"`
 
 ### removed
-- unused mixin in `_grid-column-offset.scss`
+- unused mixin in `_grid-column-offset.scss
+
+## 3.0.3
+
+### changed
+ - removed `°` character in comments
 
 ## 3.0.2
 
