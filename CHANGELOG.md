@@ -1,8 +1,18 @@
+## 3.0.5
+
+### added 
+- new mixin `setText`
+- new function `nearest` 
+
+### deprecations
+- mixins/state
+- mixins/unitSize
+
 ## 3.0.4
 
 ### added 
 - responsive reset for offset-columns e.g. `data-col="+0sm"`
-
+``
 ### removed
 - unused mixin in `_grid-column-offset.scss
 
