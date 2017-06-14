@@ -12,6 +12,6 @@
   width: 100%;
 }
 
-[#{$prefix}container] {
+[data-container] {
   @include container();
 }

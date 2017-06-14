@@ -1,0 +1,21 @@
+//justify content
+
+[data-flex~="around"] {
+  @include justify-content(space-around);
+}
+
+[data-flex~="between"] {
+  @include justify-content(space-between);
+}
+
+[data-flex~="center"] {
+  @include justify-content(center);
+}
+
+[data-flex~="start"] {
+  @include justify-content(flex-start);
+}
+
+[data-flex~="end"] {
+  @include justify-content(flex-end);
+}

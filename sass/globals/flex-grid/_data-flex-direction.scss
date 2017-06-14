@@ -1,0 +1,15 @@
+[data-flex~="column"] {
+  @include flex-direction(column);
+}
+
+[data-flex~="column-reverse"] {
+  @include flex-direction(column-reverse);
+}
+
+[data-flex~="row"] {
+  @include flex-direction(row);
+}
+
+[data-flex~="row-reverse"] {
+  @include flex-direction(row-reverse);
+}

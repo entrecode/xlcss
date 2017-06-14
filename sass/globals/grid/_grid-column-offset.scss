@@ -1,0 +1,85 @@
+/// column offset
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+
+// Offset for columns
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}"] {
+    margin-left: (($i / $numColumns) * 100%);
+  }
+}
+
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}xs"] {
+    @media (min-width: $bpXs) {
+      margin-left: (($i / $numColumns) * 100%);
+    }
+  }
+}
+
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}sm"] {
+    @media (min-width: $bpSm) {
+      margin-left: (($i / $numColumns) * 100%);
+    }
+  }
+}
+
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}md"] {
+    @media (min-width: $bpMd) {
+      margin-left: (($i / $numColumns) * 100%);
+    }
+  }
+}
+
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}lg"] {
+    @media (min-width: $bpLg) {
+      margin-left: (($i / $numColumns) * 100%);
+    }
+  }
+}
+
+@for $i from 1 through ($numColumns - 1) {
+  [data-col~="+#{$i}xl"] {
+    @media (min-width: $bpXl) {
+      margin-left: (($i / $numColumns) * 100%);
+    }
+  }
+}
+
+[data-col~="+0"] {
+  margin-left: 0;
+}
+
+[data-col~="+0xs"] {
+  @media (min-width: $bpXs) {
+    margin-left: 0;
+  }
+}
+
+[data-col~="+0sm"] {
+  @media (min-width: $bpSm) {
+    margin-left: 0;
+  }
+}
+
+[data-col~="+0md"] {
+  @media (min-width: $bpMd) {
+    margin-left: 0;
+  }
+}
+
+[data-col~="+0lg"] {
+  @media (min-width: $bpLg) {
+    margin-left: 0;
+  }
+}
+
+[data-col~="+0xl"] {
+  @media (min-width: $bpXl) {
+    margin-left: 0;
+  }
+}

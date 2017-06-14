@@ -1,0 +1,20 @@
+//align items
+[data-flex~="end-items"] {
+  @include align-items(flex-end);
+}
+
+[data-flex~="start-items"] {
+  @include align-items(flex-start);
+}
+
+[data-flex~="center-items"] {
+  @include align-items(center);
+}
+
+[data-flex~="baseline-items"] {
+  @include align-items(baseline);
+}
+
+[data-flex~="stretch-items"] {
+  @include align-items(stretch);
+}
