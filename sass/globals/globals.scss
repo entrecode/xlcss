@@ -1,12 +1,9 @@
 /// global elements
 /// @author Bernhard Ruoff
-/// @since 3.0.0
+/// @since 3.0.6
 
-@import "grid-config";
-@import "grid-container";
-@import "grid-row";
-@import "grid-column";
-@import "grid-column-offset";
-@import "grid-column-order";
 @import 'img';
 @import 'typo';
+
+@import "grid/grid";
+@import "flex-grid/flex-grid";

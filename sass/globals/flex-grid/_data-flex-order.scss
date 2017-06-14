@@ -1,0 +1,50 @@
+//order
+
+@mixin flex-order($name, $value) {
+  $divider: null;
+
+  @if $name == 'first' or $name == 'last' {
+    $divider: '-';
+  }
+
+  [data-flex-order~="#{$name}"] {
+    @include order($value);
+  }
+
+  [data-flex-order~="#{$name}#{$divider}xs"] {
+    @media (min-width: $bpXs) {
+      @include order($value);
+    }
+  }
+
+  [data-flex-order~="#{$name}#{$divider}sm"] {
+    @media (min-width: $bpSm) {
+      @include order($value);
+    }
+  }
+
+  [data-flex-order~="#{$name}#{$divider}md"] {
+    @media (min-width: $bpMd) {
+      @include order($value);
+    }
+  }
+
+  [data-flex-order~="#{$name}#{$divider}lg"] {
+    @media (min-width: $bpLg) {
+      @include order($value);
+    }
+  }
+
+  [data-flex-order~="#{$name}#{$divider}xl"] {
+    @media (min-width: $bpXl) {
+      @include order($value);
+    }
+  }
+}
+
+@include flex-order(first, 1);
+@include flex-order(last, 1);
+
+@for $i from 1 through $numColumns {
+  @include flex-order($i, $i);
+}

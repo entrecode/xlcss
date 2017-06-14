@@ -4,13 +4,13 @@
 /// @access public
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="pull#{$i}"] {
+  [data-col~="pull#{$i}"] {
     right: 100 / $numColumns * $i * 1%;
   }
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="pull#{$i}sm"] {
+  [data-col~="pull#{$i}sm"] {
     @media (min-width: $bpSm) {
       right: 100 / $numColumns * $i * 1%;
     }
@@ -18,7 +18,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="pull#{$i}md"] {
+  [data-col~="pull#{$i}md"] {
     @media (min-width: $bpMd) {
       right: 100 / $numColumns * $i * 1%;
     }
@@ -26,7 +26,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="pull#{$i}lg"] {
+  [data-col~="pull#{$i}lg"] {
     @media (min-width: $bpLg) {
       right: 100 / $numColumns * $i * 1%;
     }
@@ -34,7 +34,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="pull#{$i}xl"] {
+  [data-col~="pull#{$i}xl"] {
     @media (min-width: $bpXl) {
       right: 100 / $numColumns * $i * 1%;
     }
@@ -42,13 +42,13 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="push#{$i}"] {
+  [data-col~="push#{$i}"] {
     left: 100 / $numColumns * $i * 1%;
   }
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="push#{$i}sm"] {
+  [data-col~="push#{$i}sm"] {
     @media (min-width: $bpSm) {
       left: 100 / $numColumns * $i * 1%;
     }
@@ -56,7 +56,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="push#{$i}md"] {
+  [data-col~="push#{$i}md"] {
     @media (min-width: $bpMd) {
       left: 100 / $numColumns * $i * 1%;
     }
@@ -64,7 +64,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="push#{$i}lg"] {
+  [data-col~="push#{$i}lg"] {
     @media (min-width: $bpLg) {
       left: 100 / $numColumns * $i * 1%;
     }
@@ -72,7 +72,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="push#{$i}xl"] {
+  [data-col~="push#{$i}xl"] {
     @media (min-width: $bpXl) {
       left: 100 / $numColumns * $i * 1%;
     }

@@ -1,3 +1,11 @@
+## 3.0.6
+### added 
+- `data-flex` with `data-flex="grid" 
+
+### changed
+- added a folder for grid `globals/grid/grid.scss`
+- moved grid config variables to `_config.scss`
+
 ## 3.0.5
 
 ### added 

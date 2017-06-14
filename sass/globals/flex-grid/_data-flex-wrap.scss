@@ -1,0 +1,13 @@
+//flex-wrap
+
+[data-flex~="wrap"] {
+  @include flex-wrap(wrap);
+}
+
+[data-flex~="nowrap"] {
+  @include flex-wrap(nowrap);
+}
+
+[data-flex~="wrap-reverse"] {
+  @include flex-wrap(wrap-reverse);
+}

@@ -37,3 +37,12 @@ $bpLgMax: ($bpXl - 1) !default;
 /// @prop {number} $base-size [16] - default size used for global size calculations
 $base-size: 16;
 
+
+// Max width for container
+$containerWidth: 1200px !default;
+
+// Gutter size in pixels (without the unit we can do math easily)
+$gutter: 32 !default;
+
+// Number of columns in a row
+$numColumns: 12 !default;

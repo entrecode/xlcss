@@ -21,6 +21,6 @@
   }
 }
 
-[#{$prefix}row] {
+[data-row] {
   @include row();
 }

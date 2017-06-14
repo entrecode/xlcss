@@ -5,13 +5,13 @@
 
 // Offset for columns
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}"] {
+  [data-flex-col~="+#{$i}"] {
     margin-left: (($i / $numColumns) * 100%);
   }
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}xs"] {
+  [data-flex-col~="+#{$i}xs"] {
     @media (min-width: $bpXs) {
       margin-left: (($i / $numColumns) * 100%);
     }
@@ -19,7 +19,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}sm"] {
+  [data-flex-col~="+#{$i}sm"] {
     @media (min-width: $bpSm) {
       margin-left: (($i / $numColumns) * 100%);
     }
@@ -27,7 +27,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}md"] {
+  [data-flex-col~="+#{$i}md"] {
     @media (min-width: $bpMd) {
       margin-left: (($i / $numColumns) * 100%);
     }
@@ -35,7 +35,7 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}lg"] {
+  [data-flex-col~="+#{$i}lg"] {
     @media (min-width: $bpLg) {
       margin-left: (($i / $numColumns) * 100%);
     }
@@ -43,42 +43,42 @@
 }
 
 @for $i from 1 through ($numColumns - 1) {
-  [#{$prefix}col~="+#{$i}xl"] {
+  [data-flex-col~="+#{$i}xl"] {
     @media (min-width: $bpXl) {
       margin-left: (($i / $numColumns) * 100%);
     }
   }
 }
 
-[#{$prefix}col~="+0"] {
+[data-flex-col~="+0"] {
   margin-left: 0;
 }
 
-[#{$prefix}col~="+0xs"] {
+[data-flex-col~="+0xs"] {
   @media (min-width: $bpXs) {
     margin-left: 0;
   }
 }
 
-[#{$prefix}col~="+0sm"] {
+[data-flex-col~="+0sm"] {
   @media (min-width: $bpSm) {
     margin-left: 0;
   }
 }
 
-[#{$prefix}col~="+0md"] {
+[data-flex-col~="+0md"] {
   @media (min-width: $bpMd) {
     margin-left: 0;
   }
 }
 
-[#{$prefix}col~="+0lg"] {
+[data-flex-col~="+0lg"] {
   @media (min-width: $bpLg) {
     margin-left: 0;
   }
 }
 
-[#{$prefix}col~="+0xl"] {
+[data-flex-col~="+0xl"] {
   @media (min-width: $bpXl) {
     margin-left: 0;
   }
