@@ -1,3 +1,7 @@
+## 3.0.7
+### changed
+- changed `data-flex-col` to `data-col
+
 ## 3.0.6
 ### added 
 - `data-flex` with `data-flex="grid" 

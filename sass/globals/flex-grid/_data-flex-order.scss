@@ -43,7 +43,7 @@
 }
 
 @include flex-order(first, 1);
-@include flex-order(last, 1);
+@include flex-order(last, -1);
 
 @for $i from 1 through $numColumns {
   @include flex-order($i, $i);
