@@ -6,11 +6,16 @@
   @include flex-wrap(wrap);
   margin-left: ($gutter / -2) + px;
   margin-right: ($gutter / -2) + px;
+}
 
-  > :not([data-flex-col]) {
-    padding-left: ($gutter / 2) + px;
-    padding-right: ($gutter / 2) + px;
-    @include flex(1 1 auto);
+[data-flex~="no-gutter"] {
+  @include flex-wrap(wrap);
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  > [data-col] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
