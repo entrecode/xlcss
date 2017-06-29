@@ -1,3 +1,8 @@
+## 3.0.8
+### added
+- data-row value no-gutter `data-row="no-gutter"`
+- data-flex value no-gutter `data-flex="no-gutter"`
+
 ## 3.0.7
 ### changed
 - changed `data-flex-col` to `data-col
