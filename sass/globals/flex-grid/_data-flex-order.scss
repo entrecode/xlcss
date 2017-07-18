@@ -1,4 +1,7 @@
-//order
+/// @since 3.0.6
+/// @group grid
+/// @author Bernhard Ruoff
+/// @access public
 
 @mixin flex-order($name, $value) {
   $divider: null;
@@ -12,31 +15,35 @@
   }
 
   [data-flex-order~="#{$name}#{$divider}xs"] {
-    @media (min-width: $bpXs) {
-      @include order($value);
-    }
+    @include order($value);
   }
 
   [data-flex-order~="#{$name}#{$divider}sm"] {
-    @media (min-width: $bpSm) {
+    @media (min-width: $bp-sm) {
       @include order($value);
     }
   }
 
   [data-flex-order~="#{$name}#{$divider}md"] {
-    @media (min-width: $bpMd) {
+    @media (min-width: $bp-md) {
       @include order($value);
     }
   }
 
   [data-flex-order~="#{$name}#{$divider}lg"] {
-    @media (min-width: $bpLg) {
+    @media (min-width: $bp-lg) {
       @include order($value);
     }
   }
 
   [data-flex-order~="#{$name}#{$divider}xl"] {
-    @media (min-width: $bpXl) {
+    @media (min-width: $bp-xl) {
+      @include order($value);
+    }
+  }
+
+  [data-flex-order~="#{$name}#{$divider}xxl"] {
+    @media (min-width: $bp-xxl) {
       @include order($value);
     }
   }
@@ -45,6 +52,6 @@
 @include flex-order(first, 1);
 @include flex-order(last, -1);
 
-@for $i from 1 through $numColumns {
+@for $i from 1 through $grid-num-columns {
   @include flex-order($i, $i);
 }

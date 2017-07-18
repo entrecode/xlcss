@@ -1,48 +1,51 @@
-/// @prop {number} $bpXS [30em] - equals viewport min-width 480px (smartphone)
-/// @group responsive
-$bpXs: 30em !default;
+////
+/// @group layout
+////
 
-/// @prop {number} $bpSm [48em] - equals viewport min-width 768px (tablet)
-/// @group responsive
-$bpSm: 48em !default;
+/// @prop {number} $bp-xs [0] - smartphone
+$bp-xs: 0 !default;
 
-/// @prop {number} $bpMd [60em] - equals viewport min-width 960px (medium devices)
-/// @group responsive
-$bpMd: 60em !default;
+/// @prop {number} $bp-sm [480px] - smartphone landscape
+$bp-sm: 480px !default;
 
-/// @prop {number} $bpLg [70em] - equals viewport min-width 1120px (large devices)
-/// @group responsive
-$bpLg: 70em !default;
+/// @prop {number} $bp-md [720px] - tablet portrait
+$bp-md: 720px !default;
 
-/// @prop {number} $bpXl [80em] - equals viewport min-width 1280px (very large devices)
-/// @group responsive
-$bpXl: 80em !default;
+/// @prop {number} $bp-lg [1024px] - Tablet landscape
+$bp-lg: 1024px !default;
 
-/// @prop {number} $bpXsMax [$bpSm - 1] - equals viewport max-width 767px (smartphone)
-/// @group responsive
-$bpXsMax: ($bpSm - 1) !default;
+/// @prop {number} $bp-xl [1280px] - Desktop
+$bp-xl: 1280px !default;
 
-/// @prop {number} $bpSmMax [$bpMd - 1] - equals viewport max-width 959px (tablet)
-/// @group responsive
-$bpSmMax: ($bpMd - 1) !default;
+/// @prop {number} $bp-xxl [1920px] - Large screens
+$bp-xxl: 1920px !default;
 
-/// @prop {number} $bpMdMax [$bpLg - 1] - equals viewport max-width 1119px (large devices)
-/// @group responsive
-$bpMdMax: ($bpLg - 1) !default;
+/// @prop {number} $bp-xs-max [$bp-sm - 1]
+$bp-xs-max: ($bp-sm - 1) !default;
 
-/// @prop {number} $bpLgMax [$bpXl - 1] - equals viewport max-width 1279px (very large devices)
-/// @group responsive
-$bpLgMax: ($bpXl - 1) !default;
+/// @prop {number} $bp-sm-max [$bp-md - 1]
+$bp-sm-max: ($bp-md - 1) !default;
+
+/// @prop {number} $bp-md-max [$bp-lg - 1]
+$bp-md-max: ($bp-lg - 1) !default;
+
+/// @prop {number} $bp-lg-max [$bp-xl - 1]
+$bp-lg-max: ($bp-xl - 1) !default;
+
+/// @prop {number} $bp-xl-max [$bp-xxl - 1]
+$bp-xl-max: ($bp-xxl - 1) !default;
 
 /// @prop {number} $base-size [16] - default size used for global size calculations
 $base-size: 16;
 
+/// @prop {number} $grid-container-width [1200px] - max-width of container
+$grid-container-width: 1200px !default;
 
-// Max width for container
-$containerWidth: 1200px !default;
+/// @prop {number} $grid-gutter [32] - gutter size in pixels without unit
+$grid-gutter: 32 !default;
 
-// Gutter size in pixels (without the unit we can do math easily)
-$gutter: 32 !default;
+/// @prop {number} $grid-num-columns [12] - number of columns in a row
+$grid-num-columns: 12 !default;
 
-// Number of columns in a row
-$numColumns: 12 !default;
+/// @prop {number} $base-padding [16] - small padding value for padding helper
+$base-padding: 16;

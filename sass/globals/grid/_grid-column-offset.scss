@@ -1,51 +1,56 @@
-/// column offset
 /// @since 3.0.0
+/// @group grid
 /// @author Bernhard Ruoff
 /// @access public
 
-// Offset for columns
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}"] {
-    margin-left: (($i / $numColumns) * 100%);
+    margin-left: (($i / $grid-num-columns) * 100%);
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}xs"] {
-    @media (min-width: $bpXs) {
-      margin-left: (($i / $numColumns) * 100%);
-    }
+    margin-left: (($i / $grid-num-columns) * 100%);
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}sm"] {
-    @media (min-width: $bpSm) {
-      margin-left: (($i / $numColumns) * 100%);
+    @media (min-width: $bp-sm) {
+      margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}md"] {
-    @media (min-width: $bpMd) {
-      margin-left: (($i / $numColumns) * 100%);
+    @media (min-width: $bp-md) {
+      margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}lg"] {
-    @media (min-width: $bpLg) {
-      margin-left: (($i / $numColumns) * 100%);
+    @media (min-width: $bp-lg) {
+      margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}xl"] {
-    @media (min-width: $bpXl) {
-      margin-left: (($i / $numColumns) * 100%);
+    @media (min-width: $bp-xl) {
+      margin-left: (($i / $grid-num-columns) * 100%);
+    }
+  }
+}
+
+@for $i from 1 through ($grid-num-columns - 1) {
+  [data-col~="+#{$i}xxl"] {
+    @media (min-width: $bp-xxl) {
+      margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
 }
@@ -55,31 +60,37 @@
 }
 
 [data-col~="+0xs"] {
-  @media (min-width: $bpXs) {
+  @media (min-width: $bp-xs) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0sm"] {
-  @media (min-width: $bpSm) {
+  @media (min-width: $bp-sm) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0md"] {
-  @media (min-width: $bpMd) {
+  @media (min-width: $bp-md) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0lg"] {
-  @media (min-width: $bpLg) {
+  @media (min-width: $bp-lg) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0xl"] {
-  @media (min-width: $bpXl) {
+  @media (min-width: $bp-xl) {
+    margin-left: 0;
+  }
+}
+
+[data-col~="+0xxl"] {
+  @media (min-width: $bp-xxl) {
     margin-left: 0;
   }
 }

@@ -1,3 +1,22 @@
+## 3.0.9
+
+### removed
+- unitSize function
+- button-style mixin
+
+### added
+- responsive breakpoints to all `data-flex` values e.g. `data-flex="column-xs"`
+
+### changed
+- changed all variables to kebap-case
+- breakpoints to
+    - `$bp-xs`: 0
+    - `$bp-sm`: 480px
+    - `$bp-md`: 720px
+    - `$bp-lg`: 1024px
+    - `$bp-xl`: 1280px
+    - `$bp-xxl`: 1920px
+
 ## 3.0.8
 ### added
 - data-row value no-gutter `data-row="no-gutter"`

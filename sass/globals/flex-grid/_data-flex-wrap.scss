@@ -1,13 +1,16 @@
-//flex-wrap
+/// @since 3.0.6
+/// @group grid
+/// @author Bernhard Ruoff
+/// @access public
 
-[data-flex~="wrap"] {
+@include data-flex-bp(wrap) {
   @include flex-wrap(wrap);
 }
 
-[data-flex~="nowrap"] {
+@include data-flex-bp(nowrap) {
   @include flex-wrap(nowrap);
 }
 
-[data-flex~="wrap-reverse"] {
+@include data-flex-bp(wrap-reverse) {
   @include flex-wrap(wrap-reverse);
 }

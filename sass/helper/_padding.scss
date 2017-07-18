@@ -1,26 +1,19 @@
-/// data-padding
-/// @since 3.0.0
-/// @author Bernhard Ruoff
-/// @access public
-
-$base-padding: rem(16);
-
 [data-padding~="around"] {
-  padding: $base-padding;
+  padding: rem($base-padding);
 }
 
 [data-padding~="top"] {
-  padding-top: $base-padding;
+  padding-top: rem($base-padding);
 }
 
 [data-padding~="right"] {
-  padding-right: $base-padding;
+  padding-right: rem($base-padding);
 }
 
 [data-padding~="bottom"] {
-  padding-bottom: $base-padding;
+  padding-bottom: rem($base-padding);
 }
 
 [data-padding~="left"] {
-  padding-left: $base-padding;
+  padding-left: rem($base-padding);
 }
