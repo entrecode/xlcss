@@ -1,11 +1,3 @@
-//
-// Type Styles
-// =============================================================================
-
-//
-// Defaults
-// --------
-
 i,
 em {
   font-style: italic;
@@ -45,17 +37,9 @@ s {
   text-decoration: line-through;
 }
 
-//
-// Paragraphs
-// --------
-
 p {
   margin: rem(8) 0;
 }
-
-//
-// Links
-// -----
 
 a {
   cursor: pointer;
@@ -68,17 +52,9 @@ a {
   }
 }
 
-//
-// Abbreviations
-// -------------
-
 abbr[title] {
   cursor: help;
 }
-
-//
-// Pre, Code, and User Input
-// -------------------------
 
 code,
 pre,
@@ -105,10 +81,6 @@ kbd {
 samp {
   vertical-align: bottom;
 }
-
-//
-// Addresses
-// ---------
 
 address {
   font-style: normal;

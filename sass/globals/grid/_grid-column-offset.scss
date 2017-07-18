@@ -1,9 +1,8 @@
-/// column offset
 /// @since 3.0.0
+/// @group grid
 /// @author Bernhard Ruoff
 /// @access public
 
-// Offset for columns
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}"] {
     margin-left: (($i / $grid-num-columns) * 100%);

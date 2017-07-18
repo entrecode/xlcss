@@ -1,0 +1,10 @@
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+/// @group layout
+
+@mixin hide($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}

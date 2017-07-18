@@ -1,13 +1,3 @@
-/// @since 3.0.0
-/// @author Bernhard Ruoff
-/// @access public
-
-@mixin hide($parent) {
-  #{$parent} {
-    display: none !important;
-  }
-}
-
 @include hide('.hide');
 
 @media (max-width: $bp-xs-max) {

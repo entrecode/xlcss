@@ -1,8 +1,7 @@
-/// data-column
+/// @since 3.0.6
+/// @group grid
 /// @author Bernhard Ruoff
 /// @access public
-
-// Create columns
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}"] {
