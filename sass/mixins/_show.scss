@@ -1,0 +1,20 @@
+/// @since 3.0.0
+/// @author Bernhard Ruoff
+/// @access public
+/// @group layout
+
+@mixin show($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  table#{$parent} {
+    display: table !important;
+  }
+  tr#{$parent} {
+    display: table-row !important;
+  }
+  th#{$parent},
+  td#{$parent} {
+    display: table-cell !important;
+  }
+}

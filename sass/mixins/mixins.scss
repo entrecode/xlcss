@@ -17,7 +17,6 @@
 @import 'word-wrap';
 @import 'user-select';
 @import 'placeholder';
-@import 'button-styles';
 @import 'animation';
 @import 'filter';
 @import 'state';
@@ -25,6 +24,8 @@
 @import 'data-col-bp';
 @import 'data-flex-bp';
 @import "setText";
+@import "show";
+@import "hide";
 
 // TODO better mixin
 @mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {

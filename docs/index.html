@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>xlcss</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -25,18 +27,104 @@
     <div data-container>
       <h1>xlcss</h1>
       <div class="tag invert">v 3.0.9</div>
-      <p class="lead">xlcss is a scss framework for rapid frontend development.</p>
+      <div class="tag invert">cranberry</div>
+      <p class="lead">xlcss is a scss framework for rapid frontend development.<br>
+        Also see <a href="../dist/index.html">sass doc for functions and mixins</a></p>
     </div>
   </div>
 </header>
-<main class="page-body">
+<main class="demo-body">
   <div data-container>
+    <section>
+      <header class="demo-header">
+        <h2>layout helpers</h2>
+      </header>
+      <h3 class="text-super">image helpers</h3>
+      <div data-row>
+        <div data-col="6sm">
+          <pre><code class="html">
+<img src="" class="responsive"/>
+</code></pre>
+          <p>resizes image based on parent element up to its native size</p>
+          <img src="https://unsplash.it/400/200/?random" alt="" class="responsive">
+        </div>
+        <div data-col="6sm">
+          <pre><code class="html">
+<img src="" class="full"/>
+</code></pre>
+          <p>resizes image based on parent element ignoring its native size</p>
+          <img src="https://unsplash.it/400/200/?random" alt="" class="full">
+        </div>
+      </div>
+      <h3 class="text-super">list helpers</h3>
+      <div data-row>
+        <div data-col="6sm">
+          <pre><code class="html">
+<ul class="unstyled">
+  <li>...</li>
+  ...
+</ul>
+</code></pre>
+          <p>helper class for clean lists without margin and padding</p>
+          <ul class="unstyled">
+            <li>list entry 1</li>
+            <li>list entry 1</li>
+          </ul>
+        </div>
+        <div data-col="6sm">
+          <pre><code class="html">
+<ul class="inline">
+  <li>...</li>
+  ...
+</ul>
+</code></pre>
+          <p>helper class for clean lists without margin and padding and inline list elements</p>
+          <ul class="inline">
+            <li>list entry 1</li>
+            <li>list entry 1</li>
+          </ul>
+        </div>
+      </div>
+      <h3 class="text-super">responsive helpers</h3>
+      <table class="demo-options-table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Smartphones (<480px)</th>
+          <th>Smartphones landscape (>480px)</th>
+          <th>Tablet portrait (>720px)</th>
+          <th>Tablet landscape (>1024px)</th>
+          <th>Desktop (>1280px)</th>
+          <th>Large screens (>1920px)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>hide elements</td>
+          <td><span class="code">hide</span> or <span class="code">hide-xs</span></td>
+          <td><span class="code">hide-sm</span></td>
+          <td><span class="code">hide-md</span></td>
+          <td><span class="code">hide-lg</span></td>
+          <td><span class="code">hide-xl</span></td>
+          <td><span class="code">hide-xxl</span></td>
+        </tr>
+        <tr>
+          <td>show elements</td>
+          <td><span class="code">show</span> or <span class="code">show-xs</span></td>
+          <td><span class="code">show-sm</span></td>
+          <td><span class="code">show-md</span></td>
+          <td><span class="code">show-lg</span></td>
+          <td><span class="code">show-xl</span></td>
+          <td><span class="code">show-xxl</span></td>
+        </tr>
+        </tbody>
+      </table>
+
+    </section>
     <section>
       <header class="demo-header">
         <h2>grid</h2>
       </header>
-
-      <h3>Grid options</h3>
       <table class="demo-options-table">
         <thead>
         <tr>
@@ -444,7 +532,8 @@
         </thead>
         <tbody>
         <tr>
-          <td>data-flex-col value postfix. e.g. <br><span class="code">data-flex-col="6xs"</span></td>
+          <td>data-col value postfix. e.g. <br><span class="code">data-col="6xs"</span>
+          </td>
           <td>none or #<span class="code">xs</span></td>
           <td>#<span class="code">sm</span></td>
           <td>#<span class="code">md</span></td>
@@ -461,7 +550,7 @@
           <td colspan="6">2rem (32px)</td>
         </tr>
         <tr>
-          <td>offest. e.g. <br><span class="code">data-flex-col="+6xs"</span></td>
+          <td>offest. e.g. <br><span class="code">data-col="+6xs"</span></td>
           <td colspan="6"><span class="code">+</span>#</td>
         </tr>
         <tr>
@@ -514,25 +603,25 @@
       <h3>flex columns</h3>
       <pre><code class="html">
 <div data-flex="grid">
-  <div data-flex-col="4">...</div>
-  <div data-flex-col="6">...</div>
-  <div data-flex-col="2">...</div>
-  <div data-flex-col="12">...</div>
+  <div data-col="4">...</div>
+  <div data-col="6">...</div>
+  <div data-col="2">...</div>
+  <div data-col="12">...</div>
   ...
 </div>
 </code></pre>
       <div class="demo-grid">
         <div data-flex="grid">
-          <div data-flex-col="4">
+          <div data-col="4">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="6">
+          <div data-col="6">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="2">
+          <div data-col="2">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="12">
+          <div data-col="12">
             <div class="demo-grid-placeholder"></div>
           </div>
         </div>
@@ -542,25 +631,25 @@
       <h3>flex columns offset</h3>
       <pre><code class="html">
 <div data-flex="grid">
-  <div data-flex-col="4 +2sm">...</div>
-  <div data-flex-col="6 +4">...</div>
-  <div data-flex-col="2 +6">...</div>
-  <div data-flex-col="12">...</div>
+  <div data-col="4 +2sm">...</div>
+  <div data-col="6 +4">...</div>
+  <div data-col="2 +6">...</div>
+  <div data-col="12">...</div>
   ...
 </div>
 </code></pre>
       <div class="demo-grid">
         <div data-flex="grid">
-          <div data-flex-col="4 +2sm">
+          <div data-col="4 +2sm">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="6 +4">
+          <div data-col="6 +4">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="2 +6">
+          <div data-col="2 +6">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="12">
+          <div data-col="12">
             <div class="demo-grid-placeholder"></div>
           </div>
         </div>
@@ -569,10 +658,10 @@
       <h3>flex-grid justify-content</h3>
       <pre><code class="html">
 <div data-flex="grid center">
-  <div data-flex-col="4">...</div>
-  <div data-flex-col="4">...</div>
-  <div data-flex-col="8">...</div>
-  <div data-flex-col="6">...</div>
+  <div data-col="4">...</div>
+  <div data-col="4">...</div>
+  <div data-col="8">...</div>
+  <div data-col="6">...</div>
   ...
 </div>
 </code></pre>
@@ -583,16 +672,16 @@
 
       <div class="demo-grid">
         <div data-flex="grid center">
-          <div data-flex-col="4">
+          <div data-col="4">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="4">
+          <div data-col="4">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="8">
+          <div data-col="8">
             <div class="demo-grid-placeholder"></div>
           </div>
-          <div data-flex-col="6">
+          <div data-col="6">
             <div class="demo-grid-placeholder"></div>
           </div>
         </div>
@@ -608,15 +697,15 @@
         </thead>
         <tbody>
         <tr>
-          <td>data-flex-col value postfix. e.g. <span class="code">data-flex-col="6xs"</span></td>
+          <td>data-col value postfix. e.g. <span class="code">data-col="6xs"</span></td>
           <td>none</td>
         </tr>
         </tbody>
       </table>
       <pre><code class="html">
 <div data-flex="grid center">
-  <div data-flex-col="self">...</div>
-  <div data-flex-col="grow">...</div>
+  <div data-col="self">...</div>
+  <div data-col="grow">...</div>
 </div>
 </code></pre>
 

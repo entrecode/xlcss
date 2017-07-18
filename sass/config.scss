@@ -1,56 +1,51 @@
+////
+/// @group layout
+////
+
 /// @prop {number} $bp-xs [0] - smartphone
-/// @group responsive
 $bp-xs: 0 !default;
 
 /// @prop {number} $bp-sm [480px] - smartphone landscape
-/// @group responsive
 $bp-sm: 480px !default;
 
 /// @prop {number} $bp-md [720px] - tablet portrait
-/// @group responsive
 $bp-md: 720px !default;
 
 /// @prop {number} $bp-lg [1024px] - Tablet landscape
-/// @group responsive
 $bp-lg: 1024px !default;
 
 /// @prop {number} $bp-xl [1280px] - Desktop
-/// @group responsive
 $bp-xl: 1280px !default;
 
 /// @prop {number} $bp-xxl [1920px] - Large screens
-/// @group responsive
 $bp-xxl: 1920px !default;
 
 /// @prop {number} $bp-xs-max [$bp-sm - 1]
-/// @group responsive
 $bp-xs-max: ($bp-sm - 1) !default;
 
 /// @prop {number} $bp-sm-max [$bp-md - 1]
-/// @group responsive
 $bp-sm-max: ($bp-md - 1) !default;
 
 /// @prop {number} $bp-md-max [$bp-lg - 1]
-/// @group responsive
 $bp-md-max: ($bp-lg - 1) !default;
 
 /// @prop {number} $bp-lg-max [$bp-xl - 1]
-/// @group responsive
 $bp-lg-max: ($bp-xl - 1) !default;
 
 /// @prop {number} $bp-xl-max [$bp-xxl - 1]
-/// @group responsive
 $bp-xl-max: ($bp-xxl - 1) !default;
-
 
 /// @prop {number} $base-size [16] - default size used for global size calculations
 $base-size: 16;
 
-// Max width for container
+/// @prop {number} $grid-container-width [1200px] - max-width of container
 $grid-container-width: 1200px !default;
 
-// Gutter size in pixels (without the unit we can do math easily)
+/// @prop {number} $grid-gutter [32] - gutter size in pixels without unit
 $grid-gutter: 32 !default;
 
-// Number of columns in a row
+/// @prop {number} $grid-num-columns [12] - number of columns in a row
 $grid-num-columns: 12 !default;
+
+/// @prop {number} $base-padding [16] - small padding value for padding helper
+$base-padding: 16;

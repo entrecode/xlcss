@@ -107,14 +107,6 @@ legend {
   font-size: 16px;
   text-rendering: optimizeLegibility; }
 
-img.responsive {
-  max-width: 100%;
-  height: auto; }
-
-img.full {
-  width: 100%;
-  height: auto; }
-
 i,
 em {
   font-style: italic; }
@@ -4579,21 +4571,6 @@ address {
     -ms-flex-order: 12;
     order: 12; } }
 
-ul.unstyled,
-ol.unstyled {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-ul.inline,
-ol.inline {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  ul.inline > li,
-  ol.inline > li {
-    display: inline-block; }
-
 [data-padding~="around"] {
   padding: 1rem; }
 
@@ -4744,3 +4721,26 @@ td.show {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+img.responsive {
+  max-width: 100%;
+  height: auto; }
+
+img.full {
+  width: 100%;
+  height: auto; }
+
+ul.unstyled,
+ol.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+ul.inline,
+ol.inline {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.inline > li,
+  ol.inline > li {
+    display: inline-block; }

@@ -1,4 +1,9 @@
 ## 3.0.9
+
+### removed
+- unitSize function
+- button-style mixin
+
 ### added
 - responsive breakpoints to all `data-flex` values e.g. `data-flex="column-xs"`
 

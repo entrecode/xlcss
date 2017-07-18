@@ -1,4 +1,7 @@
-//align-content
+/// @since 3.0.6
+/// @group grid
+/// @author Bernhard Ruoff
+/// @access public
 
 @include data-flex-bp(end-content) {
   @include align-content(flex-end);

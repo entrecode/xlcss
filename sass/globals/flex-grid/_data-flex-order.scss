@@ -1,4 +1,7 @@
-//order
+/// @since 3.0.6
+/// @group grid
+/// @author Bernhard Ruoff
+/// @access public
 
 @mixin flex-order($name, $value) {
   $divider: null;

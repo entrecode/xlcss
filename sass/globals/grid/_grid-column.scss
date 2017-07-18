@@ -1,5 +1,5 @@
-/// column
 /// @since 3.0.0
+/// @group grid
 /// @author Bernhard Ruoff
 /// @access public
 
@@ -14,7 +14,6 @@
   padding-right: ($grid-gutter / 2) + px;
 }
 
-// Create columns
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}"] {
     width: ($i / $grid-num-columns) * 100%;

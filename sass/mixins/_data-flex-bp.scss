@@ -1,3 +1,18 @@
+////
+/// @group layout
+/// @since 3.0.9
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// mixin to generate breakpoints for data-flex values
+/// @param {value} $name - name of value
+///
+/// @example
+/// data-flex-bp(name) {
+///   /*some content*/
+/// }
+
 @mixin data-flex-bp($name) {
   [data-flex~="#{$name}"] {
     @content
