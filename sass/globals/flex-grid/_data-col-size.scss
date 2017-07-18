@@ -1,46 +1,9 @@
-//order
+/// order
 
-@mixin col-size($name) {
-  [data-flex-col~="#{$name}"] {
-    @content
-  }
-
-  [data-col~="#{$name}-xs"] {
-    @media (min-width: $bpXs) {
-      @content
-    }
-  }
-
-  [data-col~="#{$name}-sm"] {
-    @media (min-width: $bpSm) {
-      @content
-    }
-  }
-
-  [data-col~="#{$name}-md"] {
-    @media (min-width: $bpMd) {
-      @content
-    }
-  }
-
-  [data-col~="#{$name}-lg"] {
-    @media (min-width: $bpLg) {
-      @content
-    }
-  }
-
-  [data-col~="#{$name}-xl"] {
-    @media (min-width: $bpXl) {
-      @content
-    }
-  }
-}
-
-@include col-size(grow) {
+@include data-col-bp(grow) {
   @include flex(1 1 auto);
 }
 
-
-@include col-size(self) {
+@include data-col-bp(self) {
   @include flex(0 0 auto);
 }

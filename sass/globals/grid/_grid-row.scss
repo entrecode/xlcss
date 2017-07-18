@@ -6,8 +6,8 @@
 @mixin row($outerGutter: true) {
 
   @if $outerGutter {
-    margin-left: ($gutter / -2) + px;
-    margin-right: ($gutter / -2) + px;
+    margin-left: ($grid-gutter / -2) + px;
+    margin-right: ($grid-gutter / -2) + px;
   }
 
   &:before,

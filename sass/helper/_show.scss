@@ -20,20 +20,28 @@
 
 @include show('.show');
 
-@media (max-width: $bpXsMax) {
+@media (max-width: $bp-xs-max) {
   @include show('.show-xs');
 }
 
-@media (min-width: $bpSm) and (max-width: $bpSmMax) {
+@media (min-width: $bp-sm) and (max-width: $bp-sm-max) {
   @include show('.show-sm');
 }
 
-@media (min-width: $bpMd) and (max-width: $bpMdMax) {
+@media (min-width: $bp-md) and (max-width: $bp-md-max) {
   @include show('.show-md');
 }
 
-@media (min-width: $bpLg) {
+@media (min-width: $bp-lg) {
   @include show('.show-lg');
+}
+
+@media (min-width: $bp-xl) {
+  @include show('.show-xl');
+}
+
+@media (min-width: $bp-xxl) {
+  @include show('.show-xl');
 }
 
 @media print {

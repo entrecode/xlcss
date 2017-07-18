@@ -1,20 +1,20 @@
 //align items
-[data-flex~="end-items"] {
+@include data-flex-bp(end-items) {
   @include align-items(flex-end);
 }
 
-[data-flex~="start-items"] {
+@include data-flex-bp(start-items) {
   @include align-items(flex-start);
 }
 
-[data-flex~="center-items"] {
+@include data-flex-bp(center-items) {
   @include align-items(center);
 }
 
-[data-flex~="baseline-items"] {
+@include data-flex-bp(baseline-items) {
   @include align-items(baseline);
 }
 
-[data-flex~="stretch-items"] {
+@include data-flex-bp(stretch-items) {
   @include align-items(stretch);
 }

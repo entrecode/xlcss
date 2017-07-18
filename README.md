@@ -1,4 +1,4 @@
-# xlcss
+# xlcss - cranberry
 scss framework with a set of mixins, functions, resets and global styles.
 
 ## development

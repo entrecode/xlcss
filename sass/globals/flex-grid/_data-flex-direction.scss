@@ -1,15 +1,15 @@
-[data-flex~="column"] {
+@include data-flex-bp(column) {
   @include flex-direction(column);
 }
 
-[data-flex~="column-reverse"] {
+@include data-flex-bp(column-reverse) {
   @include flex-direction(column-reverse);
 }
 
-[data-flex~="row"] {
+@include data-flex-bp(row) {
   @include flex-direction(row);
 }
 
-[data-flex~="row-reverse"] {
+@include data-flex-bp(row-reverse) {
   @include flex-direction(row-reverse);
 }

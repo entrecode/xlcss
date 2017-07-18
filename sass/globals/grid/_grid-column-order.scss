@@ -3,78 +3,106 @@
 /// @author Bernhard Ruoff
 /// @access public
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}"] {
-    right: 100 / $numColumns * $i * 1%;
+    right: 100 / $grid-num-columns * $i * 1%;
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
+  [data-col~="pull#{$i}xs"] {
+    right: 100 / $grid-num-columns * $i * 1%;
+  }
+}
+
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}sm"] {
-    @media (min-width: $bpSm) {
-      right: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-sm) {
+      right: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}md"] {
-    @media (min-width: $bpMd) {
-      right: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-md) {
+      right: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}lg"] {
-    @media (min-width: $bpLg) {
-      right: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-lg) {
+      right: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}xl"] {
-    @media (min-width: $bpXl) {
-      right: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-xl) {
+      right: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
+  [data-col~="pull#{$i}xxl"] {
+    @media (min-width: $bp-xxl) {
+      right: 100 / $grid-num-columns * $i * 1%;
+    }
+  }
+}
+
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}"] {
-    left: 100 / $numColumns * $i * 1%;
+    left: 100 / $grid-num-columns * $i * 1%;
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
+  [data-col~="push#{$i}xs"] {
+    left: 100 / $grid-num-columns * $i * 1%;
+  }
+}
+
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}sm"] {
-    @media (min-width: $bpSm) {
-      left: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-sm) {
+      left: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}md"] {
-    @media (min-width: $bpMd) {
-      left: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-md) {
+      left: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}lg"] {
-    @media (min-width: $bpLg) {
-      left: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-lg) {
+      left: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }
 
-@for $i from 1 through ($numColumns - 1) {
+@for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}xl"] {
-    @media (min-width: $bpXl) {
-      left: 100 / $numColumns * $i * 1%;
+    @media (min-width: $bp-xl) {
+      left: 100 / $grid-num-columns * $i * 1%;
+    }
+  }
+}
+
+@for $i from 1 through ($grid-num-columns - 1) {
+  [data-col~="push#{$i}xxl"] {
+    @media (min-width: $bp-xxl) {
+      left: 100 / $grid-num-columns * $i * 1%;
     }
   }
 }

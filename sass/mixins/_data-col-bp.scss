@@ -1,0 +1,39 @@
+@mixin data-col-bp($name) {
+  [data-col~="#{$name}"] {
+    @content
+  }
+
+  [data-col~="#{$name}-xs"] {
+    @content
+  }
+
+  [data-col~="#{$name}-sm"] {
+    @media (min-width: $bp-sm) {
+      @content
+    }
+  }
+
+  [data-col~="#{$name}-md"] {
+    @media (min-width: $bp-md) {
+      @content
+    }
+  }
+
+  [data-col~="#{$name}-lg"] {
+    @media (min-width: $bp-lg) {
+      @content
+    }
+  }
+
+  [data-col~="#{$name}-xl"] {
+    @media (min-width: $bp-xl) {
+      @content
+    }
+  }
+
+  [data-col~="#{$name}-xxl"] {
+    @media (min-width: $bp-xxl) {
+      @content
+    }
+  }
+}

@@ -1,13 +1,13 @@
 //flex-wrap
 
-[data-flex~="wrap"] {
+@include data-flex-bp(wrap) {
   @include flex-wrap(wrap);
 }
 
-[data-flex~="nowrap"] {
+@include data-flex-bp(nowrap) {
   @include flex-wrap(nowrap);
 }
 
-[data-flex~="wrap-reverse"] {
+@include data-flex-bp(wrap-reverse) {
   @include flex-wrap(wrap-reverse);
 }

@@ -1,24 +1,25 @@
 //align-content
-[data-flex~="end-content"] {
+
+@include data-flex-bp(end-content) {
   @include align-content(flex-end);
 }
 
-[data-flex~="start-content"] {
+@include data-flex-bp(start-content) {
   @include align-content(flex-start);
 }
 
-[data-flex~="center-content"] {
+@include data-flex-bp(center-content) {
   @include align-content(center);
 }
 
-[data-flex~="stretch-content"] {
+@include data-flex-bp(stretch-content) {
   @include align-content(stretch);
 }
 
-[data-flex~="between-content"] {
+@include data-flex-bp(between-content) {
   @include align-content(space-between);
 }
 
-[data-flex~="around-content"] {
+@include data-flex-bp(around-content) {
   @include align-content(space-around);
 }
