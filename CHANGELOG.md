@@ -1,5 +1,8 @@
-## 3.0.9
+## 3.0.10
+### changed
+- optmized `getColor` function, base colors can be retrieved just writing `getColor(link)`, other values of `$colors` can be retrieved with `getColor(text, invert)`.
 
+## 3.0.9
 ### removed
 - unitSize function
 - button-style mixin
