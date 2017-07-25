@@ -19,8 +19,9 @@
 
   @if $result % $divider == 0 {
     @return ($result);
-  }
-  @else {
+  } @else {
     @return (round($result / $divider) * $divider);
   }
-};
+}
+
+;

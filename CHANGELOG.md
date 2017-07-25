@@ -1,3 +1,9 @@
+## 3.0.11
+### changed
+- changed `$threshold: 7; // 4.5 = WCAG AA,7= WCAG AAA` in `setContrast()` function
+- renamed `textContrast` function in `setContrast`
+- removed whitespace
+
 ## 3.0.10
 ### changed
 - optmized `getColor` function, base colors can be retrieved just writing `getColor(link)`, other values of `$colors` can be retrieved with `getColor(text, invert)`.
