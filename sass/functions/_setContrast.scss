@@ -24,8 +24,8 @@
   @return $ratio;
 }
 
-@function textContrast($color, $bgcolor: $color) {
-  $threshold: 4.5; // 4.5 = WCAG AA,7= WCAG AAA
+@function setContrast($color, $bgcolor: $color) {
+  $threshold: 7; // 4.5 = WCAG AA,7= WCAG AAA
   $list: 20 30 40 50 60 70 80 90 100;
 
   @each $percent in $list {
@@ -47,5 +47,5 @@
     }
   }
 
-  @return if(lightness($color) < 51, #FFF, #000)
+  @return if(lightness($color) < 51, $setLight, $setDark)
 }
