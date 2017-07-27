@@ -1,3 +1,7 @@
+## 3.0.14
+### added
+- easy grid for `data-flex="grid"` 
+
 ## 3.0.13
 ### changed
 - fixed `data-flex="grid"` gutter bug

@@ -10,6 +10,12 @@
 [data-flex~="grid"] {
   @include flex-wrap(wrap);
   width: 100%;
+
+  > div {
+    &:not([data-col]) {
+      @include flex(1);
+    }
+  }
 }
 
 [data-flex~="no-gutter"] {
