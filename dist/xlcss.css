@@ -1417,6 +1417,7 @@ address {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   margin-left: -16px;
   margin-right: -16px; }
 

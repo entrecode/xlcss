@@ -9,6 +9,7 @@
 
 [data-flex~="grid"] {
   @include flex-wrap(wrap);
+  width: 100%;
   margin-left: ($grid-gutter / -2) + px;
   margin-right: ($grid-gutter / -2) + px;
 }
