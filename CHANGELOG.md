@@ -1,3 +1,7 @@
+## 3.0.13
+### changed
+- fixed `data-flex="grid"` gutter bug
+
 ## 3.0.12
 ### changed
 - fixed `data-flex="grid"` width bug
