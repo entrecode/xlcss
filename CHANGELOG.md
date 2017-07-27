@@ -1,3 +1,7 @@
+## 3.0.12
+### changed
+- fixed `data-flex="grid"` width bug
+
 ## 3.0.11
 ### changed
 - changed `$threshold: 7; // 4.5 = WCAG AA,7= WCAG AAA` in `setContrast()` function
