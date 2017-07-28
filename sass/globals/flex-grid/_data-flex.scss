@@ -5,12 +5,19 @@
 
 [data-flex] {
   @include flexbox;
+
+  @at-root ul[data-flex] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 [data-flex~="grid"] {
   @include flex-wrap(wrap);
   width: 100%;
 
+  > li,
   > div {
     &:not([data-col]) {
       @include flex(1);

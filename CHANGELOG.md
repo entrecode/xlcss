@@ -1,3 +1,7 @@
+## 3.0.15
+### changed
+- removed list-style for `ul` using `[data-flex]`;
+
 ## 3.0.14
 ### added
 - easy grid for `data-flex="grid"` 
