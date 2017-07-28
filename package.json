@@ -1,6 +1,6 @@
 {
   "name": "xlcss",
-  "version": "3.0.14",
+  "version": "3.0.15",
   "description": "cranberry xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "repository": "entrecode/xlcss",
