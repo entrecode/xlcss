@@ -15,7 +15,14 @@
 
 [data-flex~="grid"] {
   @include flex-wrap(wrap);
-  width: 100%;
+  @include flex(0 1 auto);
+  margin-left: ($grid-gutter / -2) + px;
+  margin-right: ($grid-gutter / -2) + px;
+
+  @at-root ul[data-flex] {
+    margin-left: ($grid-gutter / -2) + px;
+    margin-right: ($grid-gutter / -2) + px;
+  }
 
   > li,
   > div {
