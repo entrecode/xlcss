@@ -1,3 +1,7 @@
+## 3.0.16
+### changed
+- fixed `data-flex="grid"` width bug
+
 ## 3.0.15
 ### changed
 - removed list-style for `ul` using `[data-flex]`;
