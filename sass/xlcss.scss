@@ -1,6 +1,5 @@
-@import 'config';
+@import '_config';
+@import "_reset";
 @import 'functions/functions';
 @import 'mixins/mixins';
-@import "core/core";
-@import 'globals/globals';
-@import "helper/helper";
+@import 'layout/layout';

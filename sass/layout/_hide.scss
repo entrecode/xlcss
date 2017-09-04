@@ -1,26 +1,26 @@
 @include hide('.hide');
 
-@media (max-width: $bp-xs-max) {
+@include media(mobile-only) {
   @include hide('.hidden-xs');
 }
 
-@media (min-width: $bp-sm) and (max-width: $bp-sm-max) {
+@include media(mobile-landscape-only) {
   @include hide('.hidden-sm');
 }
 
-@media (min-width: $bp-md) and (max-width: $bp-md-max) {
+@include media(tablet-portrait-only) {
   @include hide('.hidden-md');
 }
 
-@media (min-width: $bp-lg) {
+@include media(tablet-landscape-only) {
   @include hide('.hidden-lg');
 }
 
-@media (min-width: $bp-xl) {
+@include media(desktop-only) {
   @include hide('.hidden-xl');
 }
 
-@media (min-width: $bp-xxl) {
+@include media(large) {
   @include hide('.hidden-xxl');
 }
 

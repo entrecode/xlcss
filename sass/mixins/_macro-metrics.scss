@@ -1,0 +1,31 @@
+////
+/// @group styling
+/// @since 4.0.0
+/// @author Bernhard Ruoff
+/// @access public
+////
+
+/// mixin for precise macro element sizing
+/// @param {number} $font-size - font-size of element
+/// @param {number} $line-height - line-height of element
+/// @param {number} $min-height - min-height of element
+/// @param {number} $border [null] - size of element border
+
+@mixin macro-metrics($font-size, $line-height, $min-height, $border: null ) {
+  $padding: ($min-height - $line-height) / 2;
+
+  font-size: em($font-size);
+  line-height: rem($line-height);
+  min-height: rem($min-height);
+  min-width: rem($min-height);
+
+  @if $border {
+    padding: rem($padding - $border) rem($padding *2);
+    border-width: rem($border);
+    border-style: solid;
+  } @else {
+    padding: rem($padding) rem($padding *2);
+  }
+
+  @content;
+}

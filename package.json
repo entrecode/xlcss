@@ -1,7 +1,7 @@
 {
   "name": "xlcss",
-  "version": "3.0.16",
-  "description": "cranberry xlcss - minimalistic css framework by entrecode.de",
+  "version": "4.0.0",
+  "description": "dragon fruit xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "repository": "entrecode/xlcss",
   "scripts": {
@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "xlss",
+    "xlcss",
     "css",
     "sass",
     "framework",

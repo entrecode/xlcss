@@ -15,40 +15,40 @@
 
 @mixin data-flex-bp($name) {
   [data-flex~="#{$name}"] {
-    @content
+    @content;
   }
 
   [data-flex~="#{$name}-xs"] {
-    @content
+    @content;
   }
 
   [data-flex~="#{$name}-sm"] {
-    @media (min-width: $bp-sm) {
-      @content
+    @media (min-width: getBreakpoint(sm)) {
+      @content;
     }
   }
 
   [data-flex~="#{$name}-md"] {
-    @media (min-width: $bp-md) {
-      @content
+    @media (min-width: getBreakpoint(md)) {
+      @content;
     }
   }
 
   [data-flex~="#{$name}-lg"] {
-    @media (min-width: $bp-lg) {
-      @content
+    @media (min-width: getBreakpoint(lg)) {
+      @content;
     }
   }
 
   [data-flex~="#{$name}-xl"] {
-    @media (min-width: $bp-xl) {
-      @content
+    @media (min-width: getBreakpoint(xl)) {
+      @content;
     }
   }
 
   [data-flex~="#{$name}-xxl"] {
-    @media (min-width: $bp-xxl) {
-      @content
+    @media (min-width: getBreakpoint(xxl)) {
+      @content;
     }
   }
 }

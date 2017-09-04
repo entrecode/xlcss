@@ -1,3 +1,27 @@
+## 4.0.0
+### breaking changes
+- changed `$base-size` to `$root-size`
+- removed `/core/_body.scss`
+- removed `/globals/_typo.scss`
+- removed `/globals/globals.scss` to `/layout/layout.scss`
+- moved `/core/_reset.scss` to `/_reset.scss`
+- removed `/core`
+- removed `/helper/_list.scss`, `/helper/_img.scss`, `/helper/_typo.scss`, `/helper/_padding.scss` and `/helper`
+- moved `/helper/_hide.scss`, `/helper/_show.scss` and `/helper/_pull.scss` to `/layout`
+- removed `@mixin gradient-striped`,  `@mixin stripes`
+- removed `/mixins/_state.scss`
+- renamed `[data-flex~="tile"]` to `[data-flex~="tiles"]`
+
+### changes
+- optimized `setContrast` for best contrast and opacity support
+
+### added
+- new function `flattenColor()`  
+- new function `getBreakpoint()`  
+- new mixin `media()`  
+- new mixin `set-colors()`  
+- new attribute for `data-row` - `small-grid`  
+
 ## 3.0.16
 ### changed
 - fixed `data-flex="grid"` width bug

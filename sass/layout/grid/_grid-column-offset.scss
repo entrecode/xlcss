@@ -17,7 +17,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}sm"] {
-    @media (min-width: $bp-sm) {
+    @media (min-width: getBreakpoint(sm)) {
       margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
@@ -25,7 +25,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}md"] {
-    @media (min-width: $bp-md) {
+    @media (min-width: getBreakpoint(md)) {
       margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
@@ -33,7 +33,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}lg"] {
-    @media (min-width: $bp-lg) {
+    @media (min-width: getBreakpoint(lg)) {
       margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
@@ -41,7 +41,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}xl"] {
-    @media (min-width: $bp-xl) {
+    @media (min-width: getBreakpoint(xl)) {
       margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
@@ -49,7 +49,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="+#{$i}xxl"] {
-    @media (min-width: $bp-xxl) {
+    @media (min-width: getBreakpoint(xxl)) {
       margin-left: (($i / $grid-num-columns) * 100%);
     }
   }
@@ -60,37 +60,35 @@
 }
 
 [data-col~="+0xs"] {
-  @media (min-width: $bp-xs) {
-    margin-left: 0;
-  }
+  margin-left: 0;
 }
 
 [data-col~="+0sm"] {
-  @media (min-width: $bp-sm) {
+  @media (min-width: getBreakpoint(sm)) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0md"] {
-  @media (min-width: $bp-md) {
+  @media (min-width: getBreakpoint(md)) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0lg"] {
-  @media (min-width: $bp-lg) {
+  @media (min-width: getBreakpoint(lg)) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0xl"] {
-  @media (min-width: $bp-xl) {
+  @media (min-width: getBreakpoint(xl)) {
     margin-left: 0;
   }
 }
 
 [data-col~="+0xxl"] {
-  @media (min-width: $bp-xxl) {
+  @media (min-width: getBreakpoint(xxl)) {
     margin-left: 0;
   }
 }

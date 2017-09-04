@@ -2,6 +2,7 @@
 /// @since 3.0.5
 /// @author Bernhard Ruoff
 /// @access public
+/// @deprecated since 4.0.0
 ////
 
 /// sets background-color and matching text-color with
@@ -15,8 +16,8 @@
   background-color: $source;
 
   @if length($value) == 3 and nth($value, 3) == true {
-    color: setColor($source, getColor(base, link));
+    color: setContrast($source, getColor(link));
   } @else {
-    color: setColor($source);
+    color: setContrast($source);
   }
 }

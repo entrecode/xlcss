@@ -28,7 +28,7 @@
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}sm"] {
-    @media (min-width: $bp-sm) {
+    @media (min-width: getBreakpoint(sm)) {
       width: ($i / $grid-num-columns) * 100%;
     }
   }
@@ -36,7 +36,7 @@
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}md"] {
-    @media (min-width: $bp-md) {
+    @media (min-width: getBreakpoint(md)) {
       width: ($i / $grid-num-columns) * 100%;
     }
   }
@@ -44,7 +44,7 @@
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}lg"] {
-    @media (min-width: $bp-lg) {
+    @media (min-width: getBreakpoint(lg)) {
       width: ($i / $grid-num-columns) * 100%;
     }
   }
@@ -52,7 +52,7 @@
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}xl"] {
-    @media (min-width: $bp-xl) {
+    @media (min-width: getBreakpoint(xl)) {
       width: ($i / $grid-num-columns) * 100%;
     }
   }
@@ -60,7 +60,7 @@
 
 @for $i from 1 through $grid-num-columns {
   [data-col~="#{$i}xxl"] {
-    @media (min-width: $bp-xxl) {
+    @media (min-width: getBreakpoint(xxl)) {
       width: ($i / $grid-num-columns) * 100%;
     }
   }
