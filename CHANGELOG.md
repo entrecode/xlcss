@@ -1,3 +1,6 @@
+## 4.1.0
+- optimized `setContrast`function
+
 ## 4.0.0
 ### breaking changes
 - changed `$base-size` to `$root-size`
