@@ -1,6 +1,6 @@
 {
   "name": "xlcss",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "dragon fruit xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "repository": "entrecode/xlcss",
