@@ -1,4 +1,4 @@
-# xlcss - cranberry
+# xlcss - dragon fruit
 scss framework with a set of mixins, functions, resets and global styles.
 
 ## development
