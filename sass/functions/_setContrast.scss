@@ -24,28 +24,50 @@
   @return $ratio;
 }
 
-@function setContrast($color, $bgcolor: $color) {
-  $threshold: 7; // 4.5 = WCAG AA,7= WCAG AAA
-  $list: 20 30 40 50 60 70 80 90 100;
+@function setContrast($color, $hue: $color) {
+  $aaa: 7;
+  $aa: 4.5;
+
+  $list: 10 20 30 40 50 60 70 80 90 100;
+  $fallback-lighter: white;
+  $fallback-darker: black;
+  $last: nth($list, length($list));
+
+  @if (alpha($color) < 1) {
+    $color: flattenColor($color);
+  }
+
+  @if (alpha($hue) < 1) {
+    $hue: flattenColor($hue);
+  }
 
   @each $percent in $list {
-    $lighter: lighten($bgcolor, $percent);
-    $darker: darken($bgcolor, $percent);
+
+    $lighter: lighten($hue, $percent);
+    $darker: darken($hue, $percent);
     $darker-ratio: contrastRatio($color, $darker);
     $lighter-ratio: contrastRatio($color, $lighter);
 
-    @if ($lighter-ratio > $darker-ratio) {
-      @if ($lighter-ratio > $threshold) {
+    @if $lighter-ratio >= $darker-ratio {
+      @if $lighter-ratio >= $aaa {
         @return $lighter;
+      } @else if $percent == $last {
+        @if $lighter-ratio >= $aa {
+          @return $lighter;
+        } @else {
+          @return $fallback-lighter;
+        }
       }
-    }
-
-    @if ($darker-ratio > $lighter-ratio) {
-      @if ($darker-ratio > $threshold) {
+    } @else {
+      @if $darker-ratio >= $aaa {
         @return $darker;
+      } @else if $percent == $last {
+        @if $darker-ratio >= $aa {
+          @return $darker;
+        } @else {
+          @return $fallback-darker;
+        }
       }
     }
   }
-
-  @return if(lightness($color) < 51, $setLight, $setDark)
 }

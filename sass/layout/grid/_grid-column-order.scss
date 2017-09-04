@@ -17,7 +17,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}sm"] {
-    @media (min-width: $bp-sm) {
+    @media (min-width: getBreakpoint(sm)) {
       right: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -25,7 +25,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}md"] {
-    @media (min-width: $bp-md) {
+    @media (min-width: getBreakpoint(md)) {
       right: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -33,7 +33,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}lg"] {
-    @media (min-width: $bp-lg) {
+    @media (min-width: getBreakpoint(lg)) {
       right: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -41,7 +41,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}xl"] {
-    @media (min-width: $bp-xl) {
+    @media (min-width: getBreakpoint(xl)) {
       right: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -49,7 +49,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="pull#{$i}xxl"] {
-    @media (min-width: $bp-xxl) {
+    @media (min-width: getBreakpoint(xxl)) {
       right: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -69,7 +69,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}sm"] {
-    @media (min-width: $bp-sm) {
+    @media (min-width: getBreakpoint(sm)) {
       left: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -77,7 +77,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}md"] {
-    @media (min-width: $bp-md) {
+    @media (min-width: getBreakpoint(md)) {
       left: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -85,7 +85,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}lg"] {
-    @media (min-width: $bp-lg) {
+    @media (min-width: getBreakpoint(lg)) {
       left: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -93,7 +93,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}xl"] {
-    @media (min-width: $bp-xl) {
+    @media (min-width: getBreakpoint(xl)) {
       left: 100 / $grid-num-columns * $i * 1%;
     }
   }
@@ -101,7 +101,7 @@
 
 @for $i from 1 through ($grid-num-columns - 1) {
   [data-col~="push#{$i}xxl"] {
-    @media (min-width: $bp-xxl) {
+    @media (min-width: getBreakpoint(xxl)) {
       left: 100 / $grid-num-columns * $i * 1%;
     }
   }

@@ -12,7 +12,7 @@
         href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/agate.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener('DOMContentLoaded', function () {
       var codes = document.getElementsByTagName('code');
       for (var i = 0; i < codes.length; i++) {
         codes[i].innerHTML = codes[i].innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\n/, '');
@@ -26,8 +26,8 @@
   <div class="demo-intro-body">
     <div data-container>
       <h1>xlcss</h1>
-      <div class="tag invert">v 3.0.16</div>
-      <div class="tag invert">cranberry</div>
+      <span class="tag _invert">v 4.0.0</span>
+      <spam class="tag _invert">dragon-fruit</spam>
       <p class="lead">xlcss is a scss framework for rapid frontend development.<br>
         Also see <a href="../dist/index.html">sass doc for functions and mixins</a></p>
     </div>
@@ -39,52 +39,6 @@
       <header class="demo-header">
         <h2>layout helpers</h2>
       </header>
-      <h3 class="text-super">image helpers</h3>
-      <div data-row>
-        <div data-col="6sm">
-          <pre><code class="html">
-<img src="" class="responsive"/>
-</code></pre>
-          <p>resizes image based on parent element up to its native size</p>
-          <img src="https://unsplash.it/400/200/?random" alt="" class="responsive">
-        </div>
-        <div data-col="6sm">
-          <pre><code class="html">
-<img src="" class="full"/>
-</code></pre>
-          <p>resizes image based on parent element ignoring its native size</p>
-          <img src="https://unsplash.it/400/200/?random" alt="" class="full">
-        </div>
-      </div>
-      <h3 class="text-super">list helpers</h3>
-      <div data-row>
-        <div data-col="6sm">
-          <pre><code class="html">
-<ul class="unstyled">
-  <li>...</li>
-  ...
-</ul>
-</code></pre>
-          <p>helper class for clean lists without margin and padding</p>
-          <ul class="unstyled">
-            <li>list entry 1</li>
-            <li>list entry 1</li>
-          </ul>
-        </div>
-        <div data-col="6sm">
-          <pre><code class="html">
-<ul class="inline">
-  <li>...</li>
-  ...
-</ul>
-</code></pre>
-          <p>helper class for clean lists without margin and padding and inline list elements</p>
-          <ul class="inline">
-            <li>list entry 1</li>
-            <li>list entry 1</li>
-          </ul>
-        </div>
-      </div>
       <h3 class="text-super">responsive helpers</h3>
       <table class="demo-options-table">
         <thead>
@@ -565,40 +519,6 @@
         </tbody>
       </table>
 
-      <h3>dynamic flex columns</h3>
-      <pre><code class="html">
-<div data-flex="grid">
-  <div>...</div>
-  <div>...</div>
-  ...
-</div>
-</code></pre>
-      <div class="demo-grid">
-        <div data-flex="grid">
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-        </div>
-        <div data-flex="grid">
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-        </div>
-        <div data-flex="grid">
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-          <div>
-            <div class="demo-grid-placeholder"></div>
-          </div>
-        </div>
-      </div>
 
       <h3>flex columns</h3>
       <pre><code class="html">
@@ -686,29 +606,6 @@
           </div>
         </div>
       </div>
-
-      <h3>flex-grid col size</h3>
-      <table class="demo-options-table">
-        <thead>
-        <tr>
-          <th>value</th>
-          <th>description</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>data-col value postfix. e.g. <span class="code">data-col="6xs"</span></td>
-          <td>none</td>
-        </tr>
-        </tbody>
-      </table>
-      <pre><code class="html">
-<div data-flex="grid center">
-  <div data-col="self">...</div>
-  <div data-col="grow">...</div>
-</div>
-</code></pre>
-
     </section>
   </div>
 </main>

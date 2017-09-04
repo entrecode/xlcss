@@ -3,9 +3,8 @@
 /// @author Bernhard Ruoff
 /// @access public
 
-@mixin row($outerGutter: true) {
-
-  @if $outerGutter {
+[data-row] {
+  @if $outer-gutter {
     margin-left: ($grid-gutter / -2) + px;
     margin-right: ($grid-gutter / -2) + px;
   }
@@ -21,10 +20,6 @@
   }
 }
 
-[data-row] {
-  @include row();
-}
-
 [data-row~="no-gutter"] {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -32,5 +27,17 @@
   > [data-col] {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+}
+
+[data-row~="small-grid"] {
+  @if $outer-gutter {
+    margin-left: ($grid-gutter / -4) + px !important;
+    margin-right: ($grid-gutter / -4) + px !important;
+  }
+
+  > [data-col] {
+    padding-left: ($grid-gutter / 4) + px !important;
+    padding-right: ($grid-gutter / 4) + px !important;
   }
 }

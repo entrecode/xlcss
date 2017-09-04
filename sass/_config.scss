@@ -35,8 +35,8 @@ $bp-lg-max: ($bp-xl - 1) !default;
 /// @prop {number} $bp-xl-max [$bp-xxl - 1]
 $bp-xl-max: ($bp-xxl - 1) !default;
 
-/// @prop {number} $base-size [16] - default size used for global size calculations
-$base-size: 16;
+/// @prop {number} $root-size [16] - default size used for global size calculations
+$root-size: 16;
 
 /// @prop {number} $grid-container-width [1200px] - max-width of container
 $grid-container-width: 1200px !default;
@@ -44,8 +44,20 @@ $grid-container-width: 1200px !default;
 /// @prop {number} $grid-gutter [32] - gutter size in pixels without unit
 $grid-gutter: 32 !default;
 
+/// @prop {value} $outer-gutter [true] - sets an outer gutter of ($grid-gutter / 2)
+$outer-gutter: true !default;
+
 /// @prop {number} $grid-num-columns [12] - number of columns in a row
 $grid-num-columns: 12 !default;
 
 /// @prop {number} $base-padding [16] - small padding value for padding helper
 $base-padding: 16;
+
+$breakpoints: (
+  'xs':   0,    // smartphone
+  'sm':   480,  // smartphone landscape
+  'md':   720,  // tablet
+  'lg':   1024, // tablet landscape
+  'xl':   1280, // desktop
+  'xxl':  1920  // large
+) !default;
