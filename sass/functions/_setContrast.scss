@@ -95,7 +95,7 @@
     $lighter-margin: colorMargin($color, $lighter);
     $lighter-contrast: contrastRatio($color, $lighter);
 
-    @if $lighter-brightness >= $darker-brightness or $lighter-margin or $lighter-pass {
+    @if $lighter-contrast > $darker-contrast and $lighter-margin or $lighter-brightness > $darker-brightness and $lighter-margin {
       @if $lighter-pass {
         @return checkCompliance($color, $lighter, $aaa, $aa);
       } @else if $percent == $last {
