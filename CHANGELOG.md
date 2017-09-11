@@ -1,3 +1,6 @@
+## 4.1.2
+- optimized `setContrast` function
+
 ## 4.1.1
 - optimized `setContrast` function
 
