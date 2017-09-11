@@ -51,9 +51,9 @@
 @function checkCompliance($base, $color, $aaa, $aa) {
   $contrast-ratio: contrastRatio($base, $color);
 
-  @if($contrast-ratio >= $aaa) {
+  @if ($contrast-ratio >= $aaa) {
     @return $color;
-  } @else if ($contrast-ratio >= $aa ) {
+  } @else if ($contrast-ratio >= $aa) {
     @return $color;
   } @else {
     @return false;
@@ -95,7 +95,7 @@
     $lighter-margin: colorMargin($color, $lighter);
     $lighter-contrast: contrastRatio($color, $lighter);
 
-    @if $lighter-brightness >= $darker-brightness or $lighter-contrast >= $darker-contrast {
+    @if $lighter-brightness >= $darker-brightness or $lighter-margin or $lighter-pass {
       @if $lighter-pass {
         @return checkCompliance($color, $lighter, $aaa, $aa);
       } @else if $percent == $last {

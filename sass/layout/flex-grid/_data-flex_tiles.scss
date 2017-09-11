@@ -2,7 +2,7 @@
   @include flex-wrap(wrap);
 
   @for $i from 1 through $grid-num-columns {
-    >  [data-col~="#{$i}"] {
+    > [data-col~="#{$i}"] {
       min-height: ($i / $grid-num-columns) * 100vw;
     }
   }

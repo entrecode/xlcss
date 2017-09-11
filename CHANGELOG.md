@@ -1,5 +1,8 @@
+## 4.1.1
+- optimized `setContrast` function
+
 ## 4.1.0
-- optimized `setContrast`function
+- optimized `setContrast` function
 
 ## 4.0.0
 ### breaking changes

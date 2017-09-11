@@ -44,7 +44,7 @@
   }
 
   @if $media == 'tablet-only' {
-    @media (min-width: getBreakpoint(md)) and (max-width: getBreakpoint(lg, max)){
+    @media (min-width: getBreakpoint(md)) and (max-width: getBreakpoint(lg, max)) {
       @content;
     }
   }
@@ -60,7 +60,6 @@
       @content;
     }
   }
-
 
   @if $media == 'tablet-landscape' {
     @media (min-width: getBreakpoint(lg)) and (orientation: landscape) {

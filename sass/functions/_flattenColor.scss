@@ -14,10 +14,9 @@
 ///
 /// @return {Color} $flatColor - flattened color without opacity
 
-
 @function flattenColor($foreground, $background: getColor(background)) {
   $alpha: alpha($foreground) * 100%;
-  $foreground: rgba($foreground,1);
+  $foreground: rgba($foreground, 1);
   $flatColor: mix($foreground, $background, $alpha);
   @return $flatColor;
 }
