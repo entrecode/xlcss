@@ -54,10 +54,10 @@ $grid-num-columns: 12 !default;
 $base-padding: 16;
 
 $breakpoints: (
-  'xs':   0,    // smartphone
-  'sm':   480,  // smartphone landscape
-  'md':   720,  // tablet
-  'lg':   1024, // tablet landscape
-  'xl':   1280, // desktop
-  'xxl':  1920  // large
+        'xs': 0, // smartphone
+        'sm': 480, // smartphone landscape
+        'md': 720, // tablet
+        'lg': 1024, // tablet landscape
+        'xl': 1280, // desktop
+        'xxl': 1920 // large
 ) !default;
