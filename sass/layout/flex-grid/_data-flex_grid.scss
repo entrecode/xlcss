@@ -3,8 +3,8 @@
   @include flex(0 1 auto);
 
   @if $outer-gutter {
-    margin-left: ($grid-gutter / -2) + px;
-    margin-right: ($grid-gutter / -2) + px;
+    margin-left: ($grid-gutter / -2) + px !important;
+    margin-right: ($grid-gutter / -2) + px !important;
   }
 
   > [data-col],
