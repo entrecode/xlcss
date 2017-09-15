@@ -1,3 +1,6 @@
+## 4.1.4
+- optimized `setContrast` function
+
 ## 4.1.3
 - improved `data-flex="grid"` for `<ul>`
 
