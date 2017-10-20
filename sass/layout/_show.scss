@@ -1,3 +1,7 @@
+[class*="show-"] {
+  display: none !important;
+}
+
 @include show('.show');
 
 @include media(mobile-only) {

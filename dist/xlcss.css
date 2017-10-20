@@ -4387,6 +4387,9 @@ legend {
 .pull-left {
   float: left !important; }
 
+[class*="show-"] {
+  display: none !important; }
+
 .show {
   display: block !important; }
 
