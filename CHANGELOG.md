@@ -1,3 +1,6 @@
+## 4.1.5
+- fixed `.show-##` bug
+
 ## 4.1.4
 - optimized `setContrast` function
 
