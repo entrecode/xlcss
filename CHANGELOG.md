@@ -1,3 +1,7 @@
+## 5.0.0 - 26.10.2017
+### breaking changes
+- renamed `.hidden-` to `.hide-`
+
 ## 4.1.5
 - fixed `.show-##` bug
 
