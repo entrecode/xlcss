@@ -1,29 +1,29 @@
 @include hide('.hide');
 
 @include media(mobile-only) {
-  @include hide('.hidden-xs');
+  @include hide('.hide-xs');
 }
 
 @include media(mobile-landscape-only) {
-  @include hide('.hidden-sm');
+  @include hide('.hide-sm');
 }
 
 @include media(tablet-portrait-only) {
-  @include hide('.hidden-md');
+  @include hide('.hide-md');
 }
 
 @include media(tablet-landscape-only) {
-  @include hide('.hidden-lg');
+  @include hide('.hide-lg');
 }
 
 @include media(desktop-only) {
-  @include hide('.hidden-xl');
+  @include hide('.hide-xl');
 }
 
 @include media(large) {
-  @include hide('.hidden-xxl');
+  @include hide('.hide-xxl');
 }
 
 @media print {
-  @include hide('.hidden-print');
+  @include hide('.hide-print');
 }
