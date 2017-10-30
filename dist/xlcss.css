@@ -4387,21 +4387,13 @@ legend {
 .pull-left {
   float: left !important; }
 
-[class*="show-"] {
+.show-xs,
+.show-sm,
+.show-md,
+.show-lg,
+.show-xl,
+.show-print {
   display: none !important; }
-
-.show {
-  display: block !important; }
-
-table.show {
-  display: table !important; }
-
-tr.show {
-  display: table-row !important; }
-
-th.show,
-td.show {
-  display: table-cell !important; }
 
 @media (max-width: 719px) {
   .show-xs {
@@ -4484,29 +4476,29 @@ td.show {
   display: none !important; }
 
 @media (max-width: 719px) {
-  .hidden-xs {
+  .hide-xs {
     display: none !important; } }
 
 @media (min-width: 480px) and (max-width: 719px) and (orientation: landscape) {
-  .hidden-sm {
+  .hide-sm {
     display: none !important; } }
 
 @media (min-width: 720px) and (max-width: 1023px) and (orientation: portrait) {
-  .hidden-md {
+  .hide-md {
     display: none !important; } }
 
 @media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
-  .hidden-lg {
+  .hide-lg {
     display: none !important; } }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-  .hidden-xl {
+  .hide-xl {
     display: none !important; } }
 
 @media (min-width: 1920px) {
-  .hidden-xxl {
+  .hide-xxl {
     display: none !important; } }
 
 @media print {
-  .hidden-print {
+  .hide-print {
     display: none !important; } }

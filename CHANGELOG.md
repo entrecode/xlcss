@@ -1,3 +1,7 @@
+## 5.0.1 - 26.10.2017
+### changes
+- fixed `.show` styles
+
 ## 5.0.0 - 26.10.2017
 ### breaking changes
 - renamed `.hidden-` to `.hide-`

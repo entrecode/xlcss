@@ -1,8 +1,11 @@
-[class*="show-"] {
+.show-xs,
+.show-sm,
+.show-md,
+.show-lg,
+.show-xl,
+.show-print {
   display: none !important;
 }
-
-@include show('.show');
 
 @include media(mobile-only) {
   @include show('.show-xs');
