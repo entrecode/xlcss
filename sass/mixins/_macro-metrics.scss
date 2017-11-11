@@ -10,22 +10,46 @@
 /// @param {number} $line-height - line-height of element
 /// @param {number} $min-height - min-height of element
 /// @param {number} $border [null] - size of element border
+/// @param {number} $padding-ratio [2] - ratio by which padding-left and padding-right are bigger
 
-@mixin macro-metrics($font-size, $line-height, $min-height, $border: null ) {
+@mixin macro-metrics($font-size, $line-height, $min-height, $border: null , $padding-ratio: 2) {
   $padding: ($min-height - $line-height) / 2;
+  @if $border {
+    $padding: ($padding - $border);
+  }
 
   font-size: em($font-size);
-  line-height: rem($line-height);
-  min-height: rem($min-height);
-  min-width: rem($min-height);
-
+  line-height: em($line-height, $font-size);
+  min-height: em($min-height, $font-size);
+  min-width: em($min-height, $font-size);
+  padding: em($padding, $font-size) em(($padding * $padding-ratio), $font-size);
   @if $border {
-    padding: rem($padding - $border) rem($padding *2);
     border-width: rem($border);
     border-style: solid;
-  } @else {
-    padding: rem($padding) rem($padding *2);
   }
 
   @content;
+
+  .ec-icon {
+    &:before {
+      margin-left: rem($padding * $padding-ratio * -.75);
+    }
+
+    &.ec-icon_right {
+      &:before {
+        margin-left: 0;
+        margin-right: rem($padding * $padding-ratio * -.75);
+      }
+    }
+
+    &:empty {
+      margin-left: rem($padding * -$padding-ratio);
+      margin-right: rem($padding * -$padding-ratio);
+
+      &:before {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
 }
