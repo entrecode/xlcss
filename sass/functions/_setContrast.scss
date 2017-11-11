@@ -69,8 +69,8 @@
     $aa: 4.5;
   }
 
-  $lighter-fallback: white;
-  $darker-fallback: black;
+  $lighter-fallback: white !default;
+  $darker-fallback: black !default;
 
   $list: 10 20 30 40 50 60 70 80 90 100;
   $last: nth($list, length($list));
@@ -95,31 +95,47 @@
     $lighter-margin: colorMargin($color, $lighter);
     $lighter-contrast: contrastRatio($color, $lighter);
 
-    @if $lighter-contrast > $darker-contrast or $darker-pass == false and $lighter-margin {
-      @if $lighter-pass {
-        @return checkCompliance($color, $lighter, $aaa, $aa);
-      } @else if $percent == $last {
-        @if $lighter-margin {
-          @if (checkCompliance($color, $lighter, $aaa, $aa)) {
-            @return checkCompliance($color, $lighter, $aaa, $aa)
+    @if ($hue != $color) {
+      @if $lighter-contrast > $darker-contrast or $darker-pass == false and $lighter-margin {
+        @if $lighter-pass {
+          @return checkCompliance($color, $lighter, $aaa, $aa);
+        } @else if $percent == $last {
+          @if $lighter-margin {
+            @if (checkCompliance($color, $lighter, $aaa, $aa)) {
+              @return checkCompliance($color, $lighter, $aaa, $aa)
+            } @else {
+              @return $lighter-fallback;
+            }
           } @else {
             @return $lighter-fallback;
           }
-        } @else {
-          @return $lighter-fallback;
         }
-      }
-    } @else {
-      @if $darker-pass {
-        @return checkCompliance($color, $darker, $aaa, $aa);
-      } @else if $percent == $last {
-        @if $darker-margin {
-          @if (checkCompliance($color, $darker, $aaa, $aa)) {
-            @return checkCompliance($color, $darker, $aaa, $aa)
+      } @else {
+        @if $darker-pass {
+          @return checkCompliance($color, $darker, $aaa, $aa);
+        } @else if $percent == $last {
+          @if $darker-margin {
+            @if (checkCompliance($color, $darker, $aaa, $aa)) {
+              @return checkCompliance($color, $darker, $aaa, $aa)
+            } @else {
+              @return $darker-fallback;
+            }
           } @else {
             @return $darker-fallback;
           }
-        } @else {
+        }
+      }
+    } @else {
+      @if $lighter-contrast > $darker-contrast or $darker-pass == false and $lighter-margin {
+        @if $lighter-pass {
+          @return $lighter-fallback;
+        } @else if $percent == $last and $lighter-margin {
+          @return $lighter-fallback;
+        }
+      } @else {
+        @if $darker-pass {
+          @return $darker-fallback;
+        } @else if $percent == $last and $darker-margin {
           @return $darker-fallback;
         }
       }
