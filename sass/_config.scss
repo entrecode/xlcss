@@ -1,40 +1,3 @@
-////
-/// @group layout
-////
-
-/// @prop {number} $bp-xs [0] - smartphone
-$bp-xs: 0 !default;
-
-/// @prop {number} $bp-sm [480px] - smartphone landscape
-$bp-sm: 480px !default;
-
-/// @prop {number} $bp-md [720px] - tablet portrait
-$bp-md: 720px !default;
-
-/// @prop {number} $bp-lg [1024px] - Tablet landscape
-$bp-lg: 1024px !default;
-
-/// @prop {number} $bp-xl [1280px] - Desktop
-$bp-xl: 1280px !default;
-
-/// @prop {number} $bp-xxl [1920px] - Large screens
-$bp-xxl: 1920px !default;
-
-/// @prop {number} $bp-xs-max [$bp-sm - 1]
-$bp-xs-max: ($bp-sm - 1) !default;
-
-/// @prop {number} $bp-sm-max [$bp-md - 1]
-$bp-sm-max: ($bp-md - 1) !default;
-
-/// @prop {number} $bp-md-max [$bp-lg - 1]
-$bp-md-max: ($bp-lg - 1) !default;
-
-/// @prop {number} $bp-lg-max [$bp-xl - 1]
-$bp-lg-max: ($bp-xl - 1) !default;
-
-/// @prop {number} $bp-xl-max [$bp-xxl - 1]
-$bp-xl-max: ($bp-xxl - 1) !default;
-
 /// @prop {number} $root-size [16] - default size used for global size calculations
 $root-size: 16;
 
@@ -53,6 +16,7 @@ $grid-num-columns: 12 !default;
 /// @prop {number} $base-padding [16] - small padding value for padding helper
 $base-padding: 16;
 
+/// @param {map} $breakpoints
 $breakpoints: (
         'xs': 0, // smartphone
         'sm': 480, // smartphone landscape

@@ -1,3 +1,15 @@
+### breaking changes
+- removed all breakpoint variables
+
+## 5.0.1
+### added
+- validation to `flattenColor`
+
+### changes
+- improved `setContrast`
+- `macroMetrics` now uses `em`, included styling for `.ec-icon`
+- changed `set-colors` mixin due to changes in `setContrast`
+
 ## 5.0.1 - 26.10.2017
 ### changes
 - fixed `.show` styles
