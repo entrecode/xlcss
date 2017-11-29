@@ -16,7 +16,7 @@ npm run build
 ```
 
 ### Update
-## 6.0.0
+## update to 6.0.0
 - globally find and replace all breakpoint variable
     - `$bp-xs` => `getBreakpoint(xs)`,
     - `$bp-xs-max` => `getBreakpoint(xs, max)`

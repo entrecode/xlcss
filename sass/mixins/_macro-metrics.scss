@@ -17,7 +17,6 @@
   @if $border {
     $padding: ($padding - $border);
   }
-
   font-size: em($font-size);
   line-height: em($line-height, $font-size);
   min-height: em($min-height, $font-size);
@@ -30,19 +29,31 @@
 
   @content;
 
-  .ec-icon {
-    &:before {
-      margin-left: rem($padding * $padding-ratio * -.75);
+  .#{$pfx}tag {
+    &:only-child {
+      margin-left: rem($padding * -$padding-ratio);
+      margin-right: rem($padding * -$padding-ratio);
     }
+  }
+
+  .#{$pfx}bubble {
+    &:only-child {
+      margin-left: rem($padding * -$padding-ratio);
+      margin-right: rem($padding * -$padding-ratio);
+    }
+  }
+
+  .ec-icon {
+    padding-right: rem($padding);
 
     &.ec-icon_right {
-      &:before {
-        margin-left: 0;
-        margin-right: rem($padding * $padding-ratio * -.75);
-      }
+      padding-right: 0;
+      padding-left: rem($padding);
     }
 
     &:empty {
+      padding-right: 0;
+      padding-left: 0;
       margin-left: rem($padding * -$padding-ratio);
       margin-right: rem($padding * -$padding-ratio);
 

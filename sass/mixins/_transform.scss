@@ -5,7 +5,8 @@
   -ms-transform: $transforms;
   -webkit-transform: $transforms;
   transform: $transforms;
-  -webkit-backface-visibility: hidden;
+  // removed to fix subpixel render bug
+  //-webkit-backface-visibility: hidden;
 }
 
 @mixin transform-style($val) {
