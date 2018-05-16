@@ -13,10 +13,12 @@
 /// @param {color} $background [getColor(background)] - background-color
 ///
 /// @return {Color} $flatColor - flattened color without opacity
-
 @function flattenColor($foreground, $background: getColor(background)) {
   $alpha: alpha($foreground) * 100%;
   $foreground: rgba($foreground, 1);
+  @if alpha($background) < 1 {
+    @warn 'no opacity allowed for second value!';
+  }
   $flatColor: mix($foreground, $background, $alpha);
   @return $flatColor;
 }

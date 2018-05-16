@@ -32,7 +32,7 @@
   $alpha: alpha($source);
 
   @if ($alpha < .2 and $amount < 20 and $amount > -20) {
-    $target: rgba($source, .2);
+    $target: rgba($source, $alpha);
   } @else {
     @if ($amount > 0) {
       /// if $amount is positive

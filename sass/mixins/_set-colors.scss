@@ -11,7 +11,11 @@
 /// @param {color} $color - color value
 /// @param {color} $hue [$color] - color value for hue orientation
 
-@mixin set-colors($color, $hue: $color) {
+@mixin set-colors($color, $hue: false) {
   background-color: $color;
-  color: setContrast($color, $hue);
+  @if $hue {
+    color: setContrast($color, $hue);
+  } @else {
+    color: setContrast($color);
+  }
 }

@@ -15,7 +15,7 @@
 ///
 /// @return {Color} color with harmonic lightness and saturation
 
-@function systemColor($target, $colors: $link $super $minor $highlight) {
+@function systemColor($target, $colors: $link $super $highlight) {
   $targetHue: hue($target);
   $totalHue: 0;
   $totalSat: 0;

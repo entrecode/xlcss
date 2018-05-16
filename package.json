@@ -1,6 +1,6 @@
 {
   "name": "xlcss",
-  "version": "5.0.1",
+  "version": "6.0.1",
   "description": "elderberry xlcss - minimalistic css framework by entrecode.de",
   "main": "sass/xlcss.scss",
   "repository": "entrecode/xlcss",
